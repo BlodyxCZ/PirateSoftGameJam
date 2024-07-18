@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://viir1nqc5m22"]
+[gd_scene load_steps=8 format=3 uid="uid://viir1nqc5m22"]
 
 [ext_resource type="Script" path="res://scenes/TEST/CSGBox3D2.gd" id="1_3sqii"]
+[ext_resource type="Script" path="res://scenes/classes/InteractableObject/interactable_object.gd" id="2_15u1f"]
 
 [sub_resource type="Environment" id="Environment_rt2ji"]
 background_mode = 1
@@ -17,6 +18,12 @@ fog_density = 0.05
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_il3u2"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_7t8by"]
+size = Vector3(2.271, 0.797363, 0.31311)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_1oelk"]
+viewport_path = NodePath("InteractableObject/SubViewport")
+
 [node name="Node3D" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -31,7 +38,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.386475, 0)
 use_collision = true
 size = Vector3(10, 0.227, 10)
 
-[node name="CSGBox3D2" type="CharacterBody3D" parent="."]
+[node name="CSGBox3D2" type="CharacterBody3D" parent="." groups=["Player"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.373, 1, 1.362)
 script = ExtResource("1_3sqii")
 
@@ -52,12 +59,84 @@ transform = Transform3D(0.707107, -0.183013, 0.683013, 0, 0.965926, 0.258819, -0
 projection = 1
 size = 10.96
 
-[node name="CSGBox3D3" type="CSGBox3D" parent="."]
+[node name="InteractableObject" type="Node3D" parent="." node_paths=PackedStringArray("gui")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.14945, 0, 0)
+script = ExtResource("2_15u1f")
+gui = NodePath("")
+
+[node name="Range" type="Area3D" parent="InteractableObject"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractableObject/Range"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.635498, 0.101318, 0)
+shape = SubResource("BoxShape3D_7t8by")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="InteractableObject"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.217129, 0)
 use_collision = true
 
-[node name="CSGBox3D4" type="CSGBox3D" parent="."]
+[node name="CSGBox3D4" type="CSGBox3D" parent="InteractableObject"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.217, 0)
 cast_shadow = 3
 use_collision = true
 size = Vector3(0.7, 1, 0.7)
+
+[node name="Sprite3D" type="Sprite3D" parent="InteractableObject"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 1.16642, 0)
+billboard = 2
+texture = SubResource("ViewportTexture_1oelk")
+
+[node name="SubViewport" type="SubViewport" parent="InteractableObject"]
+transparent_bg = true
+
+[node name="Polygon2D" type="Polygon2D" parent="InteractableObject/SubViewport"]
+color = Color(0.140447, 0.140447, 0.140447, 1)
+polygon = PackedVector2Array(136, 192, 128, 200, 128, 312, 136, 320, 216, 320, 256, 392, 296, 320, 376, 320, 384, 312, 384, 200, 376, 192)
+
+[node name="Label" type="Label" parent="InteractableObject/SubViewport"]
+offset_right = 512.0
+offset_bottom = 512.0
+theme_override_font_sizes/font_size = 64
+text = "E"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="InteractableObject2" type="Node3D" parent="." node_paths=PackedStringArray("gui")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.14945, 0, -1.27462)
+script = ExtResource("2_15u1f")
+gui = NodePath("")
+
+[node name="Range" type="Area3D" parent="InteractableObject2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractableObject2/Range"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.635498, 0.101318, 0)
+shape = SubResource("BoxShape3D_7t8by")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="InteractableObject2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.217129, 0)
+use_collision = true
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="InteractableObject2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.217, 0)
+cast_shadow = 3
+use_collision = true
+size = Vector3(0.7, 1, 0.7)
+
+[node name="Sprite3D" type="Sprite3D" parent="InteractableObject2"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 1.16642, 0)
+billboard = 2
+texture = SubResource("ViewportTexture_1oelk")
+
+[node name="SubViewport" type="SubViewport" parent="InteractableObject2"]
+transparent_bg = true
+
+[node name="Polygon2D" type="Polygon2D" parent="InteractableObject2/SubViewport"]
+color = Color(0.140447, 0.140447, 0.140447, 1)
+polygon = PackedVector2Array(136, 192, 128, 200, 128, 312, 136, 320, 216, 320, 256, 392, 296, 320, 376, 320, 384, 312, 384, 200, 376, 192)
+
+[node name="Label" type="Label" parent="InteractableObject2/SubViewport"]
+offset_right = 512.0
+offset_bottom = 512.0
+theme_override_font_sizes/font_size = 64
+text = "E"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -17,6 +17,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 SceneTransition="*res://singletons/SceneTransition.gd"
+Enviroment="*res://singletons/Enviroment.tscn"
 
 [file_customization]
 

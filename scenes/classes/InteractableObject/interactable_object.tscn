@@ -1,7 +1,0 @@
-[gd_scene format=3 uid="uid://c5v2bngxt5lmk"]
-
-[node name="InteractableObject" type="Node3D"]
-
-[node name="Range" type="Area3D" parent="."]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Range"]

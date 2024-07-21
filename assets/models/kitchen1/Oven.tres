@@ -6,4 +6,3 @@
 resource_name = "Oven"
 albedo_texture = ExtResource("1_db5ar")
 metallic = 1.0
-emission_texture = ExtResource("1_db5ar")

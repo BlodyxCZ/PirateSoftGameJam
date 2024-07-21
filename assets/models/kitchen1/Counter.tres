@@ -6,4 +6,3 @@
 resource_name = "Counter"
 albedo_texture = ExtResource("1_55ee0")
 metallic = 1.0
-emission_texture = ExtResource("1_55ee0")

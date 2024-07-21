@@ -19,4 +19,3 @@ func _input(event: InputEvent) -> void:
 			controller = controllers.PS
 		else:
 			controller = controllers.XBOX
-	print(controller)

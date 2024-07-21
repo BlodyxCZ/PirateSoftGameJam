@@ -1,6 +1,16 @@
 extends CharacterBody3D
 
 
+enum STATES {
+	idle,
+	walk,
+}
+
+var current_state: STATES = STATES.idle
+
+
+@onready var ap: AnimationPlayer = $jackalope/AnimationPlayer
+
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 @export var speed: float = 5.0
@@ -11,6 +21,11 @@ var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 
 func _physics_process(delta: float) -> void:
+	_handle_movement(delta)
+	_handle_states()
+
+
+func _handle_movement(delta: float) -> void:
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 	
@@ -25,3 +40,18 @@ func _physics_process(delta: float) -> void:
 		velocity.z = lerp(velocity.z, 0.0, deceleration)
 	
 	move_and_slide()
+	
+	if abs(input_dir).is_equal_approx(Vector2.ZERO):
+		if current_state != STATES.idle:
+			print("Switching to Idle")
+			current_state = STATES.idle
+			ap.play("Idle")
+	elif abs(input_dir) > Vector2.ZERO:
+		if current_state != STATES.walk:
+			current_state = STATES.walk
+			print("Switching to Walk")
+			ap.play("Walk")
+
+
+func _handle_states() -> void:
+	pass

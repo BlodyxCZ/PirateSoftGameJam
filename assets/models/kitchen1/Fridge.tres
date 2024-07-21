@@ -7,4 +7,3 @@ resource_name = "Fridge"
 cull_mode = 2
 albedo_texture = ExtResource("1_kq418")
 metallic = 1.0
-emission_enabled = true

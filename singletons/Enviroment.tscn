@@ -1,4 +1,16 @@
-[gd_scene format=3 uid="uid://khufshn8ru3m"]
+[gd_scene load_steps=2 format=3 uid="uid://khufshn8ru3m"]
+
+[sub_resource type="Environment" id="Environment_ia41a"]
+background_mode = 1
+background_color = Color(0.486275, 0.498039, 1, 1)
+background_canvas_max_layer = 1
+ambient_light_source = 1
+ambient_light_color = Color(1, 1, 1, 1)
+reflected_light_source = 1
+tonemap_mode = 1
+fog_enabled = true
+fog_light_color = Color(0, 0, 0, 1)
+fog_density = 0.05
 
 [node name="Enviroment" type="Node3D"]
 
@@ -7,3 +19,6 @@ transform = Transform3D(0.707107, -0.353553, 0.612373, 0, 0.866026, 0.499999, -0
 projection = 1
 current = true
 size = 13.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ia41a")

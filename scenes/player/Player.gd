@@ -1,9 +1,13 @@
 extends CharacterBody3D
 
 
-const SPEED = 5.0
-
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
+
+@export var speed: float = 5.0
+@export_range(0.0, 1.0) var acceleration: float = 0.5
+@export_range(0.0, 1.0) var deceleration: float = 0.5
+@export_range(0.0, 1.0) var rotation_factor: float = 0.2
+
 
 
 func _physics_process(delta: float) -> void:
@@ -13,10 +17,12 @@ func _physics_process(delta: float) -> void:
 	var input_dir := Input.get_vector("move_left", "move_right", "move_up", "move_down").rotated(-PI/4)
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
+		print(rad_to_deg(Vector3(0, 0, 1).rotated(Vector3(0, 1, 0), -PI/4).signed_angle_to(direction, Vector3(0, 1, 0))))
+		$jackalope.rotation.y = lerp_angle($jackalope.rotation.y, Vector3(0, 0, 1).rotated(Vector3(0, 1, 0), PI).signed_angle_to(direction, Vector3(0, 1, 0)), rotation_factor)
+		velocity.x = lerp(velocity.x, direction.x * speed, acceleration)
+		velocity.z = lerp(velocity.z, direction.z * speed, acceleration)
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.z = move_toward(velocity.z, 0, SPEED)
+		velocity.x = lerp(velocity.x, 0.0, deceleration)
+		velocity.z = lerp(velocity.z, 0.0, deceleration)
 	
 	move_and_slide()

@@ -2,7 +2,6 @@
 
 [resource]
 resource_name = "Floor"
-albedo_color = Color(0.392157, 0.392157, 0.392157, 1)
+albedo_color = Color(0.121569, 0.0862745, 0.192157, 1)
 metallic = 1.0
-emission_enabled = true
 emission = Color(0.121667, 0.0881226, 0.193165, 1)

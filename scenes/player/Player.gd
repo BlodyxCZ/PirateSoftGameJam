@@ -17,7 +17,6 @@ func _physics_process(delta: float) -> void:
 	var input_dir := Input.get_vector("move_left", "move_right", "move_up", "move_down").rotated(-PI/4)
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
-		print(rad_to_deg(Vector3(0, 0, 1).rotated(Vector3(0, 1, 0), -PI/4).signed_angle_to(direction, Vector3(0, 1, 0))))
 		$jackalope.rotation.y = lerp_angle($jackalope.rotation.y, Vector3(0, 0, 1).rotated(Vector3(0, 1, 0), PI).signed_angle_to(direction, Vector3(0, 1, 0)), rotation_factor)
 		velocity.x = lerp(velocity.x, direction.x * speed, acceleration)
 		velocity.z = lerp(velocity.z, direction.z * speed, acceleration)

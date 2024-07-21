@@ -1,11 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://dc22jitmq87n1"]
+[gd_scene load_steps=11 format=3 uid="uid://dc22jitmq87n1"]
 
 [ext_resource type="Script" path="res://scenes/objects/interactable/oven/GUI.gd" id="1_0mnmo"]
 [ext_resource type="Script" path="res://scenes/objects/interactable/fridge/fridge.gd" id="1_engde"]
+[ext_resource type="Script" path="res://scenes/classes/Popup/popup.gd" id="2_q71sa"]
 [ext_resource type="Material" uid="uid://b57xvjoy33afl" path="res://assets/models/kitchen1/Fridge.tres" id="3_5m84l"]
+[ext_resource type="PackedScene" uid="uid://crwvcfdi3hef7" path="res://scenes/classes/Popup/pop_up_texture.tscn" id="3_8uo2k"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_ioi16"]
-viewport_path = NodePath("SubViewport")
+[sub_resource type="ViewportTexture" id="ViewportTexture_bqwvs"]
+viewport_path = NodePath("PopUpTexture")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_e7jdm"]
 size = Vector3(3.624, 0.7, 0.7)
@@ -49,28 +51,15 @@ shadow_mesh = SubResource("ArrayMesh_xjam2")
 script = ExtResource("1_engde")
 range = NodePath("Range")
 gui = NodePath("GUI")
-pop_up = NodePath("Sprite3D")
+pop_up = NodePath("Popup")
 
-[node name="Sprite3D" type="Sprite3D" parent="."]
+[node name="Popup" type="Sprite3D" parent="."]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 4.85393, 0)
 billboard = 2
-texture = SubResource("ViewportTexture_ioi16")
+texture = SubResource("ViewportTexture_bqwvs")
+script = ExtResource("2_q71sa")
 
-[node name="SubViewport" type="SubViewport" parent="."]
-own_world_3d = true
-transparent_bg = true
-
-[node name="Polygon2D" type="Polygon2D" parent="SubViewport"]
-color = Color(0.140447, 0.140447, 0.140447, 1)
-polygon = PackedVector2Array(136, 192, 128, 200, 128, 312, 136, 320, 216, 320, 256, 392, 296, 320, 376, 320, 384, 312, 384, 200, 376, 192)
-
-[node name="Label" type="Label" parent="SubViewport"]
-offset_right = 512.0
-offset_bottom = 512.0
-theme_override_font_sizes/font_size = 64
-text = "E"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="PopUpTexture" parent="." instance=ExtResource("3_8uo2k")]
 
 [node name="Range" type="Area3D" parent="."]
 

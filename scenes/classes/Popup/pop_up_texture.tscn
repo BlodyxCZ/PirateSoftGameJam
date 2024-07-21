@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://crwvcfdi3hef7"]
+
+[ext_resource type="Texture2D" uid="uid://55465qsgco4l" path="res://assets/kenney/keyboard_e_outline.svg" id="1_h6k7g"]
+[ext_resource type="Script" path="res://scenes/classes/Popup/pop_up_texture.gd" id="1_ounsl"]
+[ext_resource type="Texture2D" uid="uid://dlblt4gcyrj7w" path="res://assets/kenney/xbox_button_a_outline.svg" id="2_vt2d7"]
+[ext_resource type="Texture2D" uid="uid://b1jpf14nhgcpy" path="res://assets/kenney/playstation_button_cross_outline.svg" id="4_42bgw"]
+
+[node name="PopUpTexture" type="SubViewport"]
+transparent_bg = true
+script = ExtResource("1_ounsl")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(0.140447, 0.140447, 0.140447, 1)
+polygon = PackedVector2Array(136, 192, 128, 200, 128, 312, 136, 320, 216, 320, 256, 392, 296, 320, 376, 320, 384, 312, 384, 200, 376, 192)
+
+[node name="PC" type="Sprite2D" parent="."]
+position = Vector2(256, 256)
+scale = Vector2(2, 2)
+texture = ExtResource("1_h6k7g")
+
+[node name="XBOX" type="Sprite2D" parent="."]
+position = Vector2(256, 256)
+scale = Vector2(2, 2)
+texture = ExtResource("2_vt2d7")
+
+[node name="PS" type="Sprite2D" parent="."]
+position = Vector2(256, 256)
+scale = Vector2(2, 2)
+texture = ExtResource("4_42bgw")

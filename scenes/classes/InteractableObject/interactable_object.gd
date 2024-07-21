@@ -3,7 +3,7 @@ extends Node3D
 
 @export var range: Area3D
 @export var gui: ObjectGUI
-@export var pop_up: Sprite3D
+@export var pop_up: PopUp
 var is_in_range: bool = false
 
 
@@ -22,10 +22,11 @@ func _input(event: InputEvent) -> void:
 func _on_body_entered(body: Node3D) -> void:
 	if not body.is_in_group("Player"): return
 	is_in_range = true
-	pop_up.show()
+	pop_up.fade_in(0.3)
 
 
 func _on_body_exited(body: Node3D) -> void:
 	if not body.is_in_group("Player"): return
 	is_in_range = false
-	pop_up.hide()
+	pop_up.fade_out(0.3)
+	gui.close()

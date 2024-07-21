@@ -10,6 +10,10 @@ func _ready() -> void:
 	focus_exited.connect(_on_unfocused)
 	_on_unfocused()
 
+func _process(delta: float) -> void:
+	if is_hovered():
+		grab_focus()
+
 
 func _on_focused() -> void:
 	icon = _icon

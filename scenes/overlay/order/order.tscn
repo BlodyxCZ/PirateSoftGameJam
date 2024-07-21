@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://llaar1v2bv66"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_4j8bi"]
+
+[node name="Panel" type="Panel"]
+custom_minimum_size = Vector2(88, 168)
+anchors_preset = -1
+anchor_right = 0.076
+anchor_bottom = 0.259
+offset_right = 0.447998
+offset_bottom = 0.167999
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 80.0
+offset_bottom = 112.0
+texture = SubResource("PlaceholderTexture2D_4j8bi")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_top = 120.0
+offset_right = 88.0
+offset_bottom = 168.0
+theme_override_font_sizes/font_size = 12
+text = "[Description]"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3

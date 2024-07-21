@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dcq1we4ule87k"]
+[gd_scene load_steps=5 format=3 uid="uid://dcq1we4ule87k"]
 
 [ext_resource type="Script" path="res://scenes/overlay/Overlay.gd" id="1_2uwuf"]
+[ext_resource type="Texture2D" uid="uid://bvgsw0janrdig" path="res://assets/kenney/arrow_e.svg" id="2_pi06a"]
+[ext_resource type="Script" path="res://scenes/classes/button/IconButton.gd" id="3_u66x3"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kan7d"]
 
@@ -9,7 +11,6 @@ process_mode = 3
 script = ExtResource("1_2uwuf")
 
 [node name="Pause" type="Control" parent="."]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -51,7 +52,9 @@ focus_previous = NodePath("../Return")
 theme_override_font_sizes/font_size = 32
 theme_override_styles/focus = SubResource("StyleBoxEmpty_kan7d")
 text = "Resume"
+icon = ExtResource("2_pi06a")
 flat = true
+script = ExtResource("3_u66x3")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Pause/VBoxContainer"]
 layout_mode = 2
@@ -69,7 +72,9 @@ focus_previous = NodePath("../../Resume")
 theme_override_font_sizes/font_size = 24
 theme_override_styles/focus = SubResource("StyleBoxEmpty_kan7d")
 text = "Options"
+icon = ExtResource("2_pi06a")
 flat = true
+script = ExtResource("3_u66x3")
 
 [node name="Help" type="Button" parent="Pause/VBoxContainer/HBoxContainer"]
 layout_mode = 2
@@ -83,7 +88,9 @@ focus_previous = NodePath("../Options")
 theme_override_font_sizes/font_size = 24
 theme_override_styles/focus = SubResource("StyleBoxEmpty_kan7d")
 text = "Help"
+icon = ExtResource("2_pi06a")
 flat = true
+script = ExtResource("3_u66x3")
 
 [node name="Return" type="Button" parent="Pause/VBoxContainer"]
 layout_mode = 2
@@ -91,4 +98,17 @@ size_flags_vertical = 3
 theme_override_font_sizes/font_size = 24
 theme_override_styles/focus = SubResource("StyleBoxEmpty_kan7d")
 text = "Return To Menu"
+icon = ExtResource("2_pi06a")
 flat = true
+script = ExtResource("3_u66x3")
+
+[node name="Options" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="pressed" from="Pause/VBoxContainer/Resume" to="." method="_on_resume_pressed"]

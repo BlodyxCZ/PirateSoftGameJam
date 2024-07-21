@@ -2,20 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://twl2s8civnhj"
-path.s3tc="res://.godot/imported/oven_Oven_Emission.png-0d41de0874e2c3556e89eb4754f05dcd.s3tc.ctex"
+uid="uid://bhpq36q456odk"
+path.s3tc="res://.godot/imported/garbagebin_Garbage_BaseColor.png-fc065ebd8df1897de788c82a7fc95e54.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "cb18a5d28e77522dfec6a6255bc3847e"
-}
 
 [deps]
 
-source_file="res://assets/models/oven/oven_Oven_Emission.png"
-dest_files=["res://.godot/imported/oven_Oven_Emission.png-0d41de0874e2c3556e89eb4754f05dcd.s3tc.ctex"]
+source_file="res://assets/models/kitchen1/textures/garbagebin_Garbage_BaseColor.png"
+dest_files=["res://.godot/imported/garbagebin_Garbage_BaseColor.png-fc065ebd8df1897de788c82a7fc95e54.s3tc.ctex"]
 
 [params]
 

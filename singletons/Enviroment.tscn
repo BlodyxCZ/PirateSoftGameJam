@@ -1,27 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://khufshn8ru3m"]
-
-[sub_resource type="Environment" id="Environment_4wnnn"]
-background_mode = 1
-background_color = Color(0.486275, 0.498039, 1, 1)
-background_canvas_max_layer = 1
-ambient_light_source = 1
-ambient_light_color = Color(1, 1, 1, 1)
-tonemap_mode = 1
-fog_enabled = true
-fog_light_color = Color(0, 0, 0, 1)
-fog_density = 0.05
+[gd_scene format=3 uid="uid://khufshn8ru3m"]
 
 [node name="Enviroment" type="Node3D"]
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
-light_energy = 0.1
-shadow_enabled = true
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_4wnnn")
-
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.707107, -0.183013, 0.683013, 0, 0.965926, 0.258819, -0.707107, -0.183013, 0.683013, 10, 6.3, 10)
+[node name="Camera3D" type="Camera3D" parent="." groups=["Camera"]]
+transform = Transform3D(0.707107, -0.353553, 0.612373, 0, 0.866026, 0.5, -0.707107, -0.353553, 0.612373, 10, 10, 10)
 projection = 1
-size = 10.96
+current = true
+size = 13.0

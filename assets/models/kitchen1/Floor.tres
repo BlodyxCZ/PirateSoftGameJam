@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cyynqcuvf7pkr"]
+
+[resource]
+resource_name = "Floor"
+albedo_color = Color(0.392157, 0.392157, 0.392157, 1)
+metallic = 1.0
+emission_enabled = true
+emission = Color(0.121667, 0.0881226, 0.193165, 1)

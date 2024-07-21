@@ -2,20 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://de3ns4cgk15h0"
-path.s3tc="res://.godot/imported/oven_Oven_Metallic-Oven_Roughness.png-a6b6d1656d5f75c753a9f4c58da695f2.s3tc.ctex"
+uid="uid://cwo1vl0m7qav6"
+path.s3tc="res://.godot/imported/fridge_Fridge_BaseColor.png-7508ebbfe355358b73da8a68cdc059e6.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "990aeae0c3c3e5acf60172145b1ba599"
-}
 
 [deps]
 
-source_file="res://assets/models/oven/oven_Oven_Metallic-Oven_Roughness.png"
-dest_files=["res://.godot/imported/oven_Oven_Metallic-Oven_Roughness.png-a6b6d1656d5f75c753a9f4c58da695f2.s3tc.ctex"]
+source_file="res://assets/models/kitchen1/textures/fridge_Fridge_BaseColor.png"
+dest_files=["res://.godot/imported/fridge_Fridge_BaseColor.png-7508ebbfe355358b73da8a68cdc059e6.s3tc.ctex"]
 
 [params]
 

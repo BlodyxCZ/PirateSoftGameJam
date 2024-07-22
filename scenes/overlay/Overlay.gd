@@ -37,3 +37,17 @@ func remove_action_by_text(text: String) -> void:
 	for child in %ActionList.get_children():
 		if child.text == text:
 			child.queue_free()
+
+
+func hide_all() -> void:
+	for child in get_children():
+		child.hide()
+
+
+func show_ui(_name: String) -> void:
+	hide_all()
+	match _name:
+		"level":
+			$Level.show()
+		"hub":
+			$Hub.show()

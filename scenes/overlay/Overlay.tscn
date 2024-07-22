@@ -12,7 +12,14 @@
 process_mode = 3
 script = ExtResource("1_2uwuf")
 
+[node name="Hub" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
 [node name="Level" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

@@ -1,9 +1,15 @@
+@tool
 extends SubViewport
 
 
-func _process(_delta: float) -> void:
-	for child in $Interact.get_children():
-		if child.name == Global.controllers.keys()[Global.controller]:
-			child.show()
-		else:
-			child.hide()
+@export var process: float:
+	set(value):
+		$Process.value = value
+	get:
+		return $Process.value
+
+@export var over_process: float:
+	set(value):
+		$Overprocess.value = value
+	get:
+		return $Overprocess.value

@@ -1,11 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://dcq1we4ule87k"]
+[gd_scene load_steps=7 format=3 uid="uid://dcq1we4ule87k"]
 
 [ext_resource type="Script" path="res://scenes/overlay/Overlay.gd" id="1_2uwuf"]
 [ext_resource type="Texture2D" uid="uid://bvgsw0janrdig" path="res://assets/kenney/arrow_e.svg" id="2_pi06a"]
 [ext_resource type="Texture2D" uid="uid://bdxwg07kupgjd" path="res://assets/ghost.png" id="3_1qxej"]
 [ext_resource type="Texture2D" uid="uid://bn4l0o5ijowqj" path="res://assets/book.png" id="3_3onf3"]
 [ext_resource type="Script" path="res://scenes/classes/button/IconButton.gd" id="3_u66x3"]
-[ext_resource type="PackedScene" uid="uid://llaar1v2bv66" path="res://scenes/overlay/order/order.tscn" id="4_1hclr"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kan7d"]
 
@@ -35,24 +34,6 @@ offset_left = 24.0
 offset_top = 8.0
 offset_right = 744.0
 offset_bottom = 176.0
-
-[node name="Panel" parent="Level/Orders/OrderList" instance=ExtResource("4_1hclr")]
-layout_mode = 2
-
-[node name="Panel2" parent="Level/Orders/OrderList" instance=ExtResource("4_1hclr")]
-layout_mode = 2
-
-[node name="Panel3" parent="Level/Orders/OrderList" instance=ExtResource("4_1hclr")]
-layout_mode = 2
-
-[node name="Panel4" parent="Level/Orders/OrderList" instance=ExtResource("4_1hclr")]
-layout_mode = 2
-
-[node name="Panel5" parent="Level/Orders/OrderList" instance=ExtResource("4_1hclr")]
-layout_mode = 2
-
-[node name="Panel6" parent="Level/Orders/OrderList" instance=ExtResource("4_1hclr")]
-layout_mode = 2
 
 [node name="Ghost" type="Panel" parent="Level"]
 layout_mode = 0
@@ -88,12 +69,22 @@ texture = ExtResource("3_3onf3")
 expand_mode = 5
 stretch_mode = 5
 
-[node name="Panel4" type="Panel" parent="Level"]
+[node name="Actions" type="Panel" parent="Level"]
 layout_mode = 0
 offset_left = 32.0
-offset_top = 432.0
-offset_right = 152.0
+offset_top = 376.0
+offset_right = 224.0
 offset_bottom = 624.0
+
+[node name="ActionList" type="VBoxContainer" parent="Level/Actions"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
 
 [node name="Options" type="Control" parent="."]
 visible = false

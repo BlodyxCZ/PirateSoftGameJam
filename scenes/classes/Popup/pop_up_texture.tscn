@@ -1,32 +1,58 @@
-[gd_scene load_steps=5 format=3 uid="uid://crwvcfdi3hef7"]
+[gd_scene load_steps=6 format=3 uid="uid://crwvcfdi3hef7"]
 
-[ext_resource type="Texture2D" uid="uid://55465qsgco4l" path="res://assets/kenney/keyboard_e_outline.svg" id="1_h6k7g"]
 [ext_resource type="Script" path="res://scenes/classes/Popup/pop_up_texture.gd" id="1_ounsl"]
-[ext_resource type="Texture2D" uid="uid://dlblt4gcyrj7w" path="res://assets/kenney/xbox_button_a_outline.svg" id="2_vt2d7"]
-[ext_resource type="Texture2D" uid="uid://b1jpf14nhgcpy" path="res://assets/kenney/playstation_button_cross_outline.svg" id="4_42bgw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rb7a1"]
+bg_color = Color(0.10748, 0.10748, 0.10748, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_idxn1"]
+bg_color = Color(0.417742, 1, 0.441218, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y2kur"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uqke2"]
+bg_color = Color(0.992157, 0.14902, 0.282353, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
 
 [node name="PopUpTexture" type="SubViewport"]
-own_world_3d = true
+disable_3d = true
 transparent_bg = true
 script = ExtResource("1_ounsl")
 
-[node name="Interact" type="Polygon2D" parent="."]
-color = Color(0.140447, 0.140447, 0.140447, 1)
-polygon = PackedVector2Array(136, 192, 128, 200, 128, 312, 136, 320, 216, 320, 256, 392, 296, 320, 376, 320, 384, 312, 384, 200, 376, 192)
+[node name="Process" type="ProgressBar" parent="."]
+custom_minimum_size = Vector2(256, 0)
+anchors_preset = -1
+anchor_right = 0.389
+anchor_bottom = 0.099
+offset_left = 32.0
+offset_top = 224.0
+offset_right = 278.832
+offset_bottom = 237.312
+pivot_offset = Vector2(224, 32)
+theme_override_styles/background = SubResource("StyleBoxFlat_rb7a1")
+theme_override_styles/fill = SubResource("StyleBoxFlat_idxn1")
+show_percentage = false
 
-[node name="PC" type="Sprite2D" parent="Interact"]
-position = Vector2(256, 256)
-scale = Vector2(2, 2)
-texture = ExtResource("1_h6k7g")
-
-[node name="XBOX" type="Sprite2D" parent="Interact"]
-visible = false
-position = Vector2(256, 256)
-scale = Vector2(2, 2)
-texture = ExtResource("2_vt2d7")
-
-[node name="PS" type="Sprite2D" parent="Interact"]
-visible = false
-position = Vector2(256, 256)
-scale = Vector2(2, 2)
-texture = ExtResource("4_42bgw")
+[node name="Overprocess" type="ProgressBar" parent="."]
+anchors_preset = -1
+anchor_right = 0.389
+anchor_bottom = 0.099
+offset_left = 32.0
+offset_top = 224.0
+offset_right = 278.832
+offset_bottom = 237.312
+pivot_offset = Vector2(224, 32)
+theme_override_styles/background = SubResource("StyleBoxEmpty_y2kur")
+theme_override_styles/fill = SubResource("StyleBoxFlat_uqke2")
+show_percentage = false

@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://llaar1v2bv66"]
+[gd_scene load_steps=3 format=3 uid="uid://llaar1v2bv66"]
+
+[ext_resource type="Script" path="res://scenes/overlay/order/order.gd" id="1_btkmu"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_4j8bi"]
 
@@ -9,6 +11,7 @@ anchor_right = 0.076
 anchor_bottom = 0.259
 offset_right = 0.447998
 offset_bottom = 0.167999
+script = ExtResource("1_btkmu")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0

@@ -2,18 +2,25 @@ class_name PopUp
 extends Sprite3D
 
 
-func fade_in(duration: float) -> void:
+signal process_complete()
+signal overprocess_complete()
+
+
+func process(process_duration: float, overprocess_duration: float) -> void:
 	show()
-	modulate.a = 0.0
+	$"../PopUpTexture".process = 0.0
 	var tween: Tween = create_tween()
-	tween.tween_property(self, "modulate:a", 1.0, duration)
-	tween.play()
-
-
-func fade_out(duration: float) -> void:
-	modulate.a = 1.0
-	var tween: Tween = create_tween()
-	tween.tween_property(self, "modulate:a", 0.0, duration)
+	tween.tween_property($"../PopUpTexture", "process", 100.0, process_duration)
 	tween.play()
 	await tween.finished
-	hide()
+	process_complete.emit()
+	overprocess(overprocess_duration)
+
+
+func overprocess(duration: float) -> void:
+	$"../PopUpTexture".over_process = 0.0
+	var tween: Tween = create_tween()
+	tween.tween_property($"../PopUpTexture", "over_process", 100.0, duration)
+	tween.play()
+	await tween.finished
+	overprocess_complete.emit()

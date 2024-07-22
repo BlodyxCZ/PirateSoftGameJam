@@ -1,3 +1,4 @@
+class_name Player
 extends CharacterBody3D
 
 
@@ -13,11 +14,21 @@ var current_state: STATES = STATES.idle
 
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 
+@export_group("Movement")
 @export var speed: float = 5.0
 @export_range(0.0, 1.0) var acceleration: float = 0.5
 @export_range(0.0, 1.0) var deceleration: float = 0.5
 @export_range(0.0, 1.0) var rotation_factor: float = 0.2
 
+@export_group("Cooking")
+@export var held_item: Item:
+	set(value):
+		if value:
+			$BoneAttachment3D/InventorySlot.add_child(value)
+		else:
+			for child in $BoneAttachment3D/InventorySlot.get_children():
+				child.queue_free()
+		held_item = value
 
 
 func _physics_process(delta: float) -> void:
@@ -43,13 +54,11 @@ func _handle_movement(delta: float) -> void:
 	
 	if abs(input_dir).is_equal_approx(Vector2.ZERO):
 		if current_state != STATES.idle:
-			print("Switching to Idle")
 			current_state = STATES.idle
 			ap.play("Idle")
 	elif abs(input_dir) > Vector2.ZERO:
 		if current_state != STATES.walk:
 			current_state = STATES.walk
-			print("Switching to Walk")
 			ap.play("Walk")
 
 

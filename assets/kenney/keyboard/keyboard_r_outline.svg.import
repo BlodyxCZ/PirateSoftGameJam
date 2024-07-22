@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dlblt4gcyrj7w"
-path="res://.godot/imported/xbox_button_a_outline.svg-fb889c9a231f2188aa1a95e9ec60cf82.ctex"
+uid="uid://kabjgmqyngr5"
+path="res://.godot/imported/keyboard_r_outline.svg-fa914aa6dcea499962efd512c7468e71.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney/xbox_button_a_outline.svg"
-dest_files=["res://.godot/imported/xbox_button_a_outline.svg-fb889c9a231f2188aa1a95e9ec60cf82.ctex"]
+source_file="res://assets/kenney/keyboard/keyboard_r_outline.svg"
+dest_files=["res://.godot/imported/keyboard_r_outline.svg-fa914aa6dcea499962efd512c7468e71.ctex"]
 
 [params]
 

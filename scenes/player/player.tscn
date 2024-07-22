@@ -1,13 +1,17 @@
-[gd_scene load_steps=13 format=3 uid="uid://df7i4bxl7nc3l"]
+[gd_scene load_steps=14 format=3 uid="uid://df7i4bxl7nc3l"]
 
 [ext_resource type="Script" path="res://scenes/player/Player.gd" id="1_3vxr8"]
 [ext_resource type="Material" uid="uid://culnvg3nygply" path="res://assets/models/Jackalope/Eye.tres" id="1_yp36l"]
 [ext_resource type="Material" uid="uid://0k4mrex2iyo6" path="res://assets/models/Jackalope/Jackalope.tres" id="2_8ua35"]
 [ext_resource type="Script" path="res://scenes/classes/Item/Item.gd" id="2_s68l5"]
+[ext_resource type="Texture2D" uid="uid://djdfjqtn2i5lb" path="res://assets/Carrot.png" id="3_gsuha"]
 [ext_resource type="Animation" uid="uid://dec4t6ix42juc" path="res://assets/models/Jackalope/Idle.tres" id="4_yhibv"]
 [ext_resource type="Animation" uid="uid://b7k87l6ftxx0p" path="res://assets/models/Jackalope/Walk.tres" id="5_b14ti"]
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_akjlv"]
+[sub_resource type="Resource" id="Resource_rflfq"]
+script = ExtResource("2_s68l5")
+item_name = "name"
+texture = ExtResource("3_gsuha")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_mkpn5"]
 resource_name = "jackalope_Plane_002"
@@ -175,24 +179,22 @@ _data = {
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_e6fvx"]
 radius = 0.553856
 
-[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("held_item") groups=["Player"]]
+[node name="Player" type="CharacterBody3D" groups=["Player"]]
 script = ExtResource("1_3vxr8")
-held_item = NodePath("BoneAttachment3D/InventorySlot/Item")
+held_item = SubResource("Resource_rflfq")
 
 [node name="BoneAttachment3D" type="BoneAttachment3D" parent="."]
-transform = Transform3D(1, -4.27134e-14, 2.38419e-07, -8.40249e-08, 0.93584, 0.352426, -2.23122e-07, -0.352426, 0.93584, -3.0956e-16, 0.911847, -0.429163)
+transform = Transform3D(1, -4.62661e-14, 2.38419e-07, -8.40249e-08, 0.93584, 0.352426, -2.23122e-07, -0.352426, 0.93584, -3.0956e-16, 0.911847, -0.429163)
 bone_name = "Head"
 bone_idx = 4
 use_external_skeleton = true
 external_skeleton = NodePath("../jackalope/JackalopeRig/Skeleton3D")
 
-[node name="InventorySlot" type="Node3D" parent="BoneAttachment3D"]
-transform = Transform3D(1, 0, -2.98024e-08, -1.49012e-08, 1, 0, -2.98023e-08, 0, 1, -7.45058e-09, 1.40853, 0.03132)
-
-[node name="Item" type="MeshInstance3D" parent="BoneAttachment3D/InventorySlot"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
-mesh = SubResource("CapsuleMesh_akjlv")
-script = ExtResource("2_s68l5")
+[node name="InventorySlot" type="Sprite3D" parent="BoneAttachment3D"]
+transform = Transform3D(0.5, 7.4506e-09, 1.49012e-08, -7.4506e-09, 0.5, 0, -1.49012e-08, -2.22045e-16, 0.5, -7.45058e-09, 1.40853, 0.03132)
+billboard = 1
+shaded = true
+double_sided = false
 
 [node name="jackalope" type="Node3D" parent="."]
 
@@ -476,7 +478,7 @@ mesh = SubResource("ArrayMesh_no6hm")
 skin = SubResource("Skin_loxem")
 
 [node name="HornL" type="BoneAttachment3D" parent="jackalope/JackalopeRig/Skeleton3D"]
-transform = Transform3D(0.862584, -0.505483, -0.0208907, 0.498467, 0.842101, 0.205905, -0.0864894, -0.188024, 0.978349, -0.176628, 0.0758867, -0.587985)
+transform = Transform3D(0.862584, -0.505483, -0.0208908, 0.498467, 0.842101, 0.205905, -0.0864894, -0.188024, 0.978349, -0.176628, 0.0758867, -0.587985)
 bone_name = "Horn_L"
 bone_idx = 8
 
@@ -488,7 +490,7 @@ omni_range = 3.0
 omni_attenuation = 6.77231e-05
 
 [node name="HornR" type="BoneAttachment3D" parent="jackalope/JackalopeRig/Skeleton3D"]
-transform = Transform3D(0.862584, 0.505483, 0.0208906, -0.498467, 0.842101, 0.205905, 0.0864895, -0.188024, 0.978349, 0.176628, 0.0758867, -0.587985)
+transform = Transform3D(0.862584, 0.505483, 0.0208906, -0.498467, 0.842101, 0.205905, 0.0864896, -0.188024, 0.978349, 0.176628, 0.0758867, -0.587985)
 bone_name = "Horn_R"
 bone_idx = 12
 
@@ -504,7 +506,7 @@ libraries = {
 "": SubResource("AnimationLibrary_ans0u")
 }
 autoplay = "Idle"
-blend_times = [&"Walk", &"Walk", 0.2, &"Walk", &"Idle", 0.2, &"Idle", &"Walk", 0.2, &"Idle", &"Idle", 0.2]
+blend_times = [&"Idle", &"Idle", 0.2, &"Idle", &"Walk", 0.3, &"Walk", &"Idle", 0.6, &"Walk", &"Walk", 0.2]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0.137686)

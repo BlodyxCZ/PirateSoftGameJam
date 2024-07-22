@@ -23,11 +23,12 @@ var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 @export_group("Cooking")
 @export var held_item: Item:
 	set(value):
+		if not get_tree():
+			await tree_entered
 		if value:
-			$BoneAttachment3D/InventorySlot.add_child(value)
+			$BoneAttachment3D/InventorySlot.texture = value.texture
 		else:
-			for child in $BoneAttachment3D/InventorySlot.get_children():
-				child.queue_free()
+			$BoneAttachment3D/InventorySlot.texture = null
 		held_item = value
 
 

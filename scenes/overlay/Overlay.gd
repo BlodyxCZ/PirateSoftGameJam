@@ -4,7 +4,7 @@ extends CanvasLayer
 const ACTION = preload("res://scenes/overlay/action/action.tscn")
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("pause"):
 		pause()
 

@@ -7,6 +7,7 @@
 custom_minimum_size = Vector2(192, 64)
 offset_right = 192.0
 offset_bottom = 64.0
+focus_mode = 0
 text = "Interact"
 icon = ExtResource("1_yhaph")
 flat = true

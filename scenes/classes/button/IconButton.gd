@@ -10,7 +10,7 @@ func _ready() -> void:
 	focus_exited.connect(_on_unfocused)
 	_on_unfocused()
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if is_hovered():
 		grab_focus()
 

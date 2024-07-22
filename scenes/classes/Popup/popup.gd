@@ -24,3 +24,11 @@ func overprocess(duration: float) -> void:
 	tween.play()
 	await tween.finished
 	overprocess_complete.emit()
+
+
+func end_process() -> void:
+	for tween in get_tree().get_processed_tweens():
+		tween.kill()
+	$"../PopUpTexture".process = 0.0
+	$"../PopUpTexture".over_process = 0.0
+	hide()

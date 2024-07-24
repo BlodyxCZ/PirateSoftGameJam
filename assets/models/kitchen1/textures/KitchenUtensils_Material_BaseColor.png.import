@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djdfjqtn2i5lb"
-path.s3tc="res://.godot/imported/Carrot.png-05f2273c6df623600dc333f75e8ebbca.s3tc.ctex"
+uid="uid://iqjr1xtjgo7b"
+path.s3tc="res://.godot/imported/KitchenUtensils_Material_BaseColor.png-67e9b82f9d55c1b64b13ce2bd31a5499.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Carrot.png"
-dest_files=["res://.godot/imported/Carrot.png-05f2273c6df623600dc333f75e8ebbca.s3tc.ctex"]
+source_file="res://assets/models/kitchen1/textures/KitchenUtensils_Material_BaseColor.png"
+dest_files=["res://.godot/imported/KitchenUtensils_Material_BaseColor.png-67e9b82f9d55c1b64b13ce2bd31a5499.s3tc.ctex"]
 
 [params]
 

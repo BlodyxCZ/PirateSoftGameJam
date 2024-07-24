@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b85yuq8nbe5dh"]
+
+[ext_resource type="Texture2D" uid="uid://byxk0aggt8d0q" path="res://assets/models/kitchen1/textures/stovetop_DefaultMaterial_BaseColor.png" id="1_4wyqm"]
+
+[resource]
+resource_name = "Stove"
+albedo_texture = ExtResource("1_4wyqm")
+metallic = 1.0

@@ -13,6 +13,7 @@ process_mode = 3
 script = ExtResource("1_2uwuf")
 
 [node name="Hub" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -31,8 +32,8 @@ grow_vertical = 2
 layout_mode = 0
 offset_left = 24.0
 offset_top = 24.0
-offset_right = 792.0
-offset_bottom = 104.0
+offset_right = 1088.0
+offset_bottom = 136.0
 metadata/_edit_group_ = true
 
 [node name="OrderList" type="HBoxContainer" parent="Level/Orders"]
@@ -44,10 +45,11 @@ offset_bottom = 176.0
 
 [node name="Ghost" type="Panel" parent="Level"]
 layout_mode = 0
-offset_left = 928.0
-offset_top = 24.0
-offset_right = 1128.0
-offset_bottom = 224.0
+offset_left = 1296.0
+offset_top = 16.0
+offset_right = 1584.0
+offset_bottom = 304.0
+metadata/_edit_group_ = true
 
 [node name="TextureRect" type="TextureRect" parent="Level/Ghost"]
 layout_mode = 1
@@ -60,10 +62,11 @@ texture = ExtResource("3_1qxej")
 
 [node name="Book" type="Button" parent="Level"]
 layout_mode = 0
-offset_left = 1016.0
-offset_top = 512.0
-offset_right = 1128.0
-offset_bottom = 624.0
+offset_left = 1344.0
+offset_top = 640.0
+offset_right = 1584.0
+offset_bottom = 880.0
+metadata/_edit_group_ = true
 
 [node name="TextEdit" type="TextureRect" parent="Level/Book"]
 layout_mode = 1
@@ -78,10 +81,11 @@ stretch_mode = 5
 
 [node name="Actions" type="Panel" parent="Level"]
 layout_mode = 0
-offset_left = 32.0
-offset_top = 376.0
-offset_right = 224.0
-offset_bottom = 624.0
+offset_left = 24.0
+offset_top = 539.0
+offset_right = 288.0
+offset_bottom = 880.0
+metadata/_edit_group_ = true
 
 [node name="ActionList" type="VBoxContainer" parent="Level/Actions"]
 unique_name_in_owner = true
@@ -120,25 +124,38 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="Label" type="RichTextLabel" parent="Pause"]
-layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 256.0
+[node name="MarginContainer" type="MarginContainer" parent="Pause"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 400
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 400
+theme_override_constants/margin_bottom = 150
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Pause/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="RichTextLabel" parent="Pause/MarginContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
 theme_override_font_sizes/normal_font_size = 64
 bbcode_enabled = true
 text = "
 [center]-PAUSED-"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Pause"]
-layout_mode = 0
-offset_left = 384.0
-offset_top = 256.0
-offset_right = 768.0
-offset_bottom = 576.0
-
-[node name="Resume" type="Button" parent="Pause/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Pause/MarginContainer/VBoxContainer2"]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_constants/separation = 75
+alignment = 1
+
+[node name="Resume" type="Button" parent="Pause/MarginContainer/VBoxContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
 focus_neighbor_bottom = NodePath("../HBoxContainer/Options")
 focus_next = NodePath("../HBoxContainer/Options")
 focus_previous = NodePath("../Return")
@@ -149,13 +166,14 @@ icon = ExtResource("2_pi06a")
 flat = true
 script = ExtResource("3_u66x3")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Pause/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Pause/MarginContainer/VBoxContainer2/VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 3
+size_flags_vertical = 4
+alignment = 1
 
-[node name="Options" type="Button" parent="Pause/VBoxContainer/HBoxContainer"]
+[node name="Options" type="Button" parent="Pause/MarginContainer/VBoxContainer2/VBoxContainer/HBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_horizontal = 4
 focus_neighbor_left = NodePath("../Help")
 focus_neighbor_top = NodePath("../../Resume")
 focus_neighbor_right = NodePath("../Help")
@@ -169,9 +187,14 @@ icon = ExtResource("2_pi06a")
 flat = true
 script = ExtResource("3_u66x3")
 
-[node name="Help" type="Button" parent="Pause/VBoxContainer/HBoxContainer"]
+[node name="Control" type="Control" parent="Pause/MarginContainer/VBoxContainer2/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_horizontal = 4
+
+[node name="Help" type="Button" parent="Pause/MarginContainer/VBoxContainer2/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
 focus_neighbor_left = NodePath("../Options")
 focus_neighbor_top = NodePath("../../Resume")
 focus_neighbor_right = NodePath("../Options")
@@ -185,9 +208,9 @@ icon = ExtResource("2_pi06a")
 flat = true
 script = ExtResource("3_u66x3")
 
-[node name="Return" type="Button" parent="Pause/VBoxContainer"]
+[node name="Return" type="Button" parent="Pause/MarginContainer/VBoxContainer2/VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 3
+size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 24
 theme_override_styles/focus = SubResource("StyleBoxEmpty_kan7d")
 text = "Return To Menu"
@@ -238,4 +261,4 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "This is a recipe to a very delicious dish you will be prepearing for your fellow townmates"
 autowrap_mode = 3
 
-[connection signal="pressed" from="Pause/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Pause/MarginContainer/VBoxContainer2/VBoxContainer/Resume" to="." method="_on_resume_pressed"]

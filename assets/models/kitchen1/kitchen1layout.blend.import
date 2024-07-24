@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cyr3d57omi44k"
+uid="uid://cnrtqatav3itn"
 path="res://.godot/imported/kitchen1layout.blend-3fc268a2ee4c40a9c1c39c8f6889aea0.scn"
 
 [deps]
@@ -31,6 +31,10 @@ animation/remove_immutable_tracks=true
 import_script/path=""
 _subresources={
 "materials": {
+"ChoppingBoard": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/models/kitchen1/ChoppingBoard.tres"
+},
 "Counter": {
 "use_external/enabled": true,
 "use_external/path": "res://assets/models/kitchen1/Counter.tres"
@@ -55,6 +59,18 @@ _subresources={
 "use_external/enabled": true,
 "use_external/path": "res://assets/models/kitchen1/Garbage.001.tres"
 },
+"Material": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/models/kitchen1/Material.tres"
+},
+"Material.001": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/models/kitchen1/Material.001.tres"
+},
+"Mixer": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/models/kitchen1/Mixer.tres"
+},
 "Oven": {
 "use_external/enabled": true,
 "use_external/path": "res://assets/models/kitchen1/Oven.tres"
@@ -62,6 +78,18 @@ _subresources={
 "Pavement": {
 "use_external/enabled": true,
 "use_external/path": "res://assets/models/kitchen1/Pavement.tres"
+},
+"Potions": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/models/kitchen1/Potions.tres"
+},
+"Springbonnie": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/models/kitchen1/Springbonnie.tres"
+},
+"Stove": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/models/kitchen1/Stove.tres"
 },
 "Wall": {
 "use_external/enabled": true,

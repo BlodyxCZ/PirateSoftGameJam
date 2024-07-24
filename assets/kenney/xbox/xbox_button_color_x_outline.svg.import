@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1jpf14nhgcpy"
-path="res://.godot/imported/playstation_button_cross_outline.svg-6a781e92d5b3adbc4d0005687385e228.ctex"
+uid="uid://c2ghj71mcv8ea"
+path="res://.godot/imported/xbox_button_color_x_outline.svg-513ed175a8d7185874b658d0aa7382d8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney/ps4/playstation_button_cross_outline.svg"
-dest_files=["res://.godot/imported/playstation_button_cross_outline.svg-6a781e92d5b3adbc4d0005687385e228.ctex"]
+source_file="res://assets/kenney/xbox/xbox_button_color_x_outline.svg"
+dest_files=["res://.godot/imported/xbox_button_color_x_outline.svg-513ed175a8d7185874b658d0aa7382d8.ctex"]
 
 [params]
 

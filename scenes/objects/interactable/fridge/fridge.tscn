@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://dc22jitmq87n1"]
+[gd_scene load_steps=10 format=3 uid="uid://dc22jitmq87n1"]
 
 [ext_resource type="Script" path="res://scenes/objects/interactable/oven/GUI.gd" id="1_0mnmo"]
 [ext_resource type="Script" path="res://scenes/objects/interactable/fridge/fridge.gd" id="1_engde"]
 [ext_resource type="Script" path="res://scenes/classes/Popup/popup.gd" id="2_q71sa"]
 [ext_resource type="Material" uid="uid://bcqmoevpg4cu7" path="res://assets/models/kitchen1/Fridge.tres" id="3_5m84l"]
+[ext_resource type="Texture2D" uid="uid://djdfjqtn2i5lb" path="res://scenes/classes/Item/Items/Carrot/CarrotDefault.png" id="4_j6gjc"]
 [ext_resource type="Script" path="res://singletons/NormalCreator.gd" id="6_07xu0"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_e7jdm"]
@@ -27,7 +28,7 @@ _surfaces = [{
 [node name="Fridge" type="Node3D" node_paths=PackedStringArray("range", "gui", "pop_up")]
 script = ExtResource("1_engde")
 range = NodePath("Range")
-gui = NodePath("GUI")
+gui = NodePath("CanvasLayer/GUI")
 pop_up = NodePath("PopUp")
 
 [node name="PopUp" type="Sprite3D" parent="."]
@@ -45,7 +46,16 @@ shape = SubResource("BoxShape3D_e7jdm")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0802109, 1.12886, 0.0315795)
 shape = SubResource("BoxShape3D_eureo")
 
-[node name="GUI" type="Control" parent="."]
+[node name="Fridge" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.611187, 1.30857, -0.235071)
+mesh = SubResource("ArrayMesh_1ptvw")
+skeleton = NodePath("")
+script = ExtResource("6_07xu0")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 3
+
+[node name="GUI" type="Control" parent="CanvasLayer"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -55,20 +65,96 @@ grow_vertical = 2
 script = ExtResource("1_0mnmo")
 metadata/_edit_lock_ = true
 
-[node name="Panel" type="Panel" parent="GUI"]
+[node name="Panel" type="Panel" parent="CanvasLayer/GUI"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 64.0
-offset_top = 64.0
-offset_right = -64.0
-offset_bottom = -64.0
+offset_left = 192.0
+offset_top = 192.0
+offset_right = -192.0
+offset_bottom = -196.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Fridge" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.611187, 1.30857, -0.235071)
-mesh = SubResource("ArrayMesh_1ptvw")
-skeleton = NodePath("")
-script = ExtResource("6_07xu0")
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/GUI/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/GUI/Panel/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 20
+columns = 5
+
+[node name="Carrot" type="Button" parent="CanvasLayer/GUI/Panel/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(192, 192)
+layout_mode = 2
+icon = ExtResource("4_j6gjc")
+icon_alignment = 1
+
+[node name="TextureButton2" type="Button" parent="CanvasLayer/GUI/Panel/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(192, 192)
+layout_mode = 2
+icon = ExtResource("4_j6gjc")
+icon_alignment = 1
+
+[node name="TextureButton3" type="Button" parent="CanvasLayer/GUI/Panel/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(192, 192)
+layout_mode = 2
+icon = ExtResource("4_j6gjc")
+icon_alignment = 1
+
+[node name="TextureButton4" type="Button" parent="CanvasLayer/GUI/Panel/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(192, 192)
+layout_mode = 2
+icon = ExtResource("4_j6gjc")
+icon_alignment = 1
+
+[node name="TextureButton5" type="Button" parent="CanvasLayer/GUI/Panel/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(192, 192)
+layout_mode = 2
+icon = ExtResource("4_j6gjc")
+icon_alignment = 1
+
+[node name="TextureButton6" type="Button" parent="CanvasLayer/GUI/Panel/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(192, 192)
+layout_mode = 2
+icon = ExtResource("4_j6gjc")
+icon_alignment = 1
+
+[node name="TextureButton7" type="Button" parent="CanvasLayer/GUI/Panel/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(192, 192)
+layout_mode = 2
+icon = ExtResource("4_j6gjc")
+icon_alignment = 1
+
+[node name="TextureButton8" type="Button" parent="CanvasLayer/GUI/Panel/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(192, 192)
+layout_mode = 2
+icon = ExtResource("4_j6gjc")
+icon_alignment = 1
+
+[node name="TextureButton9" type="Button" parent="CanvasLayer/GUI/Panel/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(192, 192)
+layout_mode = 2
+icon = ExtResource("4_j6gjc")
+icon_alignment = 1
+
+[node name="TextureButton10" type="Button" parent="CanvasLayer/GUI/Panel/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(192, 192)
+layout_mode = 2
+icon = ExtResource("4_j6gjc")
+icon_alignment = 1
+
+[connection signal="pressed" from="CanvasLayer/GUI/Panel/MarginContainer/GridContainer/Carrot" to="CanvasLayer/GUI" method="_on_carrot_pressed"]

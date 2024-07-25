@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1kiavfot34l7"
-path="res://.godot/imported/xbox_button_color_y_outline.svg-66d4d79b65da9c1a0b7a46974f234ee6.ctex"
+uid="uid://dy25a7ds04s8n"
+path="res://.godot/imported/xbox_lb_outline.svg-3057299bb33f3b4fbb50ab90b1fae772.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney/xbox/xbox_button_color_y_outline.svg"
-dest_files=["res://.godot/imported/xbox_button_color_y_outline.svg-66d4d79b65da9c1a0b7a46974f234ee6.ctex"]
+source_file="res://assets/kenney/xbox/xbox_lb_outline.svg"
+dest_files=["res://.godot/imported/xbox_lb_outline.svg-3057299bb33f3b4fbb50ab90b1fae772.ctex"]
 
 [params]
 
@@ -21,7 +21,7 @@ compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=false
+mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -31,7 +31,7 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0
 svg/scale=1.0
 editor/scale_with_editor_scale=false
 editor/convert_colors_with_editor_theme=false

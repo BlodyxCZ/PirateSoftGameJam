@@ -16,6 +16,5 @@ func _on_body_exited(body: Node3D) -> void:
 
 
 func _input(event: InputEvent) -> void:
-	if event.is_action("interact2") and event.is_pressed() and not event.is_echo():
-		if is_in_range and not gui.visible:
-			gui.open()
+	if event.is_action_pressed("interact2") and not gui.visible and is_in_range:
+		gui.open()

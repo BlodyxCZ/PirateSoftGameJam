@@ -17,14 +17,6 @@ func _ready() -> void:
 	pop_up.hide()
 
 
-func _input(event: InputEvent) -> void:
-	if not is_in_range: return
-	
-	if event.is_action("interact1") and event.is_pressed() and not event.is_echo():
-		if not gui.visible:
-			gui.open()
-
-
 func _on_body_entered(_body: Player) -> void:
 	is_in_range = true
 

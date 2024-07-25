@@ -3,25 +3,18 @@ extends Button
 
 
 const KEYBOARD_E = preload("res://assets/kenney/keyboard/keyboard_e_outline.svg")
-const KEYBOARD_F = preload("res://assets/kenney/keyboard/keyboard_f_outline.svg")
-const KEYBOARD_Q = preload("res://assets/kenney/keyboard/keyboard_q_outline.svg")
-const KEYBOARD_R = preload("res://assets/kenney/keyboard/keyboard_r_outline.svg")
+const KEYBOARD_SPACE = preload("res://assets/kenney/keyboard/keyboard_space_outline.svg")
 
 const XBOX_A = preload("res://assets/kenney/xbox/xbox_button_color_a_outline.svg")
-const XBOX_B = preload("res://assets/kenney/xbox/xbox_button_color_b_outline.svg")
-const XBOX_X = preload("res://assets/kenney/xbox/xbox_button_color_x_outline.svg")
-const XBOX_Y = preload("res://assets/kenney/xbox/xbox_button_color_y_outline.svg")
+const XBOX_RB = preload("res://assets/kenney/xbox/xbox_rb_outline.svg")
 
-const PLAYSTATION_CIRCLE = preload("res://assets/kenney/ps4/playstation_button_color_circle_outline.svg")
 const PLAYSTATION_CROSS = preload("res://assets/kenney/ps4/playstation_button_color_cross_outline.svg")
-const PLAYSTATION_SQUARE = preload("res://assets/kenney/ps4/playstation_button_color_square_outline.svg")
-const PLAYSTATION_TRIANGLE = preload("res://assets/kenney/ps4/playstation_button_color_triangle_outline.svg")
+const PLAYSTATION_R1 = preload("res://assets/kenney/ps4/playstation_trigger_r1_alternative_outline.svg")
+
 
 enum BUTTONS {
 	E,
 	Q,
-	R,
-	F,
 }
 
 var current_button: BUTTONS = BUTTONS.E:
@@ -36,25 +29,11 @@ var current_button: BUTTONS = BUTTONS.E:
 					icon = PLAYSTATION_CROSS
 			"Q":
 				if Global.controller == Global.controllers.PC:
-					icon = KEYBOARD_Q
+					icon = KEYBOARD_SPACE
 				elif Global.controller == Global.controllers.XBOX:
-					icon = XBOX_X
+					icon = XBOX_RB
 				else:
-					icon = PLAYSTATION_SQUARE
-			"R":
-				if Global.controller == Global.controllers.PC:
-					icon = KEYBOARD_R
-				elif Global.controller == Global.controllers.XBOX:
-					icon = XBOX_B
-				else:
-					icon = PLAYSTATION_CIRCLE
-			"F":
-				if Global.controller == Global.controllers.PC:
-					icon = KEYBOARD_F
-				elif Global.controller == Global.controllers.XBOX:
-					icon = XBOX_Y
-				else:
-					icon = PLAYSTATION_TRIANGLE
+					icon = PLAYSTATION_R1
 		current_button = value
 
 

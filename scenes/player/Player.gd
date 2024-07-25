@@ -28,8 +28,12 @@ var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 		if value:
 			if not value.texture: value.texture = value.default
 			$BoneAttachment3D/InventorySlot.texture = value.texture
+			$jackalope/JackalopeRig/Skeleton3D/HornL/OmniLight3D.show()
+			$jackalope/JackalopeRig/Skeleton3D/HornR/OmniLight3D.show()
 		else:
 			$BoneAttachment3D/InventorySlot.texture = null
+			$jackalope/JackalopeRig/Skeleton3D/HornL/OmniLight3D.hide()
+			$jackalope/JackalopeRig/Skeleton3D/HornR/OmniLight3D.hide()
 		held_item = value
 
 var frozen: bool = false

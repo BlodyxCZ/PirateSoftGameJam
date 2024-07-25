@@ -4,6 +4,7 @@ extends Sprite3D
 
 signal process_complete()
 signal overprocess_complete()
+signal step_finished()
 
 
 func process(process_duration: float, overprocess_duration: float) -> void:
@@ -24,6 +25,22 @@ func overprocess(duration: float) -> void:
 	tween.play()
 	await tween.finished
 	overprocess_complete.emit()
+
+
+func step_process(amount: float, duration: float) -> void:
+	show()
+	if $"../PopUpTexture".process >= 100.0:
+		var tween: Tween = create_tween()
+		tween.tween_property($"../PopUpTexture", "over_process", $"../PopUpTexture".over_process + amount, duration)
+		tween.play()
+		await tween.finished
+		step_finished.emit()
+	else:
+		var tween: Tween = create_tween()
+		tween.tween_property($"../PopUpTexture", "process", $"../PopUpTexture".process + amount, duration)
+		tween.play()
+		await tween.finished
+		step_finished.emit()
 
 
 func end_process() -> void:

@@ -5,27 +5,27 @@
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_4j8bi"]
 
 [node name="Panel" type="Panel"]
-custom_minimum_size = Vector2(88, 168)
+custom_minimum_size = Vector2(128, 256)
 anchors_preset = -1
-anchor_right = 0.076
-anchor_bottom = 0.259
-offset_right = 0.447998
-offset_bottom = 0.167999
+anchor_right = 0.08
+anchor_bottom = 0.284
+offset_right = -1.52588e-05
+offset_bottom = -87.6
 script = ExtResource("1_btkmu")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
 offset_left = 8.0
-offset_top = 8.0
-offset_right = 80.0
-offset_bottom = 112.0
+offset_top = 16.0
+offset_right = 120.0
+offset_bottom = 178.0
 texture = SubResource("PlaceholderTexture2D_4j8bi")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_top = 120.0
-offset_right = 88.0
-offset_bottom = 168.0
+offset_top = 200.0
+offset_right = 128.0
+offset_bottom = 248.0
 theme_override_font_sizes/font_size = 12
 text = "[Description]"
 horizontal_alignment = 1

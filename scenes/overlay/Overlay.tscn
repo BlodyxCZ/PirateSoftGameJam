@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://dcq1we4ule87k"]
+[gd_scene load_steps=8 format=3 uid="uid://dcq1we4ule87k"]
 
 [ext_resource type="Script" path="res://scenes/overlay/Overlay.gd" id="1_2uwuf"]
+[ext_resource type="PackedScene" uid="uid://llaar1v2bv66" path="res://scenes/overlay/order/order.tscn" id="2_fm176"]
 [ext_resource type="Texture2D" uid="uid://bvgsw0janrdig" path="res://assets/kenney/arrow_e.svg" id="2_pi06a"]
 [ext_resource type="Texture2D" uid="uid://bdxwg07kupgjd" path="res://assets/ghost.png" id="3_1qxej"]
 [ext_resource type="Texture2D" uid="uid://bn4l0o5ijowqj" path="res://assets/book.png" id="3_3onf3"]
@@ -20,7 +21,6 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Level" type="Control" parent="."]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -43,12 +43,27 @@ offset_top = 8.0
 offset_right = 744.0
 offset_bottom = 176.0
 
+[node name="Panel" parent="Level/Orders/OrderList" instance=ExtResource("2_fm176")]
+layout_mode = 2
+
+[node name="Panel2" parent="Level/Orders/OrderList" instance=ExtResource("2_fm176")]
+layout_mode = 2
+
+[node name="Panel3" parent="Level/Orders/OrderList" instance=ExtResource("2_fm176")]
+layout_mode = 2
+
+[node name="Panel4" parent="Level/Orders/OrderList" instance=ExtResource("2_fm176")]
+layout_mode = 2
+
+[node name="Panel5" parent="Level/Orders/OrderList" instance=ExtResource("2_fm176")]
+layout_mode = 2
+
 [node name="Ghost" type="Panel" parent="Level"]
 layout_mode = 0
-offset_left = 1296.0
-offset_top = 16.0
-offset_right = 1584.0
-offset_bottom = 304.0
+offset_left = 1288.0
+offset_top = 24.0
+offset_right = 1576.0
+offset_bottom = 312.0
 metadata/_edit_group_ = true
 
 [node name="TextureRect" type="TextureRect" parent="Level/Ghost"]
@@ -62,10 +77,10 @@ texture = ExtResource("3_1qxej")
 
 [node name="Book" type="Button" parent="Level"]
 layout_mode = 0
-offset_left = 1344.0
-offset_top = 640.0
-offset_right = 1584.0
-offset_bottom = 880.0
+offset_left = 1336.0
+offset_top = 632.0
+offset_right = 1576.0
+offset_bottom = 872.0
 metadata/_edit_group_ = true
 
 [node name="TextEdit" type="TextureRect" parent="Level/Book"]
@@ -82,7 +97,7 @@ stretch_mode = 5
 [node name="Actions" type="Panel" parent="Level"]
 layout_mode = 0
 offset_left = 24.0
-offset_top = 539.0
+offset_top = 688.0
 offset_right = 288.0
 offset_bottom = 880.0
 metadata/_edit_group_ = true
@@ -156,8 +171,9 @@ alignment = 1
 [node name="Resume" type="Button" parent="Pause/MarginContainer/VBoxContainer2/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-focus_neighbor_bottom = NodePath("../HBoxContainer/Options")
-focus_next = NodePath("../HBoxContainer/Options")
+focus_neighbor_top = NodePath("../Return")
+focus_neighbor_bottom = NodePath("../Options")
+focus_next = NodePath("../Options")
 focus_previous = NodePath("../Return")
 theme_override_font_sizes/font_size = 32
 theme_override_styles/focus = SubResource("StyleBoxEmpty_kan7d")
@@ -166,20 +182,13 @@ icon = ExtResource("2_pi06a")
 flat = true
 script = ExtResource("3_u66x3")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Pause/MarginContainer/VBoxContainer2/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 4
-alignment = 1
-
-[node name="Options" type="Button" parent="Pause/MarginContainer/VBoxContainer2/VBoxContainer/HBoxContainer"]
+[node name="Options" type="Button" parent="Pause/MarginContainer/VBoxContainer2/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-focus_neighbor_left = NodePath("../Help")
-focus_neighbor_top = NodePath("../../Resume")
-focus_neighbor_right = NodePath("../Help")
-focus_neighbor_bottom = NodePath("../../Return")
+focus_neighbor_top = NodePath("../Resume")
+focus_neighbor_bottom = NodePath("../Help")
 focus_next = NodePath("../Help")
-focus_previous = NodePath("../../Resume")
+focus_previous = NodePath("../Resume")
 theme_override_font_sizes/font_size = 24
 theme_override_styles/focus = SubResource("StyleBoxEmpty_kan7d")
 text = "Options"
@@ -187,19 +196,12 @@ icon = ExtResource("2_pi06a")
 flat = true
 script = ExtResource("3_u66x3")
 
-[node name="Control" type="Control" parent="Pause/MarginContainer/VBoxContainer2/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(150, 0)
+[node name="Help" type="Button" parent="Pause/MarginContainer/VBoxContainer2/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-
-[node name="Help" type="Button" parent="Pause/MarginContainer/VBoxContainer2/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-focus_neighbor_left = NodePath("../Options")
-focus_neighbor_top = NodePath("../../Resume")
-focus_neighbor_right = NodePath("../Options")
-focus_neighbor_bottom = NodePath("../../Return")
-focus_next = NodePath("../../Return")
+focus_neighbor_top = NodePath("../Options")
+focus_neighbor_bottom = NodePath("../Return")
+focus_next = NodePath("../Return")
 focus_previous = NodePath("../Options")
 theme_override_font_sizes/font_size = 24
 theme_override_styles/focus = SubResource("StyleBoxEmpty_kan7d")
@@ -211,6 +213,10 @@ script = ExtResource("3_u66x3")
 [node name="Return" type="Button" parent="Pause/MarginContainer/VBoxContainer2/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
+focus_neighbor_top = NodePath("../Help")
+focus_neighbor_bottom = NodePath("../Resume")
+focus_next = NodePath("../Resume")
+focus_previous = NodePath("../Help")
 theme_override_font_sizes/font_size = 24
 theme_override_styles/focus = SubResource("StyleBoxEmpty_kan7d")
 text = "Return To Menu"

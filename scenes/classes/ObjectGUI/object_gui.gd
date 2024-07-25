@@ -16,8 +16,10 @@ func _ready() -> void:
 
 
 func open() -> void:
+	player.frozen = true
 	show()
 
 
 func close() -> void:
+	player.frozen = false
 	hide()

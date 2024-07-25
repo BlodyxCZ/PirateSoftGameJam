@@ -32,6 +32,8 @@ var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 			$BoneAttachment3D/InventorySlot.texture = null
 		held_item = value
 
+var frozen: bool = false
+
 
 func _physics_process(delta: float) -> void:
 	_handle_movement(delta)
@@ -44,7 +46,7 @@ func _handle_movement(delta: float) -> void:
 	
 	var input_dir := Input.get_vector("move_left", "move_right", "move_up", "move_down").rotated(-PI/2)
 	var direction := (Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	if direction:
+	if direction and not frozen:
 		$jackalope.rotation.y = lerp_angle($jackalope.rotation.y, Vector3(0, 0, 1).rotated(Vector3(0, 1, 0), PI).signed_angle_to(direction, Vector3(0, 1, 0)), rotation_factor)
 		velocity.x = lerp(velocity.x, direction.x * speed, acceleration)
 		velocity.z = lerp(velocity.z, direction.z * speed, acceleration)
@@ -58,7 +60,7 @@ func _handle_movement(delta: float) -> void:
 		if current_state != STATES.idle:
 			current_state = STATES.idle
 			ap.play("Idle")
-	elif abs(input_dir) > Vector2.ZERO:
+	elif abs(input_dir) > Vector2.ZERO and not frozen:
 		if current_state != STATES.walk:
 			current_state = STATES.walk
 			ap.play("Walk")

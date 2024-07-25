@@ -7,8 +7,8 @@
 [ext_resource type="Material" uid="uid://dl7fl6spwles1" path="res://assets/models/kitchen1/ChoppingBoard.tres" id="4_fasmb"]
 [ext_resource type="Material" uid="uid://crapuns5b8svh" path="res://assets/models/kitchen1/Springbonnie.tres" id="5_kw3iy"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_4ew8e"]
-viewport_path = NodePath(".")
+[sub_resource type="ViewportTexture" id="ViewportTexture_7wfat"]
+viewport_path = NodePath("PopUpTexture")
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_k3qdo"]
 height = 0.789844
@@ -70,7 +70,7 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1.9016, 0)
 billboard = 1
 shaded = true
 double_sided = false
-texture = SubResource("ViewportTexture_4ew8e")
+texture = SubResource("ViewportTexture_7wfat")
 script = ExtResource("1_o53oq")
 
 [node name="PopUpTexture" parent="." instance=ExtResource("2_1vgx6")]

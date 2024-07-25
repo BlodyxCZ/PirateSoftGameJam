@@ -19,6 +19,10 @@ func _on_resume_pressed() -> void:
 	pause()
 
 
+#region Level
+func _on_book_pressed() -> void:
+	$Recipes.visible = not $Recipes.visible
+
 func add_action(button: Action.BUTTONS, text: String) -> void:
 	var action: Action = ACTION.instantiate()
 	action.current_button = button
@@ -37,6 +41,7 @@ func remove_action_by_text(text: String) -> void:
 	for child in %ActionList.get_children():
 		if child.text == text:
 			child.queue_free()
+#endregion
 
 
 func hide_all() -> void:

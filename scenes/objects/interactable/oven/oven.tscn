@@ -7,7 +7,7 @@
 [ext_resource type="Script" path="res://singletons/NormalCreator.gd" id="4_krvcl"]
 [ext_resource type="Script" path="res://scenes/objects/interactable/oven/GUI.gd" id="6_e37a6"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_40pr7"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_tei3o"]
 viewport_path = NodePath("PopUpTexture")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_joqd2"]
@@ -49,7 +49,7 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1.9016, 0)
 billboard = 1
 shaded = true
 double_sided = false
-texture = SubResource("ViewportTexture_40pr7")
+texture = SubResource("ViewportTexture_tei3o")
 script = ExtResource("2_bpdp7")
 
 [node name="PopUpTexture" parent="." instance=ExtResource("3_qhwkc")]

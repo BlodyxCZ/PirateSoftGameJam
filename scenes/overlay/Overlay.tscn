@@ -20,6 +20,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Level" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -252,4 +253,5 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "This is a recipe to a very delicious dish you will be prepearing for your fellow townmates"
 autowrap_mode = 3
 
+[connection signal="pressed" from="Level/Book" to="." method="_on_book_pressed"]
 [connection signal="pressed" from="Pause/MarginContainer/VBoxContainer2/VBoxContainer/Resume" to="." method="_on_resume_pressed"]

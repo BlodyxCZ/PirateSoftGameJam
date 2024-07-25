@@ -39,3 +39,17 @@ var current_button: BUTTONS = BUTTONS.E:
 
 func _process(_delta: float) -> void:
 	current_button = current_button
+
+
+func _on_pressed() -> void:
+	var event = InputEventAction.new()
+	match BUTTONS.keys()[current_button]:
+		"E":
+			event.action = "interact1"
+		"Q":
+			event.action = "interact2"
+	event.pressed = true
+	Input.parse_input_event(event)
+	#event.pressed = false
+	#Input.parse_input_event(event)
+

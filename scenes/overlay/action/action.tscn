@@ -10,6 +10,7 @@ offset_bottom = 64.0
 focus_mode = 0
 text = "Interact"
 icon = ExtResource("1_yhaph")
-flat = true
 expand_icon = true
 script = ExtResource("2_3x1cj")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

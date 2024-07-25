@@ -8,7 +8,7 @@
 [ext_resource type="Material" uid="uid://crapuns5b8svh" path="res://assets/models/kitchen1/Springbonnie.tres" id="5_kw3iy"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_4ew8e"]
-viewport_path = NodePath("PopUpTexture")
+viewport_path = NodePath(".")
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_k3qdo"]
 height = 0.789844

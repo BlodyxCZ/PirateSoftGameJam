@@ -1,10 +1,54 @@
-[gd_scene load_steps=2 format=3 uid="uid://dsgayg6wweait"]
+[gd_scene load_steps=7 format=3 uid="uid://dsgayg6wweait"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_0cx2y"]
-size = Vector3(1.96191, 2.15582, 2.17346)
+[ext_resource type="Script" path="res://scenes/objects/static/counter.gd" id="1_dmktb"]
+[ext_resource type="Script" path="res://scenes/classes/Popup/popup.gd" id="2_88ekh"]
+[ext_resource type="PackedScene" uid="uid://crwvcfdi3hef7" path="res://scenes/classes/Popup/pop_up_texture.tscn" id="3_d5y7h"]
+[ext_resource type="Script" path="res://scenes/objects/interactable/oven/GUI.gd" id="4_lw5kc"]
 
-[node name="Counter" type="StaticBody3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_joqd2"]
+size = Vector3(3.6, 0.7, 1)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00439453, -0.0748596, 0.00421143)
-shape = SubResource("BoxShape3D_0cx2y")
+[sub_resource type="CylinderMesh" id="CylinderMesh_hh6ta"]
+
+[node name="Counter" type="Node3D" node_paths=PackedStringArray("range", "gui", "pop_up")]
+script = ExtResource("1_dmktb")
+range = NodePath("Range")
+gui = NodePath("GUI")
+pop_up = NodePath("Popup")
+
+[node name="Popup" type="Sprite3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1.9016, 0)
+billboard = 1
+shaded = true
+double_sided = false
+script = ExtResource("2_88ekh")
+
+[node name="PopUpTexture" parent="." instance=ExtResource("3_d5y7h")]
+
+[node name="Range" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Range"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3, 0, 0)
+shape = SubResource("BoxShape3D_joqd2")
+
+[node name="GUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_lw5kc")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0194446, 0, 0, 0, 1, 0, 0.681577, 0)
+mesh = SubResource("CylinderMesh_hh6ta")
+
+[node name="InventorySlot" type="Sprite3D" parent="."]
+transform = Transform3D(0.7, 1.04308e-08, 2.08617e-08, -1.04308e-08, 0.7, -1.07467e-21, -2.08617e-08, -3.10863e-16, 0.7, -7.45058e-09, 1.08432, 0.03132)
+billboard = 1
+shaded = true
+double_sided = false
+
+[connection signal="process_complete" from="Popup" to="." method="_on_popup_process_complete"]

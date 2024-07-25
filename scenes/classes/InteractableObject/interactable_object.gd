@@ -8,7 +8,20 @@ extends Node3D
 var is_in_range: bool = false
 
 @export_group("Inventory")
-@export var current_item: Item
+@export var current_item: Item:
+	set(value):
+		if get_tree() == null:
+			await tree_entered
+		if value:
+			if not value.texture: value.texture = value.default
+			if $InventorySlot:
+				$InventorySlot.texture = value.texture
+		else:
+			if $InventorySlot:
+				$InventorySlot.texture = null
+		current_item = value
+
+@onready var player = get_tree().get_first_node_in_group("Player")
 
 
 func _ready() -> void:

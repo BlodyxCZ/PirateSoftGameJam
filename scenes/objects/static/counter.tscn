@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scenes/objects/static/counter.gd" id="1_dmktb"]
 [ext_resource type="Script" path="res://scenes/classes/Popup/popup.gd" id="2_88ekh"]
 [ext_resource type="PackedScene" uid="uid://crwvcfdi3hef7" path="res://scenes/classes/Popup/pop_up_texture.tscn" id="3_d5y7h"]
-[ext_resource type="Script" path="res://scenes/objects/interactable/oven/GUI.gd" id="4_lw5kc"]
+[ext_resource type="Script" path="res://scenes/objects/interactable/fridge/GUI.gd" id="4_lw5kc"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_joqd2"]
 size = Vector3(3.6, 0.7, 1)

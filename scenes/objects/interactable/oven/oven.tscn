@@ -1,14 +1,13 @@
-[gd_scene load_steps=12 format=3 uid="uid://bolrbueo5umgm"]
+[gd_scene load_steps=11 format=3 uid="uid://bolrbueo5umgm"]
 
 [ext_resource type="Script" path="res://scenes/objects/interactable/oven/oven.gd" id="1_7k8b2"]
 [ext_resource type="Script" path="res://scenes/classes/Popup/popup.gd" id="2_bpdp7"]
 [ext_resource type="PackedScene" uid="uid://crwvcfdi3hef7" path="res://scenes/classes/Popup/pop_up_texture.tscn" id="3_qhwkc"]
 [ext_resource type="Material" uid="uid://bmi8qty0e61gh" path="res://assets/models/kitchen1/Oven.tres" id="3_rtjpa"]
 [ext_resource type="Script" path="res://singletons/NormalCreator.gd" id="4_krvcl"]
-[ext_resource type="Script" path="res://scenes/objects/interactable/oven/GUI.gd" id="6_e37a6"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_tei3o"]
-viewport_path = NodePath("PopUpTexture")
+[sub_resource type="ViewportTexture" id="ViewportTexture_q75fh"]
+viewport_path = NodePath(".")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_joqd2"]
 size = Vector3(3.6, 0.7, 1)
@@ -49,7 +48,7 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1.9016, 0)
 billboard = 1
 shaded = true
 double_sided = false
-texture = SubResource("ViewportTexture_tei3o")
+texture = SubResource("ViewportTexture_q75fh")
 script = ExtResource("2_bpdp7")
 
 [node name="PopUpTexture" parent="." instance=ExtResource("3_qhwkc")]
@@ -73,7 +72,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("6_e37a6")
+mouse_filter = 1
 metadata/_edit_lock_ = true
 
 [node name="OvenRig" type="Node3D" parent="."]

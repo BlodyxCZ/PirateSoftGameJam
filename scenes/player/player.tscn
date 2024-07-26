@@ -176,7 +176,7 @@ radius = 0.553856
 script = ExtResource("1_3vxr8")
 
 [node name="BoneAttachment3D" type="BoneAttachment3D" parent="."]
-transform = Transform3D(1, -4.27134e-14, 2.38419e-07, -8.40249e-08, 0.93584, 0.352426, -2.23122e-07, -0.352426, 0.93584, -3.0956e-16, 0.911847, -0.429163)
+transform = Transform3D(1, -4.27134e-14, 2.38419e-07, -8.40249e-08, 0.93584, 0.352426, -2.23122e-07, -0.352426, 0.93584, -3.0956e-16, -0.195363, -0.429163)
 bone_name = "Head"
 bone_idx = 4
 use_external_skeleton = true

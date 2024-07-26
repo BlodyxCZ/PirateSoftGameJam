@@ -21,7 +21,7 @@ var is_in_range: bool = false
 				$InventorySlot.texture = null
 		current_item = value
 
-@onready var player = get_tree().get_first_node_in_group("Player")
+@onready var player: Player = get_tree().get_first_node_in_group("Player")
 
 
 func _ready() -> void:

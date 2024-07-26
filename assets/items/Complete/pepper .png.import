@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wdqgxh1a36yj"
-path="res://.godot/imported/CarrotCookedpng.png-d10a0406cc5b02fd5875ad68e9fb2815.ctex"
+uid="uid://dmpnorku6gl1j"
+path="res://.godot/imported/pepper .png-899ca3aa57dc69d816d9832c77f95e94.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/classes/Item/Items/Carrot/CarrotCookedpng.png"
-dest_files=["res://.godot/imported/CarrotCookedpng.png-d10a0406cc5b02fd5875ad68e9fb2815.ctex"]
+source_file="res://assets/items/Complete/pepper .png"
+dest_files=["res://.godot/imported/pepper .png-899ca3aa57dc69d816d9832c77f95e94.ctex"]
 
 [params]
 

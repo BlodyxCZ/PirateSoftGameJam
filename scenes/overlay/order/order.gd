@@ -1,7 +1,7 @@
-extends Panel
+extends TextureRect
 
 
-func set_texture(texture: Texture) -> void:
+func _set_texture(texture: Texture) -> void:
 	$TextureRect.texture = texture
 
 

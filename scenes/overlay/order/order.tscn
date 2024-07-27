@@ -1,31 +1,25 @@
 [gd_scene load_steps=3 format=3 uid="uid://llaar1v2bv66"]
 
 [ext_resource type="Script" path="res://scenes/overlay/order/order.gd" id="1_btkmu"]
+[ext_resource type="Texture2D" uid="uid://libtwalh025u" path="res://assets/ui/steps.png" id="1_i5c4e"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_4j8bi"]
-
-[node name="Panel" type="Panel"]
-custom_minimum_size = Vector2(128, 256)
+[node name="Panel" type="TextureRect"]
+custom_minimum_size = Vector2(144, 200)
 anchors_preset = -1
-anchor_right = 0.08
-anchor_bottom = 0.284
-offset_right = -1.52588e-05
-offset_bottom = -87.6
+anchor_right = 0.09
+anchor_bottom = 0.222
+offset_bottom = 0.199982
+texture = ExtResource("1_i5c4e")
+expand_mode = 1
+stretch_mode = 3
 script = ExtResource("1_btkmu")
-
-[node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = 8.0
-offset_top = 16.0
-offset_right = 120.0
-offset_bottom = 178.0
-texture = SubResource("PlaceholderTexture2D_4j8bi")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_top = 200.0
-offset_right = 128.0
-offset_bottom = 248.0
+offset_top = 144.0
+offset_right = 144.0
+offset_bottom = 168.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 12
 text = "[Description]"
 horizontal_alignment = 1

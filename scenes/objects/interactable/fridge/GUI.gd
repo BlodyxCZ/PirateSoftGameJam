@@ -1,7 +1,7 @@
 extends ObjectGUI
 
 
-const CARROT_ITEM = preload("res://scenes/classes/Item/Items/Carrot.tres")
+const CARROT_ITEM = preload("res://scenes/classes/Item/Items/Vegetables.tres")
 const PEPPER_ITEM = preload("res://scenes/classes/Item/Items/BellPeppers.tres")
 const CHICKEN_ITEM = preload("res://scenes/classes/Item/Items/Chicken.tres")
 

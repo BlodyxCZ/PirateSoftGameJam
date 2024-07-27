@@ -14,6 +14,7 @@ var texture: Texture
 @export var watered: Texture
 @export var chopped: Texture
 @export var combined: Texture
+@export var enchanted: Texture
 
 @export_group("Conditions")
 @export var cook_condition: Array[String] = [""]
@@ -22,7 +23,7 @@ var texture: Texture
 @export var chop_condition: Array[String] = [""]
 @export var combine_condition: Array[String] = [""]
 @export var second_combine_condition: Array[String] = [""]
-
+@export var enchant_condition: Array[String] = [""]
 
 func _init() -> void:
 	texture = default
@@ -65,3 +66,10 @@ func combine(second_item: Item) -> bool:
 	texture = combined
 	item_name += "Combined"
 	return true
+
+func enchant() -> void:
+	for condition in enchant_condition:
+		if item_name.find(condition) == -1:
+			return
+	texture = enchanted
+	item_name += "Enchanted"

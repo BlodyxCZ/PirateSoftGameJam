@@ -2,6 +2,9 @@ class_name TransitionCamera
 extends Camera3D
 
 
+signal transition_complete()
+
+
 var is_transitioning: bool = false
 
 
@@ -19,6 +22,8 @@ func transition_switch(from: Camera3D, to: Camera3D, duration: float = 1.0) -> v
 		is_transitioning = false
 		transition_switch(self, to, duration)
 	else:
+		# Prevent other transitions from begging
+		is_transitioning = true
 		
 		# Initiate variables
 		fov = from.fov
@@ -31,9 +36,6 @@ func transition_switch(from: Camera3D, to: Camera3D, duration: float = 1.0) -> v
 		# Make camera current
 		current = true
 		
-		# Prevent other transitions from begging
-		is_transitioning = true
-		
 		# Create the tweens and tween properties
 		var tween: Tween = get_tree().create_tween()
 		tween.set_parallel()
@@ -44,6 +46,9 @@ func transition_switch(from: Camera3D, to: Camera3D, duration: float = 1.0) -> v
 		
 		# Wait for tween to complete
 		await tween.finished
+		
+		# Emit signal on finished
+		transition_complete.emit()
 		
 		# Make the second camera current
 		to.current = true

@@ -45,7 +45,12 @@ func _handle_movement(delta: float) -> void:
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 	
-	var input_dir := Input.get_vector("move_left", "move_right", "move_up", "move_down").rotated(-PI/2)
+	var cam_rotation = 0
+	for camera: Camera3D in get_tree().get_nodes_in_group("Camera"):
+		if camera.current:
+			cam_rotation = camera.rotation.y
+	
+	var input_dir := Input.get_vector("move_left", "move_right", "move_up", "move_down").rotated(cam_rotation)
 	var direction := (Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction and not frozen:
 		$jackalope.rotation.y = lerp_angle($jackalope.rotation.y, Vector3(0, 0, 1).rotated(Vector3(0, 1, 0), PI).signed_angle_to(direction, Vector3(0, 1, 0)), rotation_factor)

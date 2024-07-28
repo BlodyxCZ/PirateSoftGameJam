@@ -4,7 +4,6 @@
 
 [resource]
 resource_name = "Garbage.001"
-albedo_color = Color(0, 0, 0, 1)
+albedo_texture = ExtResource("1_eugai")
 metallic = 1.0
-emission_enabled = true
 emission_texture = ExtResource("1_eugai")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dcq1we4ule87k"]
+[gd_scene load_steps=21 format=3 uid="uid://dcq1we4ule87k"]
 
 [ext_resource type="Script" path="res://scenes/overlay/Overlay.gd" id="1_2uwuf"]
 [ext_resource type="PackedScene" uid="uid://llaar1v2bv66" path="res://scenes/overlay/order/order.tscn" id="2_bdb1u"]
@@ -9,8 +9,58 @@
 [ext_resource type="Texture2D" uid="uid://c6ttf40hqqmwt" path="res://assets/ui/action back.png" id="5_cj73a"]
 [ext_resource type="Texture2D" uid="uid://bdkynyl7ov0ck" path="res://assets/ui/action front.png" id="7_t7lpi"]
 [ext_resource type="Texture2D" uid="uid://bnhromr3itfha" path="res://assets/ui/book 2.png" id="7_vxbue"]
+[ext_resource type="PackedScene" uid="uid://bycc6jggmrowp" path="res://scenes/overlay/action/action.tscn" id="10_smlax"]
+[ext_resource type="VideoStream" path="res://assets/videos/VampireTalk.ogv" id="11_n8pbe"]
+[ext_resource type="Script" path="res://scenes/overlay/Dialogue.gd" id="11_sb3jb"]
+[ext_resource type="Texture2D" uid="uid://dfxshuav1cnrb" path="res://assets/videos/VampirePaused.png" id="12_y3m1s"]
+[ext_resource type="Material" uid="uid://ln7u33eoc8ee" path="res://assets/shaders/ChromaKey.material" id="13_qdtij"]
+[ext_resource type="VideoStream" path="res://assets/videos/JackalopeTalk.ogv" id="13_y37kt"]
+[ext_resource type="Texture2D" uid="uid://dsc1aew3h1m85" path="res://assets/videos/JackalopePaused.png" id="14_wkdkb"]
+[ext_resource type="Texture2D" uid="uid://dyubsojduwujp" path="res://assets/ui/chat-transformed.png" id="16_uwhb2"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kan7d"]
+
+[sub_resource type="Shader" id="Shader_e5l3j"]
+code = "shader_type canvas_item;
+
+uniform sampler2D screen_texture: hint_screen_texture, repeat_disable, filter_linear_mipmap;
+uniform float blur_radius : hint_range(0, 1) = 0.2; // Radius of the blur effect
+uniform float blur_amount : hint_range(0, 5) = 1.0; // Strength of the blur effect
+uniform float blur_inner : hint_range(0, 1) = 0.6; // Inner edge of the blur effect
+uniform float blur_outer : hint_range(0, 1) = 0.66; // Outer edge of the blur effect
+
+void fragment() {
+    // Original color of the pixel from the screen
+    vec4 pixelColor = texture(screen_texture, UV);
+    
+    // Color with blur effect from the screen
+    vec4 blurColor = textureLod(screen_texture, SCREEN_UV, blur_amount);
+
+    // Calculate distance from the center of the screen
+    float distance = length(UV - vec2(0.5, 0.5));
+
+    // Apply smoothstep function to control transition between areas
+    float blur = smoothstep(blur_inner - blur_radius, blur_outer, distance);
+
+    // Mix colors of the blur effect and the original color based on the smoothstep value
+    pixelColor.rgb = mix(blurColor.rgb, COLOR.rgb, -blur);
+
+    // Set the alpha component of the blur effect to the smoothstep value
+    blurColor.a = blur;
+
+    // Mix colors of the blur effect with white for an additional effect
+    blurColor.rgb = mix(blurColor.rgb, vec3(1.0), 0.1);
+
+    // Set the final color to the modified color of the blur effect
+    COLOR = blurColor;
+}"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_eesyj"]
+shader = SubResource("Shader_e5l3j")
+shader_parameter/blur_radius = 0.2
+shader_parameter/blur_amount = 3.0
+shader_parameter/blur_inner = 0.0
+shader_parameter/blur_outer = 0.0
 
 [node name="Overlay" type="CanvasLayer"]
 process_mode = 3
@@ -303,6 +353,155 @@ mouse_filter = 1
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 bbcode_enabled = true
 text = " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas erat nibh, tincidunt tincidunt neque consectetur id. Fusce id volutpat velit. Nullam condimentum, nisl ut semper varius, mauris justo finibus purus, vel pretium nibh risus ut lectus. Mauris pellentesque accumsan magna id eleifend. Sed nec libero ligula. Pellentesque at mollis lorem, ut volutpat dolor. Maecenas consequat purus sed nibh fringilla, sed finibus eros semper."
+
+[node name="Intro" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Actions" type="Control" parent="Intro"]
+anchors_preset = 0
+offset_left = 672.0
+offset_top = 64.0
+offset_right = 928.0
+offset_bottom = 304.0
+metadata/_edit_group_ = true
+
+[node name="TextureRect" type="TextureRect" parent="Intro/Actions"]
+layout_mode = 1
+offset_right = 32.0
+offset_bottom = 32.0
+texture = ExtResource("5_cj73a")
+
+[node name="IntroActionList" type="VBoxContainer" parent="Intro/Actions"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = 56.0
+offset_right = -32.0
+offset_bottom = -56.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="Action" parent="Intro/Actions/IntroActionList" instance=ExtResource("10_smlax")]
+layout_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="Intro/Actions"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("7_t7lpi")
+
+[node name="Dialogue" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("11_sb3jb")
+
+[node name="ColorRect" type="ColorRect" parent="Dialogue"]
+material = SubResource("ShaderMaterial_eesyj")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Vampire" type="VideoStreamPlayer" parent="Dialogue"]
+material = ExtResource("13_qdtij")
+layout_mode = 0
+offset_left = 1024.0
+offset_top = 394.0
+offset_right = 1536.0
+offset_bottom = 906.0
+stream = ExtResource("11_n8pbe")
+loop = true
+
+[node name="TextureRect" type="TextureRect" parent="Dialogue/Vampire"]
+show_behind_parent = true
+material = ExtResource("13_qdtij")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_y3m1s")
+
+[node name="Jackalope" type="VideoStreamPlayer" parent="Dialogue"]
+material = ExtResource("13_qdtij")
+layout_mode = 0
+offset_left = 576.0
+offset_top = 394.0
+offset_right = 1088.0
+offset_bottom = 906.0
+scale = Vector2(-1, 1)
+stream = ExtResource("13_y37kt")
+loop = true
+
+[node name="TextureRect" type="TextureRect" parent="Dialogue/Jackalope"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("14_wkdkb")
+
+[node name="VampireSpeech" type="TextureRect" parent="Dialogue"]
+layout_mode = 0
+offset_left = 896.0
+offset_top = 64.0
+offset_right = 1408.0
+offset_bottom = 576.0
+texture = ExtResource("16_uwhb2")
+
+[node name="VampireText" type="Label" parent="Dialogue/VampireSpeech"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 168.0
+offset_right = 480.0
+offset_bottom = 272.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "THIS IS A SPEECH BOUBLE"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="JackalopeSpeech" type="TextureRect" parent="Dialogue"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 64.0
+offset_right = 704.0
+offset_bottom = 576.0
+texture = ExtResource("16_uwhb2")
+flip_h = true
+
+[node name="JackalopeText" type="Label" parent="Dialogue/JackalopeSpeech"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 168.0
+offset_right = 480.0
+offset_bottom = 272.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "THIS IS A SPEECH BOUBLE"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
 
 [connection signal="pressed" from="Level/Book" to="." method="_on_book_pressed"]
 [connection signal="pressed" from="Pause/MarginContainer/VBoxContainer2/VBoxContainer/Resume" to="." method="_on_resume_pressed"]

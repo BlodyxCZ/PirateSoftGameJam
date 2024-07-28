@@ -1,6 +1,9 @@
 extends CanvasLayer
 
 
+signal dialog_finished()
+
+
 const ACTION = preload("res://scenes/overlay/action/action.tscn")
 
 
@@ -56,3 +59,8 @@ func show_ui(_name: String) -> void:
 			$Level.show()
 		"hub":
 			$Hub.show()
+		"intro":
+			$Intro.show()
+		"dialogue":
+			$Dialogue.show()
+			$Dialogue.first_meeting()

@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-SceneTransition="*res://singletons/SceneTransition.gd"
+SceneTransition="*res://singletons/TransitionCamera.gd"
 Overlay="*res://scenes/overlay/Overlay.tscn"
 Global="*res://singletons/Global.gd"
 

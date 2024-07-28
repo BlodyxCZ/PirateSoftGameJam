@@ -41,6 +41,7 @@ func _input(event: InputEvent) -> void:
 		if current_item and $PopUpTexture.process == 0.0:
 			Overlay.remove_action_by_text("Start processing")
 			Overlay.remove_action_by_text("Take item")
+			$PopUpTexture.reset()
 			$Popup.process(10.0, 6.0)
 
 

@@ -39,6 +39,6 @@ func _input(event: InputEvent) -> void:
 		if current_item:
 			Overlay.remove_action_by_text("Take item")
 			$Popup.step_process(10.0, 0.1)
-		if $PopUpTexture.process >= 90.0:
+		if $PopUpTexture.process >= 90.0 and current_item.item_name.find("Chopped") == -1:
 			current_item.chop()
 			Overlay.add_action(Action.BUTTONS.E, "Take item")

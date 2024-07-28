@@ -13,3 +13,8 @@ extends SubViewport
 		$Overprocess.value = value
 	get:
 		return $Overprocess.value
+
+
+func reset() -> void:
+	over_process = 0.0
+	process = 0.0

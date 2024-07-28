@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://4ax7ottgep82"]
+
+[resource]
+resource_name = "LightBrown"
+albedo_color = Color(0.466665, 0.372549, 0.176471, 1)
+roughness = 0.5

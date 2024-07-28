@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://8dp8npfnfgja"]
+
+[ext_resource type="Texture2D" uid="uid://dadevi001ksgr" path="res://assets/models/hub/hub_blodyxGraffiti.png" id="1_yn4je"]
+
+[resource]
+resource_name = "Blodyx"
+transparency = 1
+albedo_texture = ExtResource("1_yn4je")
+roughness = 0.5

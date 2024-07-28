@@ -1,6 +1,5 @@
 extends ObjectGUI
 
-#tenhle kód byl napsán idiotem
 
 const CARROT_ITEM = preload("res://scenes/classes/Item/Items/Vegetables.tres")
 const PEPPER_ITEM = preload("res://scenes/classes/Item/Items/BellPeppers.tres")

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bjp31ccjrymru"]
+
+[ext_resource type="Texture2D" uid="uid://ck0nmuydawrnu" path="res://assets/models/hub/hub_smamsGrafitti.png" id="1_nhj4d"]
+
+[resource]
+resource_name = "Smams"
+transparency = 1
+albedo_texture = ExtResource("1_nhj4d")
+roughness = 0.5

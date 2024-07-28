@@ -1,61 +1,50 @@
-extends Node
+class_name TransitionCamera
+extends Camera3D
 
 
-signal transition_finished()
+var is_transitioning: bool = false
 
 
-enum TYPE {
-	fade_in_out = 0,
-	swipe_left = 1,
-	swipe_right = 2,
-}
-
-var current_transition: TYPE = TYPE.fade_in_out
+# Instantly switch form one camera to another
+func quick_switch(from: Camera3D, to: Camera3D) -> void:
+	from.current = false
+	to.current = true
 
 
-func start_transition(duration: float, path_to_scene: String) -> void:
-	match current_transition:
-		TYPE.fade_in_out:
-			fade_in_out(Color.BLACK, duration, path_to_scene)
-		TYPE.swipe_left:
-			swipe(1, duration, path_to_scene)
-		TYPE.swipe_right:
-			swipe(-1, duration, path_to_scene)
-
-
-func fade_in_out(color: Color, duration: float, path_to_scene: String) -> void:
-	var color_rect: ColorRect = ColorRect.new()
-	color_rect.set_anchors_preset(Control.PRESET_FULL_RECT)
-	color_rect.color = color
-	color_rect.color.a = 0
-	add_child(color_rect)
-	var tween: Tween = create_tween()
-	tween.tween_property(color_rect, "color:a", 1.0, duration)
-	tween.tween_property(color_rect, "color:a", 0.0, duration)
-	tween.play()
-	await tween.step_finished
-	get_tree().change_scene_to_file(path_to_scene)
-	await tween.finished
-	tween.kill()
-	color_rect.queue_free()
-	transition_finished.emit()
-
-
-func swipe(direction: int, duration: float, path_to_scene: String) -> void:
-	var new_scene: PackedScene = load(path_to_scene)
-	var n_s: Node3D = new_scene.instantiate()
-	n_s.name = "NewScene"
-	n_s.global_position = Vector3(20 * direction, 0, 20 * -direction)
-	var current_scene = get_tree().current_scene
-	add_sibling(n_s)
-	var tween: Tween = create_tween()
-	tween.set_parallel()
-	tween.tween_property(n_s, "global_position",  Vector3.ZERO, duration)
-	tween.tween_property(current_scene, "global_position",  Vector3(20 * -direction, 0, 20 * direction), duration)
-	tween.play()
-	await tween.step_finished
-	await tween.finished
-	tween.kill()
-	get_tree().unload_current_scene()
-	get_tree().set_current_scene(n_s)
-	transition_finished.emit()
+# Smoothly transition from one camera to another
+func transition_switch(from: Camera3D, to: Camera3D, duration: float = 1.0) -> void:
+	if is_transitioning:
+		#for tween in get_tree().get_processed_tweens():
+		#	tween.kill()
+		is_transitioning = false
+		transition_switch(self, to, duration)
+	else:
+		
+		# Initiate variables
+		fov = from.fov
+		cull_mask = from.cull_mask
+		global_position = from.global_position
+		global_rotation = from.global_rotation
+		h_offset = from.h_offset
+		v_offset = from.v_offset
+		
+		# Make camera current
+		current = true
+		
+		# Prevent other transitions from begging
+		is_transitioning = true
+		
+		# Create the tweens and tween properties
+		var tween: Tween = get_tree().create_tween()
+		tween.set_parallel()
+		tween.tween_property(self, "transform", to.transform, duration).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_IN_OUT)
+		tween.tween_property(self, "fov", to.fov, duration).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_IN_OUT)
+		tween.tween_property(self, "h_offset", to.h_offset, duration).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_IN_OUT)
+		tween.tween_property(self, "v_offset", to.v_offset, duration).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_IN_OUT)
+		
+		# Wait for tween to complete
+		await tween.finished
+		
+		# Make the second camera current
+		to.current = true
+		is_transitioning = false

@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bbtoiw3ff6hiy"]
+
+[ext_resource type="Texture2D" uid="uid://cv0c83f5sdkvb" path="res://assets/models/hub/hub_grass.png" id="1_8fr4b"]
+
+[resource]
+resource_name = "Grass"
+cull_mode = 2
+albedo_texture = ExtResource("1_8fr4b")
+metallic = 1.0
+emission_texture = ExtResource("1_8fr4b")

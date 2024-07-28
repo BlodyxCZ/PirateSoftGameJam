@@ -44,8 +44,6 @@ func step_process(amount: float, duration: float) -> void:
 
 
 func end_process() -> void:
-	for tween in get_tree().get_processed_tweens():
-		tween.kill()
 	$"../PopUpTexture".process = 0.0
 	$"../PopUpTexture".over_process = 0.0
 	hide()

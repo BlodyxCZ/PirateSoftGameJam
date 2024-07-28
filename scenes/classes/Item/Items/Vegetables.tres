@@ -1,20 +1,22 @@
-[gd_resource type="Resource" script_class="Item" load_steps=5 format=3 uid="uid://bsih0hg0oacpu"]
+[gd_resource type="Resource" script_class="Item" load_steps=6 format=3 uid="uid://bsih0hg0oacpu"]
 
 [ext_resource type="Texture2D" uid="uid://cdques1eprfib" path="res://assets/items/Complete/rat.png" id="1_47py1"]
-[ext_resource type="Texture2D" uid="uid://wdqgxh1a36yj" path="res://assets/items/Vegetables/VegetablesCookedpng.png" id="2_ji0y0"]
-[ext_resource type="Texture2D" uid="uid://djdfjqtn2i5lb" path="res://assets/items/Vegetables/VegetablesDefault.png" id="3_gkxtu"]
+[ext_resource type="Texture2D" uid="uid://7kcilwiv2083" path="res://assets/items/Vegetables/chop vegetables.png" id="1_lvpy0"]
+[ext_resource type="Texture2D" uid="uid://dkgpo71o6jgay" path="res://assets/items/Vegetables/unc. rat. .png" id="2_jtsum"]
 [ext_resource type="Script" path="res://scenes/classes/Item/Item.gd" id="4_lngta"]
+[ext_resource type="Texture2D" uid="uid://uxqpkgpw2cni" path="res://assets/items/Vegetables/vegetables.png" id="4_mstdl"]
 
 [resource]
 script = ExtResource("4_lngta")
-item_name = "Carrot"
-default = ExtResource("3_gkxtu")
-cooked = ExtResource("2_ji0y0")
-combined = ExtResource("1_47py1")
+item_name = "Vegetables"
+default = ExtResource("4_mstdl")
+cooked = ExtResource("1_47py1")
+chopped = ExtResource("1_lvpy0")
+combined = ExtResource("2_jtsum")
 cook_condition = Array[String]([""])
 boil_condition = Array[String]([""])
 water_condition = Array[String]([""])
 chop_condition = Array[String]([""])
-combine_condition = Array[String]([""])
-second_combine_condition = Array[String]([""])
-enchant_condition = Array[String]([""])
+combine_condition = Array[String](["Chopped"])
+second_combine_condition = Array[String](["Wine"])
+enchant_condition = Array[String](["Combined"])

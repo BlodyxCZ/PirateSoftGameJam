@@ -1,14 +1,37 @@
-[gd_scene load_steps=11 format=3 uid="uid://bj0voposi40n5"]
+[gd_scene load_steps=15 format=3 uid="uid://bj0voposi40n5"]
 
 [ext_resource type="Script" path="res://scenes/objects/interactable/chopping_block/chopping_block.gd" id="1_3fn24"]
 [ext_resource type="Script" path="res://scenes/classes/Popup/popup.gd" id="1_o53oq"]
-[ext_resource type="PackedScene" uid="uid://crwvcfdi3hef7" path="res://scenes/classes/Popup/pop_up_texture.tscn" id="2_1vgx6"]
+[ext_resource type="Script" path="res://scenes/classes/Popup/pop_up_texture.gd" id="3_op37t"]
 [ext_resource type="Material" uid="uid://dl7fl6spwles1" path="res://assets/models/kitchen1/ChoppingBoard.tres" id="4_fasmb"]
 [ext_resource type="Script" path="res://scenes/objects/interactable/fridge/GUI.gd" id="4_w805t"]
 [ext_resource type="Material" uid="uid://crapuns5b8svh" path="res://assets/models/kitchen1/Springbonnie.tres" id="5_kw3iy"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_sgvtl"]
-viewport_path = NodePath(".")
+[sub_resource type="ViewportTexture" id="ViewportTexture_3vunf"]
+viewport_path = NodePath("PopUpTexture")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rb7a1"]
+bg_color = Color(0.10748, 0.10748, 0.10748, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_idxn1"]
+bg_color = Color(0.417742, 1, 0.441218, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y2kur"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uqke2"]
+bg_color = Color(0.992157, 0.14902, 0.282353, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_k3qdo"]
 height = 0.789844
@@ -70,10 +93,41 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1.9016, 0)
 billboard = 1
 shaded = true
 double_sided = false
-texture = SubResource("ViewportTexture_sgvtl")
+texture = SubResource("ViewportTexture_3vunf")
 script = ExtResource("1_o53oq")
 
-[node name="PopUpTexture" parent="." instance=ExtResource("2_1vgx6")]
+[node name="PopUpTexture" type="SubViewport" parent="."]
+disable_3d = true
+own_world_3d = true
+transparent_bg = true
+script = ExtResource("3_op37t")
+
+[node name="Process" type="ProgressBar" parent="PopUpTexture"]
+custom_minimum_size = Vector2(256, 0)
+anchors_preset = -1
+anchor_right = 0.389
+anchor_bottom = 0.099
+offset_left = 32.0
+offset_top = 224.0
+offset_right = 278.832
+offset_bottom = 237.312
+pivot_offset = Vector2(224, 32)
+theme_override_styles/background = SubResource("StyleBoxFlat_rb7a1")
+theme_override_styles/fill = SubResource("StyleBoxFlat_idxn1")
+show_percentage = false
+
+[node name="Overprocess" type="ProgressBar" parent="PopUpTexture"]
+anchors_preset = -1
+anchor_right = 0.389
+anchor_bottom = 0.099
+offset_left = 32.0
+offset_top = 224.0
+offset_right = 278.832
+offset_bottom = 237.312
+pivot_offset = Vector2(224, 32)
+theme_override_styles/background = SubResource("StyleBoxEmpty_y2kur")
+theme_override_styles/fill = SubResource("StyleBoxFlat_uqke2")
+show_percentage = false
 
 [node name="Range" type="Area3D" parent="."]
 
@@ -113,5 +167,3 @@ bones/1/scale = Vector3(1, 1, 1)
 [node name="ChoppingBoard" type="MeshInstance3D" parent="ChoppingBlock/Skeleton3D"]
 mesh = SubResource("ArrayMesh_0y7p7")
 skin = SubResource("Skin_hu7im")
-
-[connection signal="process_complete" from="Popup" to="." method="_on_popup_process_complete"]

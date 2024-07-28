@@ -17,13 +17,13 @@ var texture: Texture
 @export var enchanted: Texture
 
 @export_group("Conditions")
-@export var cook_condition: Array[String] = [""]
-@export var boil_condition: Array[String] = [""]
-@export var water_condition: Array[String] = [""]
-@export var chop_condition: Array[String] = [""]
-@export var combine_condition: Array[String] = [""]
-@export var second_combine_condition: Array[String] = [""]
-@export var enchant_condition: Array[String] = [""]
+@export var cook_condition: Array[String] = []
+@export var boil_condition: Array[String] = []
+@export var water_condition: Array[String] = []
+@export var chop_condition: Array[String] = []
+@export var combine_condition: Array[String] = []
+@export var second_combine_condition: Array[String] = []
+@export var enchant_condition: Array[String] = []
 
 func _init() -> void:
 	texture = default
@@ -34,6 +34,7 @@ func cook() -> void:
 			return
 	texture = cooked
 	item_name += "Cooked"
+	print(item_name)
 
 func boil() -> void:
 	for condition in boil_condition:
@@ -55,13 +56,14 @@ func chop() -> void:
 			return
 	texture = chopped
 	item_name += "Chopped"
+	print(item_name)
 
 func combine(second_item: Item) -> bool:
 	for condition in combine_condition:
 		if item_name.find(condition) == -1:
 			return false
 	for condition in second_combine_condition:
-		if item_name.find(condition) == -1:
+		if second_item.item_name.find(condition) == -1:
 			return false
 	texture = combined
 	item_name += "Combined"
@@ -73,3 +75,11 @@ func enchant() -> void:
 			return
 	texture = enchanted
 	item_name += "Enchanted"
+
+
+func instantiate() -> Item:
+	var new = Item.new()
+	for property in get_property_list():
+		new.set(property["name"], get(property["name"]))
+		print(property["name"])
+	return new

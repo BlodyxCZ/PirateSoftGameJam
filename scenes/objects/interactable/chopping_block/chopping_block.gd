@@ -22,9 +22,9 @@ func _input(event: InputEvent) -> void:
 	if not is_in_range: return
 	
 	if event.is_action("interact1") and event.is_pressed() and not event.is_echo():
-		if get_tree().get_first_node_in_group("Player").held_item:
-			current_item = get_tree().get_first_node_in_group("Player").held_item
-			get_tree().get_first_node_in_group("Player").held_item = null
+		if player.held_item:
+			current_item = player.held_item
+			player.held_item = null
 			Overlay.remove_action_by_text("Place item")
 			Overlay.add_action(Action.BUTTONS.Q, "Step process")
 			Overlay.add_action(Action.BUTTONS.E, "Take item")
@@ -32,7 +32,7 @@ func _input(event: InputEvent) -> void:
 			Overlay.add_action(Action.BUTTONS.E, "Place item")
 			Overlay.remove_action_by_text("Take item")
 			Overlay.remove_action_by_text("Step process")
-			get_tree().get_first_node_in_group("Player").held_item = current_item
+			player.held_item = current_item
 			current_item = null
 			$Popup.end_process()
 	if event.is_action("interact2") and event.is_pressed() and not event.is_echo():

@@ -1,13 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://bycc6jggmrowp"]
+[gd_scene load_steps=4 format=3 uid="uid://bycc6jggmrowp"]
 
 [ext_resource type="Texture2D" uid="uid://55465qsgco4l" path="res://assets/kenney/keyboard/keyboard_e_outline.svg" id="1_yhaph"]
 [ext_resource type="Script" path="res://scenes/overlay/action/action.gd" id="2_3x1cj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_glc4o"]
+draw_center = false
 
 [node name="Action" type="Button"]
 custom_minimum_size = Vector2(192, 64)
 offset_right = 192.0
 offset_bottom = 64.0
 focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_glc4o")
+theme_override_styles/hover = SubResource("StyleBoxFlat_glc4o")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_glc4o")
 text = "Interact"
 icon = ExtResource("1_yhaph")
 expand_icon = true

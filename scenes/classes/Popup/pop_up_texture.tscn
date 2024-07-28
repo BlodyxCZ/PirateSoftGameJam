@@ -27,6 +27,7 @@ corner_radius_bottom_left = 24
 
 [node name="PopUpTexture" type="SubViewport"]
 disable_3d = true
+own_world_3d = true
 transparent_bg = true
 script = ExtResource("1_ounsl")
 

@@ -23,10 +23,7 @@ var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 @export_group("Cooking")
 @export var held_item: Item:
 	set(value):
-		if get_tree() == null:
-			await tree_entered
 		if value:
-			if not value.texture: value.texture = value.default
 			$BoneAttachment3D/InventorySlot.texture = value.texture
 			$jackalope/JackalopeRig/Skeleton3D/HornL/OmniLight3D.show()
 			$jackalope/JackalopeRig/Skeleton3D/HornR/OmniLight3D.show()

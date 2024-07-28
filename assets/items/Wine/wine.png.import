@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wdqgxh1a36yj"
-path="res://.godot/imported/VegetablesCookedpng.png-b73f9912f81017bd966e56284178f726.ctex"
+uid="uid://dswebeyir8xxb"
+path="res://.godot/imported/wine.png-062d19662d6999a56cc965cd9bd07301.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/items/Vegetables/VegetablesCookedpng.png"
-dest_files=["res://.godot/imported/VegetablesCookedpng.png-b73f9912f81017bd966e56284178f726.ctex"]
+source_file="res://assets/items/Wine/wine.png"
+dest_files=["res://.godot/imported/wine.png-062d19662d6999a56cc965cd9bd07301.ctex"]
 
 [params]
 

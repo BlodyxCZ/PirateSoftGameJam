@@ -1,32 +1,43 @@
 extends ObjectGUI
 
+#tenhle kód byl napsán idiotem
 
 const CARROT_ITEM = preload("res://scenes/classes/Item/Items/Vegetables.tres")
 const PEPPER_ITEM = preload("res://scenes/classes/Item/Items/BellPeppers.tres")
 const CHICKEN_ITEM = preload("res://scenes/classes/Item/Items/Chicken.tres")
+const WINE_ITEM = preload("res://scenes/classes/Item/Items/Wine.tres")
 
 
 func open() -> void:
 	super.open()
-	$Panel/MarginContainer/GridContainer/Carrot.grab_focus()
+	if not Global.controller == Global.controllers.PC:
+		$Panel/MarginContainer/GridContainer/Carrot.grab_focus()
 
 
 func _ready() -> void:
-	var carrot = CARROT_ITEM
-	var pepper = PEPPER_ITEM
-	var chicken = CHICKEN_ITEM
+	super._ready()
+	Item.new()
 
 
 func _on_carrot_pressed() -> void:
-	player.held_item = CARROT_ITEM
+	CARROT_ITEM.texture = CARROT_ITEM.default
+	player.held_item = CARROT_ITEM.instantiate()
 	close()
 
 
 func _on_pepper_pressed() -> void:
-	player.held_item = PEPPER_ITEM
+	PEPPER_ITEM.texture = PEPPER_ITEM.default
+	player.held_item = PEPPER_ITEM.instantiate()
 	close()
 
 
 func _on_chicken_pressed() -> void:
-	player.held_item = CHICKEN_ITEM
+	CHICKEN_ITEM.texture = CHICKEN_ITEM.default
+	player.held_item = CHICKEN_ITEM.instantiate()
+	close()
+
+
+func _on_wine_pressed() -> void:
+	WINE_ITEM.texture = WINE_ITEM.default
+	player.held_item = WINE_ITEM.instantiate()
 	close()

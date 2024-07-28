@@ -501,7 +501,7 @@ libraries = {
 "": SubResource("AnimationLibrary_ans0u")
 }
 autoplay = "Idle"
-blend_times = [&"Idle", &"Idle", 0.2, &"Idle", &"Walk", 0.3, &"Walk", &"Idle", 0.6, &"Walk", &"Walk", 0.2]
+blend_times = [&"Walk", &"Walk", 0.2, &"Walk", &"Idle", 0.6, &"Idle", &"Walk", 0.3, &"Idle", &"Idle", 0.2]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0.137686)

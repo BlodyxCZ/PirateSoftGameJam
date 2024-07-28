@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://dr0qd27bluo3g"]
+
+[ext_resource type="Script" path="res://scenes/classes/Item/Item.gd" id="1_1e01g"]
+[ext_resource type="Texture2D" uid="uid://dswebeyir8xxb" path="res://assets/items/Wine/wine.png" id="1_t05dc"]
+
+[resource]
+script = ExtResource("1_1e01g")
+item_name = "Wine"
+default = ExtResource("1_t05dc")
+cook_condition = Array[String]([])
+boil_condition = Array[String]([])
+water_condition = Array[String]([])
+chop_condition = Array[String]([])
+combine_condition = Array[String]([])
+second_combine_condition = Array[String]([])
+enchant_condition = Array[String]([])

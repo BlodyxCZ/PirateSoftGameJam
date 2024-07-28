@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dcq1we4ule87k"]
+[gd_scene load_steps=11 format=3 uid="uid://dcq1we4ule87k"]
 
 [ext_resource type="Script" path="res://scenes/overlay/Overlay.gd" id="1_2uwuf"]
 [ext_resource type="PackedScene" uid="uid://llaar1v2bv66" path="res://scenes/overlay/order/order.tscn" id="2_bdb1u"]
@@ -6,7 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://bdxwg07kupgjd" path="res://assets/ghost.png" id="3_1qxej"]
 [ext_resource type="Texture2D" uid="uid://b37x0f4f5k6mt" path="res://assets/ui/book.png" id="3_54h45"]
 [ext_resource type="Script" path="res://scenes/classes/button/IconButton.gd" id="3_u66x3"]
-[ext_resource type="Texture2D" uid="uid://ypvh05hebk0e" path="res://assets/ui/book 2.png" id="7_vxbue"]
+[ext_resource type="Texture2D" uid="uid://c6ttf40hqqmwt" path="res://assets/ui/action back.png" id="5_cj73a"]
+[ext_resource type="Texture2D" uid="uid://bdkynyl7ov0ck" path="res://assets/ui/action front.png" id="7_t7lpi"]
+[ext_resource type="Texture2D" uid="uid://bnhromr3itfha" path="res://assets/ui/book 2.png" id="7_vxbue"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kan7d"]
 
@@ -88,6 +90,8 @@ offset_left = 1336.0
 offset_top = 632.0
 offset_right = 1576.0
 offset_bottom = 872.0
+focus_mode = 0
+flat = true
 metadata/_edit_group_ = true
 
 [node name="TextEdit" type="TextureRect" parent="Level/Book"]
@@ -102,13 +106,19 @@ grow_vertical = 2
 texture = ExtResource("3_54h45")
 stretch_mode = 5
 
-[node name="Actions" type="Panel" parent="Level"]
-layout_mode = 0
+[node name="Actions" type="Control" parent="Level"]
+anchors_preset = 0
 offset_left = 24.0
-offset_top = 744.0
-offset_right = 288.0
-offset_bottom = 872.0
+offset_top = 648.0
+offset_right = 280.0
+offset_bottom = 888.0
 metadata/_edit_group_ = true
+
+[node name="TextureRect" type="TextureRect" parent="Level/Actions"]
+layout_mode = 1
+offset_right = 32.0
+offset_bottom = 32.0
+texture = ExtResource("5_cj73a")
 
 [node name="ActionList" type="VBoxContainer" parent="Level/Actions"]
 unique_name_in_owner = true
@@ -116,9 +126,19 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = 56.0
+offset_right = -32.0
+offset_bottom = -56.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 0
+
+[node name="TextureRect2" type="TextureRect" parent="Level/Actions"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("7_t7lpi")
 
 [node name="Options" type="Control" parent="."]
 visible = false
@@ -236,47 +256,52 @@ flat = true
 script = ExtResource("3_u66x3")
 
 [node name="Recipes" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 256.0
+offset_top = 296.0
+offset_right = -256.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 1
+mouse_filter = 2
 
-[node name="CenterContainer" type="CenterContainer" parent="Recipes"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="TextureRect" type="TextureRect" parent="Recipes/CenterContainer"]
-layout_mode = 2
+[node name="Sprite2D" type="Sprite2D" parent="Recipes"]
+position = Vector2(544, 328)
 texture = ExtResource("7_vxbue")
 
-[node name="Label" type="Label" parent="Recipes/CenterContainer/TextureRect"]
+[node name="MarginContainer" type="MarginContainer" parent="Recipes"]
 layout_mode = 0
-offset_left = 181.0
-offset_top = 148.0
-offset_right = 389.0
-offset_bottom = 462.0
-rotation = 0.122173
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "This is a recipe to a very delicious dish you will be prepearing for your fellow townmates"
-autowrap_mode = 3
+offset_left = 192.0
+offset_top = 32.0
+offset_right = 896.0
+offset_bottom = 504.0
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 30
 
-[node name="Label2" type="Label" parent="Recipes/CenterContainer/TextureRect"]
-layout_mode = 0
-offset_left = 456.0
-offset_top = 160.0
-offset_right = 664.0
-offset_bottom = 438.0
-rotation = -0.122173
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "This is a recipe to a very delicious dish you will be prepearing for your fellow townmates"
-autowrap_mode = 3
+[node name="HBoxContainer" type="HBoxContainer" parent="Recipes/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 64
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Recipes/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+text = " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas erat nibh, tincidunt tincidunt neque consectetur id. Fusce id volutpat velit. Nullam condimentum, nisl ut semper varius, mauris justo finibus purus, vel pretium nibh risus ut lectus. Mauris pellentesque accumsan magna id eleifend. Sed nec libero ligula. Pellentesque at mollis lorem, ut volutpat dolor. Maecenas consequat purus sed nibh fringilla, sed finibus eros semper."
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Recipes/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+text = " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas erat nibh, tincidunt tincidunt neque consectetur id. Fusce id volutpat velit. Nullam condimentum, nisl ut semper varius, mauris justo finibus purus, vel pretium nibh risus ut lectus. Mauris pellentesque accumsan magna id eleifend. Sed nec libero ligula. Pellentesque at mollis lorem, ut volutpat dolor. Maecenas consequat purus sed nibh fringilla, sed finibus eros semper."
 
 [connection signal="pressed" from="Level/Book" to="." method="_on_book_pressed"]
 [connection signal="pressed" from="Pause/MarginContainer/VBoxContainer2/VBoxContainer/Resume" to="." method="_on_resume_pressed"]

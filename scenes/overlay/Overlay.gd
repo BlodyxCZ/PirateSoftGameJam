@@ -64,3 +64,7 @@ func show_ui(_name: String) -> void:
 		"dialogue":
 			$Dialogue.show()
 			$Dialogue.first_meeting()
+
+
+func chef_say(duration: float, emotion: String = "Normal") -> void:
+	$Level/GhostChef.chef_say(duration, emotion)

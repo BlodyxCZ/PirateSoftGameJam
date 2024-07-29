@@ -1,22 +1,52 @@
-[gd_scene load_steps=21 format=3 uid="uid://dcq1we4ule87k"]
+[gd_scene load_steps=42 format=3 uid="uid://dcq1we4ule87k"]
 
 [ext_resource type="Script" path="res://scenes/overlay/Overlay.gd" id="1_2uwuf"]
 [ext_resource type="PackedScene" uid="uid://llaar1v2bv66" path="res://scenes/overlay/order/order.tscn" id="2_bdb1u"]
 [ext_resource type="Texture2D" uid="uid://bvgsw0janrdig" path="res://assets/kenney/arrow_e.svg" id="2_pi06a"]
-[ext_resource type="Texture2D" uid="uid://bdxwg07kupgjd" path="res://assets/ghost.png" id="3_1qxej"]
 [ext_resource type="Texture2D" uid="uid://b37x0f4f5k6mt" path="res://assets/ui/book.png" id="3_54h45"]
+[ext_resource type="Script" path="res://scenes/overlay/GhostChef.gd" id="3_hxfpv"]
 [ext_resource type="Script" path="res://scenes/classes/button/IconButton.gd" id="3_u66x3"]
+[ext_resource type="VideoStream" path="res://assets/videos/Chef/ChefTalk.ogv" id="4_hmg2p"]
 [ext_resource type="Texture2D" uid="uid://c6ttf40hqqmwt" path="res://assets/ui/action back.png" id="5_cj73a"]
+[ext_resource type="Texture2D" uid="uid://devff3kvftros" path="res://assets/videos/Chef/ChefPaused.png" id="5_jqw4f"]
+[ext_resource type="VideoStream" path="res://assets/videos/Chef/ChefAngryTalk.ogv" id="6_mkbgc"]
+[ext_resource type="Texture2D" uid="uid://ddn2sm4fg71yo" path="res://assets/videos/Chef/chefAngryPaused.png" id="7_oysl0"]
 [ext_resource type="Texture2D" uid="uid://bdkynyl7ov0ck" path="res://assets/ui/action front.png" id="7_t7lpi"]
 [ext_resource type="Texture2D" uid="uid://bnhromr3itfha" path="res://assets/ui/book 2.png" id="7_vxbue"]
+[ext_resource type="VideoStream" path="res://assets/videos/Chef/ChefFocusedTalk.ogv" id="8_pyob4"]
+[ext_resource type="Texture2D" uid="uid://sjiev8dfqgv2" path="res://assets/videos/Chef/chefFocusedPaused.png" id="9_8emi6"]
+[ext_resource type="VideoStream" path="res://assets/videos/Chef/ChefPleasedTalk.ogv" id="10_2f8pf"]
 [ext_resource type="PackedScene" uid="uid://bycc6jggmrowp" path="res://scenes/overlay/action/action.tscn" id="10_smlax"]
-[ext_resource type="VideoStream" path="res://assets/videos/VampireTalk.ogv" id="11_n8pbe"]
+[ext_resource type="Texture2D" uid="uid://rxyejkjcj11o" path="res://assets/videos/Chef/chefPleasedPaused.png" id="11_j4h3x"]
 [ext_resource type="Script" path="res://scenes/overlay/Dialogue.gd" id="11_sb3jb"]
-[ext_resource type="Texture2D" uid="uid://dfxshuav1cnrb" path="res://assets/videos/VampirePaused.png" id="12_y3m1s"]
+[ext_resource type="VideoStream" path="res://assets/videos/Chef/ChefThinkingTalk.ogv" id="12_rnvfj"]
+[ext_resource type="Texture2D" uid="uid://dfxshuav1cnrb" path="res://assets/videos/Vampire/VampirePaused.png" id="12_y3m1s"]
+[ext_resource type="Texture2D" uid="uid://xxhx5y7dwuof" path="res://assets/videos/Chef/chefThinkingPaused.png" id="13_ilprb"]
 [ext_resource type="Material" uid="uid://ln7u33eoc8ee" path="res://assets/shaders/ChromaKey.material" id="13_qdtij"]
-[ext_resource type="VideoStream" path="res://assets/videos/JackalopeTalk.ogv" id="13_y37kt"]
-[ext_resource type="Texture2D" uid="uid://dsc1aew3h1m85" path="res://assets/videos/JackalopePaused.png" id="14_wkdkb"]
+[ext_resource type="VideoStream" path="res://assets/videos/Vampire/VampireTalk.ogv" id="14_4gv8b"]
+[ext_resource type="VideoStream" path="res://assets/videos/Vampire/vampireHappyTalk.ogv" id="16_56qdk"]
+[ext_resource type="Texture2D" uid="uid://dek580dnta5t7" path="res://assets/videos/Vampire/vampireHappyPaused.png" id="16_pioej"]
 [ext_resource type="Texture2D" uid="uid://dyubsojduwujp" path="res://assets/ui/chat-transformed.png" id="16_uwhb2"]
+[ext_resource type="VideoStream" path="res://assets/videos/Vampire/vampireSadTalk.ogv" id="17_2wy72"]
+[ext_resource type="Texture2D" uid="uid://dp8schc2t75aq" path="res://assets/videos/Vampire/vampSadPaused.png" id="18_rkhkb"]
+[ext_resource type="VideoStream" path="res://assets/videos/Vampire/VampireSleepyTalk.ogv" id="19_p33kt"]
+[ext_resource type="Texture2D" uid="uid://b4vcoh0crls5m" path="res://assets/videos/Vampire/vampireSleepyPaused.png" id="20_f5u5c"]
+[ext_resource type="VideoStream" path="res://assets/videos/Vampire/VampireWideOpenedTalk.ogv" id="21_ch81l"]
+[ext_resource type="Texture2D" uid="uid://bm5alq04nuwoo" path="res://assets/videos/Vampire/vampireWideOpenedPaused.png" id="22_6ublj"]
+[ext_resource type="VideoStream" path="res://assets/videos/Jackalope/JackalopeTalk.ogv" id="23_uw371"]
+[ext_resource type="Texture2D" uid="uid://dsc1aew3h1m85" path="res://assets/videos/Jackalope/JackalopePaused.png" id="24_cdpag"]
+
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_nfm1y"]
+button_index = 4
+pressed = true
+
+[sub_resource type="InputEventKey" id="InputEventKey_sgxr1"]
+device = -1
+pressed = true
+keycode = 4194306
+
+[sub_resource type="Shortcut" id="Shortcut_sb144"]
+events = [SubResource("InputEventJoypadButton_nfm1y"), SubResource("InputEventKey_sgxr1")]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kan7d"]
 
@@ -75,7 +105,6 @@ offset_bottom = 40.0
 mouse_filter = 1
 
 [node name="Level" type="Control" parent="."]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -118,22 +147,163 @@ layout_mode = 2
 [node name="Panel7" parent="Level/Orders/OrderList" instance=ExtResource("2_bdb1u")]
 layout_mode = 2
 
-[node name="Ghost" type="Panel" parent="Level"]
+[node name="GhostChef" type="Panel" parent="Level"]
 layout_mode = 0
 offset_left = 1288.0
 offset_top = 24.0
 offset_right = 1576.0
 offset_bottom = 312.0
+script = ExtResource("3_hxfpv")
 metadata/_edit_group_ = true
 
-[node name="TextureRect" type="TextureRect" parent="Level/Ghost"]
+[node name="GhostChef" type="Control" parent="Level/GhostChef"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_1qxej")
+scale = Vector2(0.5, 0.5)
+pivot_offset = Vector2(144, 144)
+
+[node name="Normal" type="VideoStreamPlayer" parent="Level/GhostChef/GhostChef"]
+material = ExtResource("13_qdtij")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -112.0
+offset_top = -112.0
+offset_right = 112.0
+offset_bottom = 112.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("4_hmg2p")
+loop = true
+
+[node name="Static" type="TextureRect" parent="Level/GhostChef/GhostChef/Normal"]
+show_behind_parent = true
+material = ExtResource("13_qdtij")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_jqw4f")
+expand_mode = 2
+
+[node name="Angry" type="VideoStreamPlayer" parent="Level/GhostChef/GhostChef"]
+visible = false
+material = ExtResource("13_qdtij")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -112.0
+offset_top = -112.0
+offset_right = 112.0
+offset_bottom = 112.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("6_mkbgc")
+loop = true
+
+[node name="Static" type="TextureRect" parent="Level/GhostChef/GhostChef/Angry"]
+show_behind_parent = true
+material = ExtResource("13_qdtij")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_oysl0")
+expand_mode = 2
+
+[node name="Focused" type="VideoStreamPlayer" parent="Level/GhostChef/GhostChef"]
+visible = false
+material = ExtResource("13_qdtij")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -112.0
+offset_top = -112.0
+offset_right = 112.0
+offset_bottom = 112.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("8_pyob4")
+loop = true
+
+[node name="Static" type="TextureRect" parent="Level/GhostChef/GhostChef/Focused"]
+show_behind_parent = true
+material = ExtResource("13_qdtij")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_8emi6")
+expand_mode = 2
+
+[node name="Pleased" type="VideoStreamPlayer" parent="Level/GhostChef/GhostChef"]
+visible = false
+material = ExtResource("13_qdtij")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -112.0
+offset_top = -112.0
+offset_right = 112.0
+offset_bottom = 112.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("10_2f8pf")
+loop = true
+
+[node name="Static" type="TextureRect" parent="Level/GhostChef/GhostChef/Pleased"]
+show_behind_parent = true
+material = ExtResource("13_qdtij")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_j4h3x")
+expand_mode = 2
+
+[node name="Thinking" type="VideoStreamPlayer" parent="Level/GhostChef/GhostChef"]
+visible = false
+material = ExtResource("13_qdtij")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -112.0
+offset_top = -112.0
+offset_right = 112.0
+offset_bottom = 112.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("12_rnvfj")
+loop = true
+
+[node name="Static" type="TextureRect" parent="Level/GhostChef/GhostChef/Thinking"]
+show_behind_parent = true
+material = ExtResource("13_qdtij")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("13_ilprb")
+expand_mode = 2
 
 [node name="Book" type="Button" parent="Level"]
 layout_mode = 0
@@ -142,6 +312,7 @@ offset_top = 632.0
 offset_right = 1576.0
 offset_bottom = 872.0
 focus_mode = 0
+shortcut = SubResource("Shortcut_sb144")
 flat = true
 metadata/_edit_group_ = true
 
@@ -401,6 +572,7 @@ offset_bottom = 40.0
 texture = ExtResource("7_t7lpi")
 
 [node name="Dialogue" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -417,6 +589,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+metadata/_edit_lock_ = true
 
 [node name="VampireSpeech" type="TextureRect" parent="Dialogue"]
 layout_mode = 0
@@ -473,10 +646,10 @@ offset_left = 1024.0
 offset_top = 394.0
 offset_right = 1536.0
 offset_bottom = 906.0
-stream = ExtResource("11_n8pbe")
+stream = ExtResource("14_4gv8b")
 loop = true
 
-[node name="TextureRect" type="TextureRect" parent="Dialogue/Vampire/Normal"]
+[node name="Static" type="TextureRect" parent="Dialogue/Vampire/Normal"]
 show_behind_parent = true
 material = ExtResource("13_qdtij")
 layout_mode = 1
@@ -486,6 +659,94 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("12_y3m1s")
+
+[node name="Happy" type="VideoStreamPlayer" parent="Dialogue/Vampire"]
+visible = false
+material = ExtResource("13_qdtij")
+layout_mode = 0
+offset_left = 1024.0
+offset_top = 394.0
+offset_right = 1536.0
+offset_bottom = 906.0
+stream = ExtResource("16_56qdk")
+loop = true
+
+[node name="Static" type="TextureRect" parent="Dialogue/Vampire/Happy"]
+show_behind_parent = true
+material = ExtResource("13_qdtij")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("16_pioej")
+
+[node name="Sad" type="VideoStreamPlayer" parent="Dialogue/Vampire"]
+visible = false
+material = ExtResource("13_qdtij")
+layout_mode = 0
+offset_left = 1024.0
+offset_top = 394.0
+offset_right = 1536.0
+offset_bottom = 906.0
+stream = ExtResource("17_2wy72")
+loop = true
+
+[node name="Static" type="TextureRect" parent="Dialogue/Vampire/Sad"]
+show_behind_parent = true
+material = ExtResource("13_qdtij")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("18_rkhkb")
+
+[node name="Sleepy" type="VideoStreamPlayer" parent="Dialogue/Vampire"]
+visible = false
+material = ExtResource("13_qdtij")
+layout_mode = 0
+offset_left = 1024.0
+offset_top = 394.0
+offset_right = 1536.0
+offset_bottom = 906.0
+stream = ExtResource("19_p33kt")
+loop = true
+
+[node name="Static" type="TextureRect" parent="Dialogue/Vampire/Sleepy"]
+show_behind_parent = true
+material = ExtResource("13_qdtij")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("20_f5u5c")
+
+[node name="Wide" type="VideoStreamPlayer" parent="Dialogue/Vampire"]
+visible = false
+material = ExtResource("13_qdtij")
+layout_mode = 0
+offset_left = 1024.0
+offset_top = 394.0
+offset_right = 1536.0
+offset_bottom = 906.0
+stream = ExtResource("21_ch81l")
+loop = true
+
+[node name="Static" type="TextureRect" parent="Dialogue/Vampire/Wide"]
+show_behind_parent = true
+material = ExtResource("13_qdtij")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("22_6ublj")
 
 [node name="Jackalope" type="Control" parent="Dialogue"]
 anchors_preset = 0
@@ -500,18 +761,19 @@ offset_top = 394.0
 offset_right = 1088.0
 offset_bottom = 906.0
 scale = Vector2(-1, 1)
-stream = ExtResource("13_y37kt")
+stream = ExtResource("23_uw371")
 loop = true
 
-[node name="TextureRect" type="TextureRect" parent="Dialogue/Jackalope/Normal"]
+[node name="Static" type="TextureRect" parent="Dialogue/Jackalope/Normal"]
 show_behind_parent = true
+material = ExtResource("13_qdtij")
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("14_wkdkb")
+texture = ExtResource("24_cdpag")
 
 [connection signal="pressed" from="Level/Book" to="." method="_on_book_pressed"]
 [connection signal="pressed" from="Pause/MarginContainer/VBoxContainer2/VBoxContainer/Resume" to="." method="_on_resume_pressed"]

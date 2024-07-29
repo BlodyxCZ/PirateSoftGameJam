@@ -418,48 +418,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Vampire" type="VideoStreamPlayer" parent="Dialogue"]
-material = ExtResource("13_qdtij")
-layout_mode = 0
-offset_left = 1024.0
-offset_top = 394.0
-offset_right = 1536.0
-offset_bottom = 906.0
-stream = ExtResource("11_n8pbe")
-loop = true
-
-[node name="TextureRect" type="TextureRect" parent="Dialogue/Vampire"]
-show_behind_parent = true
-material = ExtResource("13_qdtij")
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("12_y3m1s")
-
-[node name="Jackalope" type="VideoStreamPlayer" parent="Dialogue"]
-material = ExtResource("13_qdtij")
-layout_mode = 0
-offset_left = 576.0
-offset_top = 394.0
-offset_right = 1088.0
-offset_bottom = 906.0
-scale = Vector2(-1, 1)
-stream = ExtResource("13_y37kt")
-loop = true
-
-[node name="TextureRect" type="TextureRect" parent="Dialogue/Jackalope"]
-show_behind_parent = true
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("14_wkdkb")
-
 [node name="VampireSpeech" type="TextureRect" parent="Dialogue"]
 layout_mode = 0
 offset_left = 896.0
@@ -502,6 +460,58 @@ text = "THIS IS A SPEECH BOUBLE"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
+
+[node name="Vampire" type="Control" parent="Dialogue"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Normal" type="VideoStreamPlayer" parent="Dialogue/Vampire"]
+material = ExtResource("13_qdtij")
+layout_mode = 0
+offset_left = 1024.0
+offset_top = 394.0
+offset_right = 1536.0
+offset_bottom = 906.0
+stream = ExtResource("11_n8pbe")
+loop = true
+
+[node name="TextureRect" type="TextureRect" parent="Dialogue/Vampire/Normal"]
+show_behind_parent = true
+material = ExtResource("13_qdtij")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_y3m1s")
+
+[node name="Jackalope" type="Control" parent="Dialogue"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Normal" type="VideoStreamPlayer" parent="Dialogue/Jackalope"]
+material = ExtResource("13_qdtij")
+layout_mode = 0
+offset_left = 576.0
+offset_top = 394.0
+offset_right = 1088.0
+offset_bottom = 906.0
+scale = Vector2(-1, 1)
+stream = ExtResource("13_y37kt")
+loop = true
+
+[node name="TextureRect" type="TextureRect" parent="Dialogue/Jackalope/Normal"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("14_wkdkb")
 
 [connection signal="pressed" from="Level/Book" to="." method="_on_book_pressed"]
 [connection signal="pressed" from="Pause/MarginContainer/VBoxContainer2/VBoxContainer/Resume" to="." method="_on_resume_pressed"]

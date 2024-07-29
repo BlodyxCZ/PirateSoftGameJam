@@ -8,6 +8,9 @@ signal wake()
 
 func _ready() -> void:
 	Overlay.hide_all()
+	await get_tree().create_timer(1.0).timeout
+	$Cameras/Intro.current = true
+	$ColorRect.hide()
 	
 	player.frozen = true
 	player.sleep()
@@ -39,13 +42,13 @@ func _on_camera_trigger_body_exited(body: Node3D) -> void:
 	Overlay.hide_all()
 
 
-func _on_door_trigger_body_entered(body: Node3D) -> void:
+func _on_door_trigger_body_entered(_body: Node3D) -> void:
 	var tween: Tween = create_tween()
 	tween.tween_property($Objects/Kitchen/Door, "rotation:y", deg_to_rad(-82), 0.2)
 	tween.play()
 
 
-func _on_door_trigger_body_exited(body: Node3D) -> void:
+func _on_door_trigger_body_exited(_body: Node3D) -> void:
 	var tween: Tween = create_tween()
 	tween.tween_property($Objects/Kitchen/Door, "rotation:y", deg_to_rad(0), 0.2)
 	tween.play()

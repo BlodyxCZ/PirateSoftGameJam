@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://byip00fwh6224"]
+
+[ext_resource type="Texture2D" uid="uid://bawkbrpj5cxa" path="res://assets/models/kitchen1/Kitchen_oven_Oven_BaseColor.png" id="1_bdmrp"]
+
+[resource]
+resource_name = "Oven"
+albedo_texture = ExtResource("1_bdmrp")
+metallic = 1.0
+emission_texture = ExtResource("1_bdmrp")

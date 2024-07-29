@@ -1,0 +1,209 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://b3ss108v3b7ta"
+path="res://.godot/imported/Kitchen.glb-1c3c56ac32ce2b4137e136e51bb6ef10.scn"
+
+[deps]
+
+source_file="res://assets/models/kitchen1/Kitchen.glb"
+dest_files=["res://.godot/imported/Kitchen.glb-1c3c56ac32ce2b4137e136e51bb6ef10.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+import_script/path=""
+_subresources={
+"materials": {
+"Blodyx": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/models/kitchen1/Materials/Blodyx.tres"
+},
+"ChoppingBoard": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/models/kitchen1/Materials/ChoppingBoard.tres"
+},
+"Concrete": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/models/kitchen1/Materials/Concrete.tres"
+},
+"Counter": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/models/kitchen1/Materials/Counter.tres"
+},
+"Crown": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/models/kitchen1/Materials/Crown.tres"
+},
+"Door": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/models/kitchen1/Materials/Door.tres"
+},
+"Door.001": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/models/kitchen1/Materials/Door.001.tres"
+},
+"Eyes": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/models/kitchen1/Materials/Eyes.tres"
+},
+"Flame": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/models/kitchen1/Materials/Flame.tres"
+},
+"Flame.001": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/models/kitchen1/Materials/Flame.001.tres"
+},
+"Floor": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/models/kitchen1/Materials/Floor.tres"
+},
+"Fridge": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/models/kitchen1/Materials/Fridge.tres"
+},
+"Garbage.001": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/models/kitchen1/Materials/Garbage.001.tres"
+},
+"Grass": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/models/kitchen1/Materials/Grass.tres"
+},
+"GrassTuft": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/models/kitchen1/Materials/GrassTuft.tres"
+},
+"Grime": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/models/kitchen1/Materials/Grime.tres"
+},
+"Jacks": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/models/kitchen1/Materials/Jacks.tres"
+},
+"Jamie": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/models/kitchen1/Materials/Jamie.tres"
+},
+"Material": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/models/kitchen1/Materials/Material.tres"
+},
+"Material.001": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/models/kitchen1/Materials/Material.001.tres"
+},
+"Material.002": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/models/kitchen1/Materials/Material.002.tres"
+},
+"Material.003": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/models/kitchen1/Materials/Material.003.tres"
+},
+"Material.004": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/models/kitchen1/Materials/Material.004.tres"
+},
+"Material.005": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/models/kitchen1/Materials/Material.005.tres"
+},
+"Material.006": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/models/kitchen1/Materials/Material.006.tres"
+},
+"Material.007": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/models/kitchen1/Materials/Material.007.tres"
+},
+"Material.008": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/models/kitchen1/Materials/Material.008.tres"
+},
+"Mixer": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/models/kitchen1/Materials/Mixer.tres"
+},
+"Mouth": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/models/kitchen1/Materials/Mouth.tres"
+},
+"Oven": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/models/kitchen1/Materials/Oven.tres"
+},
+"Pavement": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/models/kitchen1/Materials/Pavement.tres"
+},
+"Potions": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/models/kitchen1/Materials/Potions.tres"
+},
+"RedWallExt": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/models/kitchen1/Materials/RedWallExt.tres"
+},
+"RedWallExt.001": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/models/kitchen1/Materials/RedWallExt.001.tres"
+},
+"RedWallExt.002": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/models/kitchen1/Materials/RedWallExt.002.tres"
+},
+"Road": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/models/kitchen1/Materials/Road.tres"
+},
+"Smams": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/models/kitchen1/Materials/Smams.tres"
+},
+"Springbonnie": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/models/kitchen1/Materials/Springbonnie.tres"
+},
+"Stem": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/models/kitchen1/Materials/Stem.tres"
+},
+"Stove": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/models/kitchen1/Materials/Stove.tres"
+},
+"Vampire": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/models/kitchen1/Materials/Vampire.tres"
+},
+"Wall": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/models/kitchen1/Materials/Wall.tres"
+},
+"Water": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/models/kitchen1/Materials/Water.tres"
+}
+}
+}
+gltf/naming_version=1
+gltf/embedded_image_handling=1

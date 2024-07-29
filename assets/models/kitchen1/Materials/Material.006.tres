@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://8decsm7h8x5r"]
+
+[ext_resource type="Texture2D" uid="uid://dsk6pn4whbeut" path="res://assets/models/kitchen1/Kitchen_lantern_DefaultMaterial_BaseColor.png" id="1_fb8t8"]
+
+[resource]
+resource_name = "Material.006"
+albedo_texture = ExtResource("1_fb8t8")
+metallic = 1.0
+emission_texture = ExtResource("1_fb8t8")

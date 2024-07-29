@@ -3,9 +3,9 @@
 [ext_resource type="Script" path="res://scenes/objects/interactable/chopping_block/chopping_block.gd" id="1_3fn24"]
 [ext_resource type="Script" path="res://scenes/classes/Popup/popup.gd" id="1_o53oq"]
 [ext_resource type="Script" path="res://scenes/classes/Popup/pop_up_texture.gd" id="3_op37t"]
-[ext_resource type="Material" uid="uid://dl7fl6spwles1" path="res://assets/models/kitchen1/ChoppingBoard.tres" id="4_fasmb"]
+[ext_resource type="Material" uid="uid://b2g8r5c1tjx10" path="res://assets/models/kitchen1/ChoppingBoard.tres" id="4_fasmb"]
 [ext_resource type="Script" path="res://scenes/objects/interactable/fridge/GUI.gd" id="4_w805t"]
-[ext_resource type="Material" uid="uid://crapuns5b8svh" path="res://assets/models/kitchen1/Springbonnie.tres" id="5_kw3iy"]
+[ext_resource type="Material" uid="uid://dh4boa58v0nmy" path="res://assets/models/kitchen1/Flame.tres" id="5_kw3iy"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_3vunf"]
 viewport_path = NodePath("PopUpTexture")

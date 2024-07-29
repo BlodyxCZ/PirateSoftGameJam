@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b5by1w1r3crwt"]
+
+[ext_resource type="Texture2D" uid="uid://cwhqtao720fax" path="res://assets/models/kitchen1/Kitchen_smamsGrafitti.png" id="1_w1d50"]
+
+[resource]
+resource_name = "Smams"
+transparency = 4
+albedo_texture = ExtResource("1_w1d50")
+roughness = 0.5

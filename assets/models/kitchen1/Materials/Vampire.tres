@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://ey5cdsywq5wo"]
+
+[ext_resource type="Texture2D" uid="uid://b6redf4tpagwn" path="res://assets/models/kitchen1/Kitchen_vampire_Vampire_BaseColor.png" id="1_a2rgv"]
+
+[resource]
+resource_name = "Vampire"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0, 0, 0, 1)
+albedo_texture = ExtResource("1_a2rgv")
+metallic = 1.0
+emission_texture = ExtResource("1_a2rgv")

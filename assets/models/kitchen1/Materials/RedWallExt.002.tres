@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://matu1ue12ldu"]
+
+[ext_resource type="Texture2D" uid="uid://brvhmsfnmeoo3" path="res://assets/models/kitchen1/Kitchen_RedBrick.png" id="1_ewnov"]
+
+[resource]
+resource_name = "RedWallExt.002"
+albedo_texture = ExtResource("1_ewnov")
+roughness = 0.5

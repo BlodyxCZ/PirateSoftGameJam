@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://m8ixmc48at4k"]
+
+[ext_resource type="Texture2D" uid="uid://bpss0juo1oolf" path="res://assets/models/kitchen1/Kitchen_cashbox_DefaultMaterial_BaseColor.png" id="1_qkojg"]
+
+[resource]
+resource_name = "Material"
+albedo_texture = ExtResource("1_qkojg")
+metallic = 1.0

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dlrxrgppyflf8"]
+
+[ext_resource type="Texture2D" uid="uid://df5cofuqblnef" path="res://assets/models/kitchen1/Kitchen_choppingboard_DefaultMaterial_BaseColor.png" id="1_n1aoc"]
+
+[resource]
+resource_name = "ChoppingBoard"
+albedo_texture = ExtResource("1_n1aoc")
+metallic = 1.0
+emission_texture = ExtResource("1_n1aoc")

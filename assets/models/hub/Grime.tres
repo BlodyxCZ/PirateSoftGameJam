@@ -1,9 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://donxbsmuums6y"]
-
-[ext_resource type="Texture2D" uid="uid://djdb1cmig4a32" path="res://assets/models/hub/hub_grime.png" id="1_lq51d"]
-
-[resource]
-resource_name = "Grime"
-transparency = 4
-albedo_texture = ExtResource("1_lq51d")
-roughness = 0.5

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bhrnyv7nij55a"]
+
+[ext_resource type="Texture2D" uid="uid://ct8tv8h7623s7" path="res://assets/models/kitchen1/Kitchen_jacks.png" id="1_ingk6"]
+
+[resource]
+resource_name = "Jacks"
+transparency = 4
+albedo_texture = ExtResource("1_ingk6")
+roughness = 0.5

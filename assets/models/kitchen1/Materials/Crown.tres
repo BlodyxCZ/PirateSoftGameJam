@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dd2ofnk7phxjr"]
+
+[ext_resource type="Texture2D" uid="uid://bxyw3ggruqrp5" path="res://assets/models/kitchen1/Kitchen_crown.png" id="1_5tm0v"]
+
+[resource]
+resource_name = "Crown"
+transparency = 4
+albedo_texture = ExtResource("1_5tm0v")
+roughness = 0.5

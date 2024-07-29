@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cw1b1jpsdwhi1"]
+
+[ext_resource type="Texture2D" uid="uid://cs750b44novbu" path="res://assets/models/kitchen1/Kitchen_blodyxGraffiti.png" id="1_k73n1"]
+
+[resource]
+resource_name = "Blodyx"
+transparency = 4
+albedo_texture = ExtResource("1_k73n1")
+roughness = 0.5

@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bpqy235s05oyv"]
+
+[ext_resource type="Texture2D" uid="uid://dhmnhs4n8n4hj" path="res://assets/models/kitchen1/Kitchen_grasstuft.png" id="1_k10rg"]
+
+[resource]
+resource_name = "GrassTuft"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_k10rg")
+roughness = 0.5

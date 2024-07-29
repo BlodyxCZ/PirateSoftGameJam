@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dblup4ob7siqu"]
+
+[ext_resource type="Texture2D" uid="uid://ch465vchm3x4q" path="res://assets/models/kitchen1/Kitchen_potionrack_Potions_BaseColor.png" id="1_fk07l"]
+
+[resource]
+resource_name = "Potions"
+albedo_texture = ExtResource("1_fk07l")
+metallic = 1.0
+emission_texture = ExtResource("1_fk07l")

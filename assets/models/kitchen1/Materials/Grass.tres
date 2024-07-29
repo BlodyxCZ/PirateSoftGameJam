@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b3e3w7fbq87tv"]
+
+[ext_resource type="Texture2D" uid="uid://dfq1n87lrwe0y" path="res://assets/models/kitchen1/Kitchen_grass.png" id="1_juarq"]
+
+[resource]
+resource_name = "Grass"
+albedo_texture = ExtResource("1_juarq")
+metallic = 1.0
+emission_texture = ExtResource("1_juarq")

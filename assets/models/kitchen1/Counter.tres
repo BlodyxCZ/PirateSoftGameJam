@@ -1,9 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dtkkxjfm7p3jh"]
-
-[ext_resource type="Texture2D" uid="uid://b4knpgnd0eavs" path="res://assets/models/kitchen1/textures/counter_Counter_BaseColor.png" id="1_55ee0"]
-
-[resource]
-resource_name = "Counter"
-albedo_texture = ExtResource("1_55ee0")
-metallic = 1.0
-emission_enabled = true

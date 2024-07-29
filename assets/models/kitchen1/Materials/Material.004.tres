@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b0cnthhvq8ox7"]
+
+[ext_resource type="Texture2D" uid="uid://j1q15m1o1n8h" path="res://assets/models/kitchen1/Kitchen_Gate_DefaultMaterial_BaseColor.png" id="1_t5wmd"]
+
+[resource]
+resource_name = "Material.004"
+cull_mode = 1
+albedo_texture = ExtResource("1_t5wmd")
+roughness = 0.5

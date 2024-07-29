@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dt2ohqtquihq8"]
+
+[ext_resource type="Texture2D" uid="uid://dkkcrpcc2m88e" path="res://assets/models/kitchen1/Kitchen_mixer_DefaultMaterial_BaseColor.png" id="1_y2l6h"]
+
+[resource]
+resource_name = "Mixer"
+albedo_texture = ExtResource("1_y2l6h")
+metallic = 1.0
+emission_texture = ExtResource("1_y2l6h")

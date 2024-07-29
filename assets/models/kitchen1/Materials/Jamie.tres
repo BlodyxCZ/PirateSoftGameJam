@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dtkn53rjo1305"]
+
+[ext_resource type="Texture2D" uid="uid://bmpcaejquaqvc" path="res://assets/models/kitchen1/Kitchen_output-onlinepngtools.png" id="1_ch5k3"]
+
+[resource]
+resource_name = "Jamie"
+transparency = 4
+albedo_texture = ExtResource("1_ch5k3")
+roughness = 0.5

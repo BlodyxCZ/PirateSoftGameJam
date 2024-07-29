@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dxbe40avdq2ny"]
+
+[ext_resource type="Texture2D" uid="uid://23q73ejaqvoy" path="res://assets/models/kitchen1/Kitchen_grime.png" id="1_ljn6e"]
+
+[resource]
+resource_name = "Grime"
+transparency = 4
+albedo_texture = ExtResource("1_ljn6e")
+roughness = 0.5

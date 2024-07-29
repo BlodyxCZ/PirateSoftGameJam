@@ -1,9 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bw0di4lc74wkh"]
-
-[ext_resource type="Texture2D" uid="uid://bhpq36q456odk" path="res://assets/models/kitchen1/textures/garbagebin_Garbage_BaseColor.png" id="1_eugai"]
-
-[resource]
-resource_name = "Garbage.001"
-albedo_texture = ExtResource("1_eugai")
-metallic = 1.0
-emission_texture = ExtResource("1_eugai")

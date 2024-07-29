@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b673a6h3q543"]
+
+[ext_resource type="Texture2D" uid="uid://cgkxwn8jpl4kh" path="res://assets/models/kitchen1/Kitchen_counter_Counter_BaseColor.png" id="1_pmskt"]
+
+[resource]
+resource_name = "Counter"
+albedo_texture = ExtResource("1_pmskt")
+metallic = 1.0
+emission_texture = ExtResource("1_pmskt")

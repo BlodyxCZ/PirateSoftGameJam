@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://ccq0woa1q1a3m"]
+
+[ext_resource type="Texture2D" uid="uid://dd6pwyojtkq6j" path="res://assets/models/kitchen1/Kitchen_fridge_Fridge_BaseColor.png" id="1_6r7g5"]
+
+[resource]
+resource_name = "Fridge"
+albedo_texture = ExtResource("1_6r7g5")
+metallic = 1.0
+emission_texture = ExtResource("1_6r7g5")

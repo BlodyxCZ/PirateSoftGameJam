@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://c7pntxc5eb7f7"]
+
+[ext_resource type="Texture2D" uid="uid://c2oyo26hofoiw" path="res://assets/models/kitchen1/Kitchen_RoadTexture.png" id="1_76rlc"]
+
+[resource]
+resource_name = "Road"
+albedo_texture = ExtResource("1_76rlc")
+roughness = 0.5

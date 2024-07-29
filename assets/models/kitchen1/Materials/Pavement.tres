@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://tabkf6uyqus7"]
+
+[ext_resource type="Texture2D" uid="uid://difnjbttfkwj6" path="res://assets/models/kitchen1/Kitchen_concretewall.png" id="1_abc8y"]
+
+[resource]
+resource_name = "Pavement"
+albedo_texture = ExtResource("1_abc8y")
+metallic = 1.0
+emission_texture = ExtResource("1_abc8y")

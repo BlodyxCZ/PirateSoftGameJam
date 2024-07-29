@@ -1,8 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://ckp06ih8carlg"]
+[gd_scene load_steps=15 format=3 uid="uid://ckp06ih8carlg"]
 
 [ext_resource type="Script" path="res://scenes/npc/npc.gd" id="1_bld23"]
-[ext_resource type="Material" uid="uid://ceeujwhpfesdd" path="res://assets/models/hub/Eyes.tres" id="2_xu3y5"]
-[ext_resource type="Material" uid="uid://xq50u2tuqixb" path="res://assets/models/hub/Mouth.tres" id="3_k3mo4"]
+[ext_resource type="Texture2D" uid="uid://cexkmev2xgs8c" path="res://assets/models/hub/vampire_vampeye.png" id="2_21414"]
+[ext_resource type="Texture2D" uid="uid://b0rl5kcyunyyq" path="res://assets/models/hub/vampire_vampmouth.png" id="3_lrr8o"]
 [ext_resource type="Material" uid="uid://cttva8wnlw1s8" path="res://assets/models/hub/Vampire.tres" id="4_f460r"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_fn24u"]
@@ -10,6 +10,12 @@ radius = 3.62934
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0r38c"]
 size = Vector3(1.51646, 2.23425, 3.07173)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_skquv"]
+resource_name = "Eyes"
+transparency = 4
+albedo_texture = ExtResource("2_21414")
+roughness = 0.5
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_s1ka7"]
 resource_name = "vampire_Plane_013"
@@ -20,7 +26,7 @@ _surfaces = [{
 "format": 34359745559,
 "index_count": 48,
 "index_data": PackedByteArray(8, 0, 3, 0, 7, 0, 8, 0, 6, 0, 3, 0, 5, 0, 6, 0, 8, 0, 5, 0, 1, 0, 6, 0, 0, 0, 8, 0, 4, 0, 0, 0, 5, 0, 8, 0, 4, 0, 7, 0, 2, 0, 4, 0, 8, 0, 7, 0, 17, 0, 12, 0, 15, 0, 17, 0, 16, 0, 12, 0, 14, 0, 15, 0, 10, 0, 14, 0, 17, 0, 15, 0, 9, 0, 17, 0, 14, 0, 9, 0, 13, 0, 17, 0, 13, 0, 16, 0, 17, 0, 13, 0, 11, 0, 16, 0),
-"material": ExtResource("2_xu3y5"),
+"material": SubResource("StandardMaterial3D_skquv"),
 "name": "Eyes",
 "primitive": 3,
 "skin_data": PackedByteArray(4, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0),
@@ -139,6 +145,13 @@ bind/34/name = &"Knee_L"
 bind/34/bone = -1
 bind/34/pose = Transform3D(-0.69591, -0.154038, 0.269055, -0.274729, 0, -0.710586, 0.143674, -0.746111, -0.0555478, 23.3211, 2.69228, -4.63652)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ocpqh"]
+resource_name = "Mouth"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("3_lrr8o")
+roughness = 0.5
+
 [sub_resource type="ArrayMesh" id="ArrayMesh_aenta"]
 resource_name = "vampire_Plane_014"
 _surfaces = [{
@@ -148,7 +161,7 @@ _surfaces = [{
 "format": 34359745559,
 "index_count": 24,
 "index_data": PackedByteArray(13, 0, 3, 0, 9, 0, 13, 0, 10, 0, 3, 0, 5, 0, 11, 0, 15, 0, 5, 0, 2, 0, 11, 0, 0, 0, 14, 0, 7, 0, 0, 0, 4, 0, 14, 0, 6, 0, 8, 0, 1, 0, 6, 0, 12, 0, 8, 0),
-"material": ExtResource("3_k3mo4"),
+"material": SubResource("StandardMaterial3D_ocpqh"),
 "name": "Mouth",
 "primitive": 3,
 "skin_data": PackedByteArray(4, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0),

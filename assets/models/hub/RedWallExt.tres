@@ -1,9 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b6kqv3gmmncmg"]
-
-[ext_resource type="Texture2D" uid="uid://flq0hvpc7kwj" path="res://assets/models/hub/hub_brickwall.png" id="1_m2nx6"]
-
-[resource]
-resource_name = "RedWallExt"
-albedo_texture = ExtResource("1_m2nx6")
-metallic = 1.0
-emission_texture = ExtResource("1_m2nx6")

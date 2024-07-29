@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dkg1rt34d6ohv"]
+
+[ext_resource type="Texture2D" uid="uid://nsx5oj3t6bla" path="res://assets/models/kitchen1/Kitchen_vampeye.png" id="1_7welb"]
+
+[resource]
+resource_name = "Eyes"
+transparency = 4
+albedo_texture = ExtResource("1_7welb")
+roughness = 0.5

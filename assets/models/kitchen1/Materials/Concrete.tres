@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://byhh3dhwjo2bt"]
+
+[ext_resource type="Texture2D" uid="uid://b8gxaeg770ihw" path="res://assets/models/kitchen1/Kitchen_concrete.png" id="1_1mnh3"]
+
+[resource]
+resource_name = "Concrete"
+albedo_texture = ExtResource("1_1mnh3")
+metallic = 1.0
+emission_texture = ExtResource("1_1mnh3")

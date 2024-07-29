@@ -1,9 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://0k4mrex2iyo6"]
-
-[ext_resource type="Texture2D" uid="uid://bifjmxe4kokf3" path="res://assets/models/Jackalope/textures/jackalope_Jackalope_BaseColor.png" id="1_xayvp"]
-
-[resource]
-resource_name = "Jackalope"
-albedo_texture = ExtResource("1_xayvp")
-metallic = 1.0
-emission_texture = ExtResource("1_xayvp")

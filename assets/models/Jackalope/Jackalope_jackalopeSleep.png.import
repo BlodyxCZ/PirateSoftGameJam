@@ -2,21 +2,23 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bifjmxe4kokf3"
-path.s3tc="res://.godot/imported/jackalope_Jackalope_BaseColor.png-776a595132326c302f23d1103352b19a.s3tc.ctex"
+uid="uid://d2pf8ad0cra53"
+path="res://.godot/imported/Jackalope_jackalopeSleep.png-198aea3812e7bac66cef63fd35a0d538.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
+}
+generator_parameters={
+"md5": "424678f656cc14690602210b731ec977"
 }
 
 [deps]
 
-source_file="res://assets/models/Jackalope/textures/jackalope_Jackalope_BaseColor.png"
-dest_files=["res://.godot/imported/jackalope_Jackalope_BaseColor.png-776a595132326c302f23d1103352b19a.s3tc.ctex"]
+source_file="res://assets/models/Jackalope/Jackalope_jackalopeSleep.png"
+dest_files=["res://.godot/imported/Jackalope_jackalopeSleep.png-198aea3812e7bac66cef63fd35a0d538.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

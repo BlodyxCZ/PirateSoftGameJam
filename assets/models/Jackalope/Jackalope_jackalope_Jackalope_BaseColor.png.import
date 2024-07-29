@@ -2,16 +2,19 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4twfhupjbv4j"
-path="res://.godot/imported/i_hate_it.png-85ea1dbbc98810f72f458158b3a1266e.ctex"
+uid="uid://bqv0oorvghs63"
+path="res://.godot/imported/Jackalope_jackalope_Jackalope_BaseColor.png-c14c2434a1f843028f27be511f941781.ctex"
 metadata={
 "vram_texture": false
+}
+generator_parameters={
+"md5": "07c7e838582ad0a1feea6b4e8ca14a8c"
 }
 
 [deps]
 
-source_file="res://assets/models/Jackalope/textures/i_hate_it.png"
-dest_files=["res://.godot/imported/i_hate_it.png-85ea1dbbc98810f72f458158b3a1266e.ctex"]
+source_file="res://assets/models/Jackalope/Jackalope_jackalope_Jackalope_BaseColor.png"
+dest_files=["res://.godot/imported/Jackalope_jackalope_Jackalope_BaseColor.png-c14c2434a1f843028f27be511f941781.ctex"]
 
 [params]
 
@@ -21,7 +24,7 @@ compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=false
+mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -31,4 +34,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

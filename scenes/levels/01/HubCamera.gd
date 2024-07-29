@@ -1,7 +1,7 @@
 extends Camera3D
 
 
-@export var follow_factor: float = 0.01
+@export var follow_factor: float = 0.005
 
 @onready var player: Player = get_tree().get_first_node_in_group("Player")
 

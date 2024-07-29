@@ -2,19 +2,19 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cexkmev2xgs8c"
-path="res://.godot/imported/vampire_vampeye.png-dcf549bc56e070c1e1ceb2ab3060fffe.ctex"
+uid="uid://jvh0qe3lpy2p"
+path="res://.godot/imported/Jackalope_eye.png-f9dd75edd4ecd264b5a8eeb74caf45b8.ctex"
 metadata={
 "vram_texture": false
 }
 generator_parameters={
-"md5": "a4bd730f764be15712004dc78f73040c"
+"md5": "7b0628102b269ab699ec32fa8c18a1ce"
 }
 
 [deps]
 
-source_file="res://assets/models/hub/vampire_vampeye.png"
-dest_files=["res://.godot/imported/vampire_vampeye.png-dcf549bc56e070c1e1ceb2ab3060fffe.ctex"]
+source_file="res://assets/models/Jackalope/Jackalope_eye.png"
+dest_files=["res://.godot/imported/Jackalope_eye.png-f9dd75edd4ecd264b5a8eeb74caf45b8.ctex"]
 
 [params]
 

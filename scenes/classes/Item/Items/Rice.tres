@@ -1,23 +1,18 @@
 [gd_resource type="Resource" script_class="Item" load_steps=6 format=3 uid="uid://b1yuwwch7dk4o"]
 
+[ext_resource type="Texture2D" uid="uid://su71p5p1igqi" path="res://assets/items/CombinedRice.png" id="1_4a7m6"]
 [ext_resource type="Script" path="res://scenes/classes/Item/Item.gd" id="1_cvcgf"]
+[ext_resource type="Texture2D" uid="uid://ohpp3rhkfwq" path="res://assets/items/Complete/tofu.png" id="2_fth1r"]
 [ext_resource type="Texture2D" uid="uid://hfnhs5x17kxi" path="res://assets/items/Trash.png" id="2_s5dxh"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_bim4j"]
-size = Vector2(256, 256)
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_dw7c6"]
-size = Vector2(256, 256)
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_aqnqf"]
-size = Vector2(256, 256)
+[ext_resource type="Texture2D" uid="uid://c7hpndccmmae8" path="res://assets/items/rice.png" id="3_tbgjh"]
 
 [resource]
 script = ExtResource("1_cvcgf")
 item_name = "Rice"
-default = SubResource("PlaceholderTexture2D_aqnqf")
-cooked = SubResource("PlaceholderTexture2D_dw7c6")
-combined = SubResource("PlaceholderTexture2D_bim4j")
+default = ExtResource("3_tbgjh")
+cooked = ExtResource("2_fth1r")
+combined = ExtResource("1_4a7m6")
+enchanted = ExtResource("2_fth1r")
 trashed = ExtResource("2_s5dxh")
 cook_condition = Array[String](["Combined"])
 boil_condition = Array[String]([])

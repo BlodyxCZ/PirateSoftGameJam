@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dc22jitmq87n1"]
+[gd_scene load_steps=17 format=3 uid="uid://dc22jitmq87n1"]
 
 [ext_resource type="Script" path="res://scenes/objects/interactable/fridge/fridge.gd" id="1_engde"]
 [ext_resource type="Script" path="res://scenes/classes/Popup/popup.gd" id="2_q71sa"]
@@ -9,6 +9,10 @@
 [ext_resource type="Texture2D" uid="uid://cen22u4q85712" path="res://assets/items/BellPeppers/peppers.png" id="7_17fmn"]
 [ext_resource type="Texture2D" uid="uid://cww8vvupf6bqg" path="res://assets/items/Chicken/chicken .png" id="8_rehq1"]
 [ext_resource type="Texture2D" uid="uid://dswebeyir8xxb" path="res://assets/items/Wine/wine.png" id="9_buhsy"]
+[ext_resource type="Texture2D" uid="uid://c7hpndccmmae8" path="res://assets/items/rice.png" id="10_nwt1e"]
+[ext_resource type="Texture2D" uid="uid://cc6q6qmcufyvk" path="res://assets/items/tofu.png" id="11_qdcc0"]
+[ext_resource type="Texture2D" uid="uid://xh7xhqolkqc5" path="res://assets/items/onions.png" id="12_mlpgk"]
+[ext_resource type="Texture2D" uid="uid://d1iw7tc8hi7uj" path="res://assets/items/hot_sauce.png" id="13_bw3nc"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_e7jdm"]
 size = Vector3(3.624, 0.7, 1)
@@ -58,7 +62,6 @@ skeleton = NodePath("")
 layer = 3
 
 [node name="GUI" type="Control" parent="CanvasLayer"]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -154,6 +157,7 @@ offset_bottom = 555.0
 focus_neighbor_left = NodePath("../Pepper")
 focus_previous = NodePath("../Pepper")
 mouse_filter = 1
+icon = ExtResource("10_nwt1e")
 icon_alignment = 1
 expand_icon = true
 
@@ -167,6 +171,7 @@ offset_bottom = 557.0
 focus_neighbor_left = NodePath("../Pepper")
 focus_previous = NodePath("../Pepper")
 mouse_filter = 1
+icon = ExtResource("11_qdcc0")
 icon_alignment = 1
 expand_icon = true
 
@@ -180,6 +185,7 @@ offset_bottom = 555.0
 focus_neighbor_left = NodePath("../Pepper")
 focus_previous = NodePath("../Pepper")
 mouse_filter = 1
+icon = ExtResource("12_mlpgk")
 icon_alignment = 1
 expand_icon = true
 
@@ -193,6 +199,7 @@ offset_bottom = 341.0
 focus_neighbor_left = NodePath("../Pepper")
 focus_previous = NodePath("../Pepper")
 mouse_filter = 1
+icon = ExtResource("13_bw3nc")
 icon_alignment = 1
 expand_icon = true
 

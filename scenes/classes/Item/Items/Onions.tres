@@ -1,23 +1,17 @@
 [gd_resource type="Resource" script_class="Item" load_steps=6 format=3 uid="uid://l7b7f3qdsdrb"]
 
 [ext_resource type="Script" path="res://scenes/classes/Item/Item.gd" id="1_4c740"]
+[ext_resource type="Texture2D" uid="uid://cvbpsmya14cpp" path="res://assets/items/CombinedOnions.png" id="1_r77in"]
+[ext_resource type="Texture2D" uid="uid://xh7xhqolkqc5" path="res://assets/items/onions.png" id="2_2peoy"]
 [ext_resource type="Texture2D" uid="uid://hfnhs5x17kxi" path="res://assets/items/Trash.png" id="2_p5ypx"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_nm8mv"]
-size = Vector2(256, 256)
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_c4l0n"]
-size = Vector2(256, 256)
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_tp0jo"]
-size = Vector2(256, 256)
+[ext_resource type="Texture2D" uid="uid://b5hkb5nkdyady" path="res://assets/items/EnchantedOnions.png" id="3_s3soq"]
 
 [resource]
 script = ExtResource("1_4c740")
 item_name = "Onions"
-default = SubResource("PlaceholderTexture2D_c4l0n")
-combined = SubResource("PlaceholderTexture2D_nm8mv")
-enchanted = SubResource("PlaceholderTexture2D_tp0jo")
+default = ExtResource("2_2peoy")
+combined = ExtResource("1_r77in")
+enchanted = ExtResource("3_s3soq")
 trashed = ExtResource("2_p5ypx")
 cook_condition = Array[String]([])
 boil_condition = Array[String]([])

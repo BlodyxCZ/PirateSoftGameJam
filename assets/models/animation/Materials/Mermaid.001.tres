@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cs16gwvkxt3de"]
+
+[ext_resource type="Texture2D" uid="uid://clk6r0hbl3x3f" path="res://assets/models/animation/Cutscene_mermaid_DefaultMaterial_BaseColor.png" id="1_106xq"]
+
+[resource]
+resource_name = "Mermaid.001"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_color = Color(0, 0, 0, 1)
+metallic = 1.0
+emission_enabled = true
+emission_texture = ExtResource("1_106xq")

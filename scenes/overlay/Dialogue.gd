@@ -7,7 +7,6 @@ func _ready() -> void:
 
 
 func first_meeting() -> void:
-	await get_tree().create_timer(1.0).timeout
 	await vampire_say("Ungh…..", 0.5, "Sleepy")
 	await vampire_say("Oh….. Hello little… bunny?", 1.0, "Sad")
 	await vampire_say("Hmmm…. Sooo…. Hungry…..", 1.0, "Sad")
@@ -42,7 +41,7 @@ func vampire_say(what: String, duration: float, emotion: String = "Normal") -> v
 		video.stop()
 	
 	var tween2: Tween = create_tween()
-	tween2.tween_property($VampireSpeech/VampireText, "visible_ratio", 1.0, duration)
+	tween2.tween_property($VampireSpeech/VampireText, "visible_ratio", 1.0, 100)
 	tween2.play()
 	await tween2.finished
 	
@@ -79,4 +78,4 @@ func jackalope_say(what: String, duration: float, emotion: String = "normal") ->
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("interact1") and Overlay.is_in_dialogue():
 		for tween: Tween in get_tree().get_processed_tweens():
-			tween.set_speed_scale(100.0)
+			tween.set_speed_scale(1000.0)

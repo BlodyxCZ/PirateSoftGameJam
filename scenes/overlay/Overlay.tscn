@@ -316,6 +316,54 @@ offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("7_t7lpi")
 
+[node name="Recipes" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 256.0
+offset_top = 296.0
+offset_right = -256.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Recipes"]
+position = Vector2(544, 328)
+texture = ExtResource("7_vxbue")
+
+[node name="MarginContainer" type="MarginContainer" parent="Recipes"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 32.0
+offset_right = 896.0
+offset_bottom = 504.0
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 30
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Recipes/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 64
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Recipes/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+text = " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas erat nibh, tincidunt tincidunt neque consectetur id. Fusce id volutpat velit. Nullam condimentum, nisl ut semper varius, mauris justo finibus purus, vel pretium nibh risus ut lectus. Mauris pellentesque accumsan magna id eleifend. Sed nec libero ligula. Pellentesque at mollis lorem, ut volutpat dolor. Maecenas consequat purus sed nibh fringilla, sed finibus eros semper."
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Recipes/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+text = " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas erat nibh, tincidunt tincidunt neque consectetur id. Fusce id volutpat velit. Nullam condimentum, nisl ut semper varius, mauris justo finibus purus, vel pretium nibh risus ut lectus. Mauris pellentesque accumsan magna id eleifend. Sed nec libero ligula. Pellentesque at mollis lorem, ut volutpat dolor. Maecenas consequat purus sed nibh fringilla, sed finibus eros semper."
+
 [node name="Pause" type="Control" parent="."]
 visible = false
 layout_mode = 3
@@ -446,54 +494,6 @@ offset_top = 768.0
 offset_right = 912.0
 offset_bottom = 832.0
 text = "BACK"
-
-[node name="Recipes" type="Control" parent="."]
-visible = false
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 256.0
-offset_top = 296.0
-offset_right = -256.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-
-[node name="Sprite2D" type="Sprite2D" parent="Recipes"]
-position = Vector2(544, 328)
-texture = ExtResource("7_vxbue")
-
-[node name="MarginContainer" type="MarginContainer" parent="Recipes"]
-layout_mode = 0
-offset_left = 192.0
-offset_top = 32.0
-offset_right = 896.0
-offset_bottom = 504.0
-theme_override_constants/margin_left = 15
-theme_override_constants/margin_top = 15
-theme_override_constants/margin_right = 15
-theme_override_constants/margin_bottom = 30
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Recipes/MarginContainer"]
-layout_mode = 2
-theme_override_constants/separation = 64
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Recipes/MarginContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-mouse_filter = 1
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-bbcode_enabled = true
-text = " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas erat nibh, tincidunt tincidunt neque consectetur id. Fusce id volutpat velit. Nullam condimentum, nisl ut semper varius, mauris justo finibus purus, vel pretium nibh risus ut lectus. Mauris pellentesque accumsan magna id eleifend. Sed nec libero ligula. Pellentesque at mollis lorem, ut volutpat dolor. Maecenas consequat purus sed nibh fringilla, sed finibus eros semper."
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="Recipes/MarginContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-mouse_filter = 1
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-bbcode_enabled = true
-text = " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas erat nibh, tincidunt tincidunt neque consectetur id. Fusce id volutpat velit. Nullam condimentum, nisl ut semper varius, mauris justo finibus purus, vel pretium nibh risus ut lectus. Mauris pellentesque accumsan magna id eleifend. Sed nec libero ligula. Pellentesque at mollis lorem, ut volutpat dolor. Maecenas consequat purus sed nibh fringilla, sed finibus eros semper."
 
 [node name="Intro" type="Control" parent="."]
 visible = false

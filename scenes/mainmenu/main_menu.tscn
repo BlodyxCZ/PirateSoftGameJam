@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://bd8iijxjsveu1"]
+[gd_scene load_steps=8 format=3 uid="uid://bd8iijxjsveu1"]
 
 [ext_resource type="Script" path="res://scenes/classes/button/IconButton.gd" id="1_3te8o"]
-[ext_resource type="Texture2D" uid="uid://d01v8philk8i6" path="res://assets/ui/TitleScreen.png" id="1_emcy5"]
 [ext_resource type="Script" path="res://scenes/mainmenu/main_menu.gd" id="1_h1105"]
 [ext_resource type="Texture2D" uid="uid://bvgsw0janrdig" path="res://assets/kenney/arrow_e.svg" id="3_sbuf4"]
 [ext_resource type="PackedScene" uid="uid://qpw7pev76fip" path="res://scenes/mainmenu/credits/credits.tscn" id="5_1lrif"]
+[ext_resource type="Texture2D" uid="uid://c488wksxm1kex" path="res://assets/ui/menu.png" id="5_lwnmd"]
+[ext_resource type="Texture2D" uid="uid://dlohnic36da2x" path="res://assets/ui/GameTitle.png" id="6_lu5jt"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o5jto"]
 
@@ -17,56 +18,45 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_h1105")
 
-[node name="TitleScreen" type="Sprite2D" parent="."]
-position = Vector2(816, 272)
-scale = Vector2(1.19136, 1.19136)
-texture = ExtResource("1_emcy5")
-
-[node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 40.0
-offset_top = 296.0
-offset_right = 1046.0
-offset_bottom = 471.0
-rotation = -0.261799
-theme_override_font_sizes/font_size = 128
-text = "GHOST KITCHEN"
-
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("5_lwnmd")
+expand_mode = 5
+stretch_mode = 5
 
-[node name="Control" type="Control" parent="HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -40.0
+offset_top = 8.0
+offset_right = 553.0
+offset_bottom = 331.0
+rotation = -0.0925025
+texture = ExtResource("6_lu5jt")
 
-[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
+[node name="Play" type="Button" parent="."]
 layout_mode = 2
-size_flags_horizontal = 3
-theme_override_constants/margin_left = 200
-theme_override_constants/margin_top = 250
-theme_override_constants/margin_right = 300
-
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/MarginContainer"]
-layout_mode = 2
-theme_override_constants/separation = 35
-alignment = 1
-
-[node name="Play" type="Button" parent="HBoxContainer/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 64
+offset_left = 104.0
+offset_top = 360.0
+offset_right = 341.0
+offset_bottom = 500.0
+theme_override_font_sizes/font_size = 96
 theme_override_styles/focus = SubResource("StyleBoxEmpty_o5jto")
 text = "Play"
 icon = ExtResource("3_sbuf4")
 flat = true
 script = ExtResource("1_3te8o")
 
-[node name="Settings" type="Button" parent="HBoxContainer/MarginContainer/VBoxContainer"]
+[node name="Settings" type="Button" parent="."]
 layout_mode = 2
+offset_left = 64.0
+offset_top = 624.0
+offset_right = 293.0
+offset_bottom = 699.0
 theme_override_font_sizes/font_size = 48
 theme_override_styles/focus = SubResource("StyleBoxEmpty_o5jto")
 text = "Settings"
@@ -74,8 +64,12 @@ icon = ExtResource("3_sbuf4")
 flat = true
 script = ExtResource("1_3te8o")
 
-[node name="Credits" type="Button" parent="HBoxContainer/MarginContainer/VBoxContainer"]
+[node name="Credits2" type="Button" parent="."]
 layout_mode = 2
+offset_left = 88.0
+offset_top = 768.0
+offset_right = 296.0
+offset_bottom = 843.0
 theme_override_font_sizes/font_size = 48
 theme_override_styles/focus = SubResource("StyleBoxEmpty_o5jto")
 text = "Credits"
@@ -87,6 +81,16 @@ script = ExtResource("1_3te8o")
 visible = false
 layout_mode = 1
 
-[connection signal="pressed" from="HBoxContainer/MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="HBoxContainer/MarginContainer/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
-[connection signal="pressed" from="HBoxContainer/MarginContainer/VBoxContainer/Credits" to="." method="_on_credits_pressed"]
+[node name="Fade" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Credits2" to="." method="_on_credits_pressed"]

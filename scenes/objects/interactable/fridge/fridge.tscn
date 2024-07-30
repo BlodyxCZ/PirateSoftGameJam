@@ -58,6 +58,7 @@ skeleton = NodePath("")
 layer = 3
 
 [node name="GUI" type="Control" parent="CanvasLayer"]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -92,6 +93,7 @@ focus_neighbor_right = NodePath("../Pepper")
 focus_next = NodePath("../Pepper")
 mouse_filter = 1
 icon = ExtResource("6_2stu8")
+flat = true
 icon_alignment = 1
 expand_icon = true
 
@@ -108,6 +110,7 @@ focus_next = NodePath("../Chicken")
 focus_previous = NodePath("../Carrot")
 mouse_filter = 1
 icon = ExtResource("7_17fmn")
+flat = true
 icon_alignment = 1
 expand_icon = true
 
@@ -122,6 +125,7 @@ focus_neighbor_left = NodePath("../Pepper")
 focus_previous = NodePath("../Pepper")
 mouse_filter = 1
 icon = ExtResource("8_rehq1")
+flat = true
 icon_alignment = 1
 expand_icon = true
 
@@ -136,6 +140,7 @@ focus_neighbor_left = NodePath("../Pepper")
 focus_previous = NodePath("../Pepper")
 mouse_filter = 1
 icon = ExtResource("9_buhsy")
+flat = true
 icon_alignment = 1
 expand_icon = true
 

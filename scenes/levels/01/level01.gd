@@ -10,6 +10,7 @@ func _ready() -> void:
 	Overlay.hide_all()
 	await $Prerender/AnimationPlayer.animation_finished
 	Audio.play("Voice")
+	$Cutscene/camera/CamPart/Camera3D/VideoStreamPlayer.play()
 	$Prerender.hide()
 	
 	player.frozen = true
@@ -20,6 +21,8 @@ func _ready() -> void:
 	$Cutscene/AnimationPlayer2.play("Armature_008Action_001")
 	$Cutscene/AnimationPlayer3.play("Armature_009Action_001")
 	$Cutscene/AnimationPlayer4.play("Cube_033Action_001")
+	await $Cutscene/camera/CamPart/Camera3D/VideoStreamPlayer.finished
+	$Cutscene/camera/CamPart/Camera3D/VideoStreamPlayer.hide()
 	await $Cutscene/camera/AnimationPlayer.animation_finished
 	SceneTransition.transition_switch($Cutscene/camera/CamPart/Camera3D, $Cameras/Intro)
 	await SceneTransition.transition_complete

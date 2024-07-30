@@ -81,5 +81,4 @@ func instantiate() -> Item:
 	var new = Item.new()
 	for property in get_property_list():
 		new.set(property["name"], get(property["name"]))
-		print(property["name"])
 	return new

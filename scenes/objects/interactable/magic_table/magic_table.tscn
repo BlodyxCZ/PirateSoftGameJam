@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://bp7kegrops2vk"]
+[gd_scene load_steps=10 format=3 uid="uid://bp7kegrops2vk"]
 
 [ext_resource type="Script" path="res://scenes/objects/interactable/magic_table/magic_table.gd" id="1_tbuak"]
 [ext_resource type="Script" path="res://scenes/classes/Popup/popup.gd" id="2_0j37y"]
 [ext_resource type="Material" uid="uid://blpexn72obacp" path="res://assets/models/kitchen1/Materials/Material.008.tres" id="2_8c80t"]
 [ext_resource type="Script" path="res://scenes/objects/interactable/magic_table/GUI.gd" id="3_w6cc3"]
+[ext_resource type="Texture2D" uid="uid://dhimsrmxcfg4h" path="res://assets/MagicTable.png" id="5_cwr4s"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_35gav"]
 _surfaces = [{
@@ -48,6 +49,10 @@ script = ExtResource("1_tbuak")
 range = NodePath("Range")
 gui = NodePath("CanvasLayer/GUI")
 pop_up = NodePath("Popup")
+
+[node name="InventorySlot" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.66676, 0)
+billboard = 1
 
 [node name="MagicTable" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.631033, 0, -0.458473, 0, 0.78, 0, 0.458473, 0, 0.631033, 0, 1.39638, 0)
@@ -94,14 +99,34 @@ offset_top = 136.0
 offset_right = 1472.0
 offset_bottom = 768.0
 
-[node name="Button" type="Button" parent="CanvasLayer/GUI/Panel"]
+[node name="Win" type="Button" parent="CanvasLayer/GUI/Panel"]
 layout_mode = 0
-offset_left = 472.0
+offset_left = 776.0
 offset_top = 248.0
-offset_right = 880.0
+offset_right = 1184.0
 offset_bottom = 384.0
 theme_override_font_sizes/font_size = 32
 text = "WIN MINIGAME"
 
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/GUI/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.095
+anchor_top = -0.215
+anchor_right = -0.095
+anchor_bottom = -0.215
+offset_left = 244.68
+offset_top = 192.88
+offset_right = 764.68
+offset_bottom = 704.88
+texture = ExtResource("5_cwr4s")
+
+[node name="Item" type="TextureRect" parent="CanvasLayer/GUI/Panel"]
+layout_mode = 1
+offset_left = 256.0
+offset_top = 184.0
+offset_right = 512.0
+offset_bottom = 440.0
+
 [connection signal="process_complete" from="Popup" to="." method="_on_popup_process_complete"]
-[connection signal="pressed" from="CanvasLayer/GUI/Panel/Button" to="CanvasLayer/GUI" method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/GUI/Panel/Win" to="CanvasLayer/GUI" method="_on_button_pressed"]

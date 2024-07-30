@@ -4,7 +4,6 @@ extends Camera3D
 
 signal transition_complete()
 
-@onready var player: Player = get_tree().get_first_node_in_group("Player")
 var is_transitioning: bool = false
 
 
@@ -22,7 +21,7 @@ func transition_switch(from: Camera3D, to: Camera3D, duration: float = 1.0) -> v
 		is_transitioning = false
 		transition_switch(self, to, duration)
 	else:
-		player.frozen = true
+		get_tree().get_first_node_in_group("Player").frozen = true
 		# Prevent other transitions from begging
 		is_transitioning = true
 		
@@ -54,4 +53,4 @@ func transition_switch(from: Camera3D, to: Camera3D, duration: float = 1.0) -> v
 		# Make the second camera current
 		to.current = true
 		is_transitioning = false
-		player.frozen = false
+		get_tree().get_first_node_in_group("Player").frozen = false

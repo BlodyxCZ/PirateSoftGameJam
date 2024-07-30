@@ -25,12 +25,12 @@ var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 	set(value):
 		if value:
 			$Head/InventorySlot.texture = value.texture
-			$HornL/OmniLight3D.show()
-			$HornR/OmniLight3D.show()
+			$HornL/OmniLight3D.omni_range = 5
+			$HornR/OmniLight3D.omni_range = 5
 		else:
 			$Head/InventorySlot.texture = null
-			$HornL/OmniLight3D.hide()
-			$HornR/OmniLight3D.hide()
+			$HornL/OmniLight3D.omni_range = 3
+			$HornR/OmniLight3D.omni_range = 3
 		held_item = value
 
 var frozen: bool = false

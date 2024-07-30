@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://ckp06ih8carlg"]
+[gd_scene load_steps=13 format=3 uid="uid://ckp06ih8carlg"]
 
 [ext_resource type="Script" path="res://scenes/npc/npc.gd" id="1_bld23"]
 [ext_resource type="Material" uid="uid://dkg1rt34d6ohv" path="res://assets/models/kitchen1/Materials/Eyes.tres" id="2_wohmn"]
@@ -142,6 +142,9 @@ material = ExtResource("2_wohmn")
 
 [sub_resource type="QuadMesh" id="QuadMesh_qt2ng"]
 material = ExtResource("3_ovqb3")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h6dyg"]
+size = Vector3(1.95532, 2.51843, 3.63483)
 
 [sub_resource type="Animation" id="Animation_qn4ry"]
 resource_name = "VampireRigAction"
@@ -599,7 +602,7 @@ mesh = SubResource("ArrayMesh_vcgey")
 skin = SubResource("Skin_vnxye")
 
 [node name="BoneAttachment3D" type="BoneAttachment3D" parent="VampireRig/Skeleton3D"]
-transform = Transform3D(0.982216, 0.18679, -0.018984, -0.171697, 0.934531, 0.311723, 0.075968, -0.30292, 0.949983, 4.25648e-06, 1.44528, 0.681254)
+transform = Transform3D(0.982216, 0.186791, -0.018984, -0.171697, 0.934532, 0.311722, 0.075968, -0.302919, 0.949984, 4.25648e-06, 1.44528, 0.681255)
 bone_name = "Head"
 bone_idx = 4
 
@@ -620,6 +623,12 @@ transform = Transform3D(-0.136726, -0.0239739, 0.0568447, -0.0174145, 0.147588, 
 mesh = SubResource("QuadMesh_cof0v")
 skin = SubResource("Skin_vnxye")
 skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.022, 1.26166, -0.466)
+shape = SubResource("BoxShape3D_h6dyg")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

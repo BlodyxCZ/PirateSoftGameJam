@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Pirate Soft Game Jam"
-run/main_scene="res://scenes/levels/01/Level01.tscn"
+run/main_scene="res://scenes/mainmenu/main_menu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 Overlay="*res://scenes/overlay/Overlay.tscn"
 Global="*res://singletons/Global.gd"
 SceneTransition="*res://singletons/TransitionCamera.gd"
+Audio="*res://scenes/audio/audio.tscn"
 
 [display]
 
@@ -56,6 +57,18 @@ texture={
 "process/size_limit": 0,
 "roughness/mode": 0,
 "roughness/src_normal": ""
+}
+wav={
+"compress/mode": 1,
+"edit/loop_begin": 0,
+"edit/loop_end": -1,
+"edit/loop_mode": 0,
+"edit/normalize": true,
+"edit/trim": false,
+"force/8_bit": false,
+"force/max_rate": false,
+"force/max_rate_hz": 44100,
+"force/mono": false
 }
 
 [input]

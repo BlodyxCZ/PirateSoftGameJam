@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://dcq1we4ule87k"]
+[gd_scene load_steps=41 format=3 uid="uid://dcq1we4ule87k"]
 
 [ext_resource type="Script" path="res://scenes/overlay/Overlay.gd" id="1_2uwuf"]
 [ext_resource type="PackedScene" uid="uid://llaar1v2bv66" path="res://scenes/overlay/order/order.tscn" id="2_bdb1u"]
@@ -33,6 +33,7 @@
 [ext_resource type="Texture2D" uid="uid://b4vcoh0crls5m" path="res://assets/videos/Vampire/vampireSleepyPaused.png" id="20_f5u5c"]
 [ext_resource type="VideoStream" path="res://assets/videos/Vampire/VampireWideOpenedTalk.ogv" id="21_ch81l"]
 [ext_resource type="Texture2D" uid="uid://bm5alq04nuwoo" path="res://assets/videos/Vampire/vampireWideOpenedPaused.png" id="22_6ublj"]
+[ext_resource type="Texture2D" uid="uid://bbfotc00jpyry" path="res://assets/New_Project13.png" id="23_c6jo1"]
 [ext_resource type="VideoStream" path="res://assets/videos/Jackalope/JackalopeTalk.ogv" id="23_uw371"]
 [ext_resource type="Texture2D" uid="uid://dsc1aew3h1m85" path="res://assets/videos/Jackalope/JackalopePaused.png" id="24_cdpag"]
 
@@ -76,13 +77,13 @@ mouse_filter = 1
 layout_mode = 0
 offset_left = 24.0
 offset_top = 24.0
-offset_right = 1088.0
+offset_right = 784.0
 offset_bottom = 136.0
 
 [node name="OrderList" type="HBoxContainer" parent="Level/Orders"]
 layout_mode = 0
 offset_left = 16.0
-offset_right = 1048.0
+offset_right = 760.0
 offset_bottom = 200.0
 
 [node name="Panel" parent="Level/Orders/OrderList" instance=ExtResource("2_bdb1u")]
@@ -98,12 +99,6 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="Panel5" parent="Level/Orders/OrderList" instance=ExtResource("2_bdb1u")]
-layout_mode = 2
-
-[node name="Panel6" parent="Level/Orders/OrderList" instance=ExtResource("2_bdb1u")]
-layout_mode = 2
-
-[node name="Panel7" parent="Level/Orders/OrderList" instance=ExtResource("2_bdb1u")]
 layout_mode = 2
 
 [node name="GhostChef" type="Panel" parent="Level"]
@@ -321,16 +316,6 @@ offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("7_t7lpi")
 
-[node name="Options" type="Control" parent="."]
-visible = false
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 1
-
 [node name="Pause" type="Control" parent="."]
 visible = false
 layout_mode = 3
@@ -436,6 +421,25 @@ icon = ExtResource("2_pi06a")
 flat = true
 script = ExtResource("3_u66x3")
 
+[node name="Options" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="bg" type="ColorRect" parent="Options"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
 [node name="Recipes" type="Control" parent="."]
 visible = false
 layout_mode = 3
@@ -531,6 +535,7 @@ offset_bottom = 40.0
 texture = ExtResource("7_t7lpi")
 
 [node name="Dialogue" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -539,14 +544,14 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("11_sb3jb")
 
-[node name="ColorRect" type="ColorRect" parent="Dialogue"]
+[node name="BG" type="TextureRect" parent="Dialogue"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(1, 1, 1, 0.294118)
+texture = ExtResource("23_c6jo1")
 metadata/_edit_lock_ = true
 
 [node name="VampireSpeech" type="TextureRect" parent="Dialogue"]

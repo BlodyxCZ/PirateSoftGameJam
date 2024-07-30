@@ -8,9 +8,10 @@ signal wake()
 
 func _ready() -> void:
 	Overlay.hide_all()
-	await get_tree().create_timer(1.0).timeout
+	await $Prerender/AnimationPlayer.animation_finished
+	Audio.play("Hub")
 	$Cameras/Intro.current = true
-	$ColorRect.hide()
+	$Prerender.hide()
 	
 	player.frozen = true
 	player.sleep()
@@ -31,6 +32,7 @@ func _input(event: InputEvent) -> void:
 
 func _on_camera_trigger_body_entered(body: Node3D) -> void:
 	if not body is Player: return
+	Audio.play("Kitchen")
 	SceneTransition.transition_switch($Cameras/Hub, $Cameras/Kitchen)
 	await SceneTransition.transition_complete
 	Overlay.show_ui("level")
@@ -38,17 +40,20 @@ func _on_camera_trigger_body_entered(body: Node3D) -> void:
 
 func _on_camera_trigger_body_exited(body: Node3D) -> void:
 	if not body is Player: return
+	Audio.play("Hub")
 	SceneTransition.transition_switch($Cameras/Kitchen, $Cameras/Hub)
 	Overlay.hide_all()
 
 
-func _on_door_trigger_body_entered(_body: Node3D) -> void:
+func _on_door_trigger_body_entered(body: Node3D) -> void:
+	if not body is Player: return
 	var tween: Tween = create_tween()
 	tween.tween_property($Objects/Kitchen/Door, "rotation:y", deg_to_rad(-82), 0.2)
 	tween.play()
 
 
-func _on_door_trigger_body_exited(_body: Node3D) -> void:
+func _on_door_trigger_body_exited(body: Node3D) -> void:
+	if not body is Player: return
 	var tween: Tween = create_tween()
 	tween.tween_property($Objects/Kitchen/Door, "rotation:y", deg_to_rad(0), 0.2)
 	tween.play()

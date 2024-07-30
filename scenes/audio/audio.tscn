@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://cbcns4judb7mq"]
+
+[ext_resource type="AudioStream" uid="uid://c02hgvdaguepk" path="res://assets/sounds/Fresh air on a dark night.wav" id="1_cgtv4"]
+[ext_resource type="Script" path="res://scenes/audio/audio.gd" id="1_wfrff"]
+[ext_resource type="AudioStream" uid="uid://b5qxqefls2u5w" path="res://assets/sounds/Frantic kitchen samba FINAL.wav" id="2_jpmsl"]
+[ext_resource type="AudioStream" uid="uid://dvjc4yx2j78xa" path="res://assets/sounds/title theme.wav" id="3_g7nlf"]
+
+[node name="Audio" type="Node"]
+script = ExtResource("1_wfrff")
+
+[node name="Hub" type="AudioStreamPlayer" parent="." groups=["Music"]]
+stream = ExtResource("1_cgtv4")
+
+[node name="Kitchen" type="AudioStreamPlayer" parent="." groups=["Music"]]
+stream = ExtResource("2_jpmsl")
+
+[node name="Title" type="AudioStreamPlayer" parent="." groups=["Music"]]
+stream = ExtResource("3_g7nlf")

@@ -8,7 +8,7 @@ signal wake()
 
 func _ready() -> void:
 	Overlay.hide_all()
-	await $Prerender/AnimationPlayer.animation_finished
+	await get_tree().create_timer(2.0).timeout
 	Audio.play("Voice")
 	$Cutscene/camera/CamPart/Camera3D/VideoStreamPlayer.play()
 	$Prerender.hide()
@@ -47,13 +47,14 @@ func _input(event: InputEvent) -> void:
 
 func _on_camera_trigger_body_entered(body: Node3D) -> void:
 	if not body is Player: return
-	Audio.play("Kitchen")
-	SceneTransition.transition_switch($Cameras/Hub, $Cameras/Kitchen)
-	await SceneTransition.transition_complete
 	Overlay.show_ui("level")
 	if Overlay.tutorial:
 		Overlay.tutorial = false
 		Overlay.start_tutorial()
+		await Overlay.tutorial_finished
+	SceneTransition.transition_switch($Cameras/Hub, $Cameras/Kitchen)
+	await SceneTransition.transition_complete
+	Audio.play("Kitchen")
 
 
 func _on_camera_trigger_body_exited(body: Node3D) -> void:

@@ -1,7 +1,6 @@
-[gd_scene load_steps=68 format=3 uid="uid://dcq1we4ule87k"]
+[gd_scene load_steps=69 format=3 uid="uid://dcq1we4ule87k"]
 
 [ext_resource type="Script" path="res://scenes/overlay/Overlay.gd" id="1_2uwuf"]
-[ext_resource type="PackedScene" uid="uid://llaar1v2bv66" path="res://scenes/overlay/order/order.tscn" id="2_bdb1u"]
 [ext_resource type="Texture2D" uid="uid://bvgsw0janrdig" path="res://assets/kenney/arrow_e.svg" id="2_pi06a"]
 [ext_resource type="Script" path="res://scenes/overlay/Recipes.gd" id="2_s658n"]
 [ext_resource type="Texture2D" uid="uid://b37x0f4f5k6mt" path="res://assets/ui/book.png" id="3_54h45"]
@@ -63,6 +62,8 @@
 [ext_resource type="Texture2D" uid="uid://su71p5p1igqi" path="res://assets/items/Rice/CombinedRice.png" id="25_ihk1p"]
 [ext_resource type="Texture2D" uid="uid://ekj3e41mm520" path="res://assets/icons/icon 5.png" id="26_ebmry"]
 [ext_resource type="Texture2D" uid="uid://cvbpsmya14cpp" path="res://assets/items/Onions/CombinedOnions.png" id="27_cts0b"]
+[ext_resource type="Texture2D" uid="uid://libtwalh025u" path="res://assets/ui/steps.png" id="28_njncm"]
+[ext_resource type="Script" path="res://scenes/overlay/order/order.gd" id="29_itduv"]
 
 [sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_nfm1y"]
 button_index = 4
@@ -238,6 +239,7 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("17_qxa7d")
 
 [node name="Label" type="Label" parent="Recipes/MarginContainer/Page2"]
+layout_mode = 0
 offset_left = -7.0
 offset_right = 337.0
 offset_bottom = 179.0
@@ -328,6 +330,7 @@ scale = Vector2(0.25, 0.25)
 texture = ExtResource("27_cts0b")
 
 [node name="Label" type="Label" parent="Recipes/MarginContainer/Page3"]
+layout_mode = 0
 offset_right = 321.0
 offset_bottom = 137.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -358,7 +361,6 @@ offset_bottom = 496.0
 text = "<-"
 
 [node name="Level" type="Control" parent="."]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -371,29 +373,131 @@ mouse_filter = 1
 layout_mode = 0
 offset_left = 24.0
 offset_top = 24.0
-offset_right = 784.0
+offset_right = 640.0
 offset_bottom = 136.0
 
 [node name="OrderList" type="HBoxContainer" parent="Level/Orders"]
 layout_mode = 0
 offset_left = 16.0
-offset_right = 760.0
+offset_right = 604.0
 offset_bottom = 200.0
 
-[node name="Panel" parent="Level/Orders/OrderList" instance=ExtResource("2_bdb1u")]
+[node name="Panel" type="TextureRect" parent="Level/Orders/OrderList"]
+custom_minimum_size = Vector2(144, 200)
 layout_mode = 2
+texture = ExtResource("28_njncm")
+expand_mode = 1
+stretch_mode = 3
+script = ExtResource("29_itduv")
 
-[node name="Panel2" parent="Level/Orders/OrderList" instance=ExtResource("2_bdb1u")]
-layout_mode = 2
+[node name="Label" type="Label" parent="Level/Orders/OrderList/Panel"]
+layout_mode = 0
+offset_top = 144.0
+offset_right = 144.0
+offset_bottom = 192.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -1
+theme_override_font_sizes/font_size = 12
+text = "Quinoa stuffed    peppers"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
 
-[node name="Panel3" parent="Level/Orders/OrderList" instance=ExtResource("2_bdb1u")]
-layout_mode = 2
+[node name="TextureRect" type="TextureRect" parent="Level/Orders/OrderList/Panel"]
+layout_mode = 0
+offset_top = 16.0
+offset_right = 136.0
+offset_bottom = 152.0
+texture = ExtResource("4_gj4mu")
+expand_mode = 3
+stretch_mode = 5
 
-[node name="Panel4" parent="Level/Orders/OrderList" instance=ExtResource("2_bdb1u")]
+[node name="Panel2" type="TextureRect" parent="Level/Orders/OrderList"]
+custom_minimum_size = Vector2(144, 200)
 layout_mode = 2
+texture = ExtResource("28_njncm")
+expand_mode = 1
+stretch_mode = 3
+script = ExtResource("29_itduv")
 
-[node name="Panel5" parent="Level/Orders/OrderList" instance=ExtResource("2_bdb1u")]
+[node name="Label" type="Label" parent="Level/Orders/OrderList/Panel2"]
+layout_mode = 0
+offset_top = 144.0
+offset_right = 144.0
+offset_bottom = 176.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "Ratatouille"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="TextureRect" type="TextureRect" parent="Level/Orders/OrderList/Panel2"]
+layout_mode = 0
+offset_top = 16.0
+offset_right = 136.0
+offset_bottom = 152.0
+texture = ExtResource("13_nxtj4")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Panel3" type="TextureRect" parent="Level/Orders/OrderList"]
+custom_minimum_size = Vector2(144, 200)
 layout_mode = 2
+texture = ExtResource("28_njncm")
+expand_mode = 1
+stretch_mode = 3
+script = ExtResource("29_itduv")
+
+[node name="Label" type="Label" parent="Level/Orders/OrderList/Panel3"]
+layout_mode = 0
+offset_top = 144.0
+offset_right = 144.0
+offset_bottom = 176.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "Hellfire Mapo Tofu"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="TextureRect" type="TextureRect" parent="Level/Orders/OrderList/Panel3"]
+layout_mode = 0
+offset_top = 16.0
+offset_right = 136.0
+offset_bottom = 152.0
+texture = ExtResource("18_jy3ow")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Panel4" type="TextureRect" parent="Level/Orders/OrderList"]
+custom_minimum_size = Vector2(144, 200)
+layout_mode = 2
+texture = ExtResource("28_njncm")
+expand_mode = 1
+stretch_mode = 3
+script = ExtResource("29_itduv")
+
+[node name="Label" type="Label" parent="Level/Orders/OrderList/Panel4"]
+layout_mode = 0
+offset_top = 144.0
+offset_right = 144.0
+offset_bottom = 168.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "Quinoa stuffed    peppers"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="TextureRect" type="TextureRect" parent="Level/Orders/OrderList/Panel4"]
+layout_mode = 0
+offset_top = 16.0
+offset_right = 136.0
+offset_bottom = 152.0
+texture = ExtResource("4_gj4mu")
+expand_mode = 3
+stretch_mode = 5
 
 [node name="GhostChef" type="Panel" parent="Level"]
 layout_mode = 0
@@ -554,19 +658,19 @@ expand_mode = 2
 
 [node name="GhostChefSpeech" type="TextureRect" parent="Level/GhostChef"]
 visible = false
-offset_left = -272.0
-offset_top = 96.0
-offset_right = 240.0
-offset_bottom = 608.0
+layout_mode = 0
+offset_left = -512.0
+offset_top = -112.0
+offset_bottom = 400.0
 texture = ExtResource("16_uwhb2")
-flip_v = true
+metadata/_edit_group_ = true
 
 [node name="JackalopeText" type="Label" parent="Level/GhostChef/GhostChefSpeech"]
 layout_mode = 0
 offset_left = 32.0
-offset_top = 240.0
+offset_top = 168.0
 offset_right = 480.0
-offset_bottom = 344.0
+offset_bottom = 272.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 16
 horizontal_alignment = 1
@@ -692,6 +796,7 @@ offset_right = 172.5
 offset_bottom = 229.5
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("22_rfqoq")
 stretch_mode = 5
 metadata/_edit_lock_ = true
@@ -728,6 +833,7 @@ offset_right = 172.5
 offset_bottom = 229.5
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("22_rfqoq")
 stretch_mode = 5
 metadata/_edit_lock_ = true
@@ -764,6 +870,7 @@ offset_right = 172.5
 offset_bottom = 229.5
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("22_rfqoq")
 stretch_mode = 5
 metadata/_edit_lock_ = true
@@ -800,6 +907,7 @@ offset_right = 172.5
 offset_bottom = 229.5
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("22_rfqoq")
 stretch_mode = 5
 metadata/_edit_lock_ = true

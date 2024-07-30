@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bd8iijxjsveu1"]
+[gd_scene load_steps=13 format=3 uid="uid://bd8iijxjsveu1"]
 
 [ext_resource type="Script" path="res://scenes/classes/button/IconButton.gd" id="1_3te8o"]
 [ext_resource type="Script" path="res://scenes/mainmenu/main_menu.gd" id="1_h1105"]
@@ -6,8 +6,143 @@
 [ext_resource type="PackedScene" uid="uid://qpw7pev76fip" path="res://scenes/mainmenu/credits/credits.tscn" id="5_1lrif"]
 [ext_resource type="Texture2D" uid="uid://c488wksxm1kex" path="res://assets/ui/menu.png" id="5_lwnmd"]
 [ext_resource type="Texture2D" uid="uid://dlohnic36da2x" path="res://assets/ui/GameTitle.png" id="6_lu5jt"]
+[ext_resource type="Texture2D" uid="uid://cobu1vit0i4qh" path="res://assets/image2.png" id="7_0go3l"]
+[ext_resource type="Texture2D" uid="uid://dfelncnnp376u" path="res://assets/image.png" id="8_0eqr8"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o5jto"]
+
+[sub_resource type="Animation" id="Animation_2ajs6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect2:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.996078)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TextureRect:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(880, 240)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TextureRect:size")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1600, 900)]
+}
+
+[sub_resource type="Animation" id="Animation_me2ck"]
+resource_name = "intro"
+length = 20.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect2:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Color(0, 0, 0, 0.996078), Color(1, 1, 1, 0.996078)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(14, 18),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TextureRect:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(880, 240), Vector2(792, 166), Vector2(704, 192), Vector2(616, 118), Vector2(528, 144), Vector2(440, 70), Vector2(352, 96), Vector2(264, 22), Vector2(176, 48), Vector2(88, -26), Vector2(0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TextureRect:size")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1600, 900), Vector2(1600, 900)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_17h68"]
+_data = {
+"RESET": SubResource("Animation_2ajs6"),
+"intro": SubResource("Animation_me2ck")
+}
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -90,6 +225,55 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 0)
+
+[node name="Prerender" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Prerender"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.996078)
+
+[node name="TextureRect" type="TextureRect" parent="Prerender"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 880.0
+offset_top = 240.0
+offset_right = 2480.0
+offset_bottom = 1140.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_0go3l")
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="Prerender"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_0eqr8")
+stretch_mode = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Prerender"]
+libraries = {
+"": SubResource("AnimationLibrary_17h68")
+}
+autoplay = "intro"
+speed_scale = 3.0
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]

@@ -2,6 +2,7 @@ extends CanvasLayer
 
 
 signal dialog_finished()
+signal tutorial_finished()
 
 
 const ACTION = preload("res://scenes/overlay/action/action.tscn")
@@ -15,10 +16,13 @@ func _process(_delta: float) -> void:
 
 
 func pause() -> void:
-	$Pause/MarginContainer/VBoxContainer2/VBoxContainer/Resume.grab_focus()
-	get_tree().current_scene.process_mode = Node.PROCESS_MODE_PAUSABLE
-	get_tree().paused = !get_tree().paused
-	$Pause.visible = get_tree().paused
+	if $Recipes.visible:
+		$Recipes.visible = false
+	else:
+		$Pause/Resume.grab_focus()
+		get_tree().current_scene.process_mode = Node.PROCESS_MODE_PAUSABLE
+		get_tree().paused = !get_tree().paused
+		$Pause.visible = get_tree().paused
 
 func _on_resume_pressed() -> void:
 	pause()
@@ -92,6 +96,7 @@ func start_tutorial() -> void:
 	
 	$Level/GhostChef.tutorial()
 	
+	
 	SceneTransition.transition_switch(get_camera("Kitchen"), get_camera("First"))
 	await SceneTransition.transition_complete
 	get_tree().get_first_node_in_group("Player").locked = true
@@ -109,10 +114,11 @@ func start_tutorial() -> void:
 	$Level/Orders.show()
 	$Level/Book.show()
 	$Level/Actions.show()
+	SceneTransition.transition_switch(get_camera("First"), get_camera("Kitchen"))
 	
 	await $Level/GhostChef.trigger3
 	
-	SceneTransition.transition_switch(get_camera("First"), get_camera("Kitchen"))
+	tutorial_finished.emit()
 
 
 func get_camera(_name: String) -> Camera3D:

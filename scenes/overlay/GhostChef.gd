@@ -6,8 +6,6 @@ signal trigger2()
 signal trigger3()
 
 
-var tweens: Array[Tween] = []
-
 
 func _ready() -> void:
 	$GhostChefSpeech.hide()
@@ -28,7 +26,7 @@ func tutorial() -> void:
 	await chef_say("This little tool has been passed down from master to apprentice for ages.", 2.0, "Normal")
 	await chef_say("Utilizing it brought me to three star status once I had developed my skills", 2.0, "Normal")
 	await chef_say("No small feat for any chef in this city.", 1.5, "Normal")
-	await chef_say("Open it up with [TAB]", 1.0, "Normal")
+	await chef_say("Open it up with [TAB]", 1.0, "Normal", 0.0)
 	#TODO: prompt the player to press the tab key, and once they do, open the recipe book
 	await $"../Book".pressed
 	await chef_say("Here there is a page for each recipe.", 1.0, "Normal")
@@ -37,7 +35,7 @@ func tutorial() -> void:
 	await chef_say("This card shows the necessary ingredients...", 1.5, "Normal")
 	await chef_say("...and tells you what to do with them", 1.0, "Normal")
 	await chef_say("One last thing, reading this book does not slow the passage of time, so be careful to only look at it when you are confident you won’t fail to retrieve your food before it is lost.", 4.0, "Normal")
-	await chef_say("You can exit the recipe book with either [TAB] or [ESC]", 1.5, "Normal")
+	await chef_say("You can exit the recipe book with either [TAB] or [ESC]", 1.5, "Normal", 0.0)
 	await $"../Book".pressed
 	await chef_say("I’ll put the ingredients in the fridge for now, you can retrieve them as you need.", 2.0, "Normal")
 	#TODO: animate the chef going over there, then poofing away and reappearing in the top right corner as the rest of the kitchen UI appears
@@ -47,11 +45,12 @@ func tutorial() -> void:
 	await chef_say("With that, I believe you have all of the information you need to begin cooking", 1.0, "Normal")
 	await chef_say("Chop chop!", 1.0, "Normal")
 	#player gains control
-	trigger3.emit()
 	get_tree().get_first_node_in_group("Player").locked = false
+	$GhostChefSpeech.hide()
+	trigger3.emit()
 
 
-func chef_say(what: String, duration: float, emotion: String = "Normal") -> void:
+func chef_say(what: String, duration: float, emotion: String = "Normal", x: float = 100) -> void:
 	for video: VideoStreamPlayer in $GhostChef.get_children():
 		if video.name == emotion:
 			video.show()
@@ -64,7 +63,6 @@ func chef_say(what: String, duration: float, emotion: String = "Normal") -> void
 	$GhostChefSpeech/JackalopeText.visible_ratio = 0.0
 	$GhostChefSpeech/JackalopeText.text = what
 	var tween1: Tween = create_tween()
-	tweens.append(tween1)
 	tween1.tween_property($GhostChefSpeech/JackalopeText, "visible_ratio", 1.0, duration)
 	tween1.play()
 	await tween1.finished
@@ -75,13 +73,12 @@ func chef_say(what: String, duration: float, emotion: String = "Normal") -> void
 		video.stop()
 	
 	var tween2: Tween = create_tween()
-	tweens.append(tween2)
-	tween2.tween_property($VampireSpeech/VampireText, "visible_ratio", 1.0, 100)
+	tween2.tween_property($GhostChefSpeech/JackalopeText, "visible_ratio", 1.0, x)
 	tween2.play()
 	await tween2.finished
 
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("interact1") and $GhostChefSpeech.visible:
-		for tween: Tween in tweens:
+		for tween: Tween in get_tree().get_processed_tweens():
 			tween.set_speed_scale(1000.0)

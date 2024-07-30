@@ -15,6 +15,7 @@ var texture: Texture
 @export var chopped: Texture
 @export var combined: Texture
 @export var enchanted: Texture
+@export var trashed: Texture
 
 @export_group("Conditions")
 @export var cook_condition: Array[String] = []
@@ -30,40 +31,40 @@ func _init() -> void:
 
 func cook() -> void:
 	for condition in cook_condition:
-		if item_name.find(condition) == -1:
-			return
+		if item_name.find(condition) == -1 or texture == trashed:
+			texture = trashed
 	texture = cooked
 	item_name += "Cooked"
 	print(item_name)
 
 func boil() -> void:
 	for condition in boil_condition:
-		if item_name.find(condition) == -1:
-			return
+		if item_name.find(condition) == -1 or texture == trashed:
+			texture = trashed
 	texture = boiled
 	item_name += "Boiled"
 
 func water() -> void:
 	for condition in water_condition:
-		if item_name.find(condition) == -1:
-			return
+		if item_name.find(condition) == -1 or texture == trashed:
+			texture = trashed
 	texture = watered
 	item_name += "Watered"
 
 func chop() -> void:
 	for condition in chop_condition:
-		if item_name.find(condition) == -1:
-			return
+		if item_name.find(condition) == -1 or texture == trashed:
+			texture = trashed
 	texture = chopped
 	item_name += "Chopped"
 	print(item_name)
 
 func combine(second_item: Item) -> bool:
 	for condition in combine_condition:
-		if item_name.find(condition) == -1:
+		if item_name.find(condition) == -1 or texture == trashed:
 			return false
 	for condition in second_combine_condition:
-		if second_item.item_name.find(condition) == -1:
+		if second_item.item_name.find(condition) == -1 or texture == trashed:
 			return false
 	texture = combined
 	item_name += "Combined"
@@ -71,8 +72,8 @@ func combine(second_item: Item) -> bool:
 
 func enchant() -> void:
 	for condition in enchant_condition:
-		if item_name.find(condition) == -1:
-			return
+		if item_name.find(condition) == -1 or texture == trashed:
+			texture = trashed
 	texture = enchanted
 	item_name += "Enchanted"
 

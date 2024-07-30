@@ -64,6 +64,7 @@ offset_bottom = 40.0
 mouse_filter = 1
 
 [node name="Level" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -421,7 +422,6 @@ flat = true
 script = ExtResource("3_u66x3")
 
 [node name="Options" type="Control" parent="."]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -439,7 +439,16 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
+[node name="Button" type="Button" parent="Options"]
+layout_mode = 0
+offset_left = 752.0
+offset_top = 768.0
+offset_right = 912.0
+offset_bottom = 832.0
+text = "BACK"
+
 [node name="Recipes" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -738,3 +747,4 @@ texture = ExtResource("24_cdpag")
 
 [connection signal="pressed" from="Level/Book" to="." method="_on_book_pressed"]
 [connection signal="pressed" from="Pause/MarginContainer/VBoxContainer2/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Options/Button" to="." method="_on_button_pressed"]

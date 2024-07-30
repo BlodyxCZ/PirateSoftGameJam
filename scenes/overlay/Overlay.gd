@@ -64,6 +64,8 @@ func show_ui(_name: String) -> void:
 		"dialogue":
 			$Dialogue.show()
 			$Dialogue.first_meeting()
+		"options":
+			$Options.show()
 
 
 func is_in_dialogue() -> bool:
@@ -72,3 +74,7 @@ func is_in_dialogue() -> bool:
 
 func chef_say(duration: float, emotion: String = "Normal") -> void:
 	$Level/GhostChef.chef_say(duration, emotion)
+
+
+func _on_button_pressed() -> void:
+	$Options.hide()

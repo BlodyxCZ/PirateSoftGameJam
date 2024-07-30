@@ -1,0 +1,93 @@
+[gd_scene load_steps=9 format=3 uid="uid://qpw7pev76fip"]
+
+[ext_resource type="Script" path="res://scenes/mainmenu/credits/credits.gd" id="1_kqbkx"]
+[ext_resource type="Texture2D" uid="uid://ipdhxyynobwl" path="res://assets/credits/RedBrick2.png" id="1_rcuml"]
+[ext_resource type="Texture2D" uid="uid://2te3r785gop" path="res://assets/credits/blodyxGraffiti.png" id="2_kh7vb"]
+[ext_resource type="Texture2D" uid="uid://b37flm6627y5h" path="res://assets/credits/jamiegraffiti.png" id="3_6s30o"]
+[ext_resource type="Texture2D" uid="uid://443481tutx3m" path="res://assets/credits/crown.png" id="4_34yqj"]
+[ext_resource type="Texture2D" uid="uid://c8r25f3fd070o" path="res://assets/credits/smamsGrafitti.png" id="5_cvc8o"]
+[ext_resource type="Texture2D" uid="uid://b77aauvom4mef" path="res://assets/credits/stem.png" id="6_h6crx"]
+[ext_resource type="Texture2D" uid="uid://guxnxb6gk7mf" path="res://assets/credits/g.png" id="7_fxmsx"]
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kqbkx")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_rcuml")
+stretch_mode = 1
+
+[node name="BlodyxGraffiti" type="Sprite2D" parent="."]
+position = Vector2(488, 248)
+texture = ExtResource("2_kh7vb")
+
+[node name="Jamiegraffiti" type="Sprite2D" parent="."]
+position = Vector2(1120, 368)
+texture = ExtResource("3_6s30o")
+
+[node name="Crown" type="Sprite2D" parent="."]
+position = Vector2(1120, 256)
+texture = ExtResource("4_34yqj")
+
+[node name="SmamsGrafitti" type="Sprite2D" parent="."]
+position = Vector2(344, 576)
+texture = ExtResource("5_cvc8o")
+
+[node name="Stem" type="Sprite2D" parent="."]
+position = Vector2(1304, 704)
+texture = ExtResource("6_h6crx")
+
+[node name="G" type="Sprite2D" parent="."]
+position = Vector2(760, 728)
+texture = ExtResource("7_fxmsx")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 32
+bbcode_enabled = true
+text = "[center]
+
+
+
+
+
+[font_size=128]CREDITS[/font_size]
+
+[font_size=48]
+Tatoni Fail: 2D Artist
+Samuel Furches: Manager
+Jakub \"Blodyx\" Talman: Programmer
+Matt Perry: Musician
+[/font_size]"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 760.0
+offset_top = 776.0
+offset_right = 904.0
+offset_bottom = 832.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 32
+theme_override_font_sizes/font_size = 32
+text = "BACK"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

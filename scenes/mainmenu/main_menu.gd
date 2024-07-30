@@ -12,8 +12,8 @@ func _on_play_pressed() -> void:
 
 
 func _on_settings_pressed() -> void:
-	pass # Replace with function body.
+	Overlay.show_ui("options")
 
 
 func _on_credits_pressed() -> void:
-	pass # Replace with function body.
+	$Credits.show()

@@ -1,14 +1,16 @@
-[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://duuw54vi1vk08"]
+[gd_resource type="Resource" script_class="Item" load_steps=5 format=3 uid="uid://duuw54vi1vk08"]
 
 [ext_resource type="Script" path="res://scenes/classes/Item/Item.gd" id="1_e415k"]
 [ext_resource type="Texture2D" uid="uid://lu1ib77o2qlk" path="res://assets/items/Chicken/coocked chicken .png" id="1_l5fdf"]
 [ext_resource type="Texture2D" uid="uid://cww8vvupf6bqg" path="res://assets/items/Chicken/chicken .png" id="2_yd66o"]
+[ext_resource type="Texture2D" uid="uid://hfnhs5x17kxi" path="res://assets/items/Trash.png" id="4_jm3mv"]
 
 [resource]
 script = ExtResource("1_e415k")
 item_name = "Chicken"
 default = ExtResource("2_yd66o")
 cooked = ExtResource("1_l5fdf")
+trashed = ExtResource("4_jm3mv")
 cook_condition = Array[String]([])
 boil_condition = Array[String]([])
 water_condition = Array[String]([])

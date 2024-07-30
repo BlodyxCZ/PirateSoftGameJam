@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="Item" load_steps=6 format=3 uid="uid://b1yuwwch7dk4o"]
+
+[ext_resource type="Script" path="res://scenes/classes/Item/Item.gd" id="1_cvcgf"]
+[ext_resource type="Texture2D" uid="uid://hfnhs5x17kxi" path="res://assets/items/Trash.png" id="2_s5dxh"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_bim4j"]
+size = Vector2(256, 256)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_dw7c6"]
+size = Vector2(256, 256)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_aqnqf"]
+size = Vector2(256, 256)
+
+[resource]
+script = ExtResource("1_cvcgf")
+item_name = "Rice"
+default = SubResource("PlaceholderTexture2D_aqnqf")
+cooked = SubResource("PlaceholderTexture2D_dw7c6")
+combined = SubResource("PlaceholderTexture2D_bim4j")
+trashed = ExtResource("2_s5dxh")
+cook_condition = Array[String](["Combined"])
+boil_condition = Array[String]([])
+water_condition = Array[String]([])
+chop_condition = Array[String]([])
+combine_condition = Array[String]([])
+second_combine_condition = Array[String](["Combined", "Onions"])
+enchant_condition = Array[String](["Cooked"])

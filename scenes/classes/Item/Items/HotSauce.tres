@@ -10,7 +10,6 @@ item_name = "HotSauce"
 default = ExtResource("1_xyh63")
 trashed = ExtResource("2_rg1mx")
 cook_condition = Array[String]([])
-boil_condition = Array[String]([])
 water_condition = Array[String]([])
 chop_condition = Array[String]([])
 combine_condition = Array[String]([])

@@ -81,3 +81,6 @@ func wake_up() -> void:
 	ap.play("GetUp")
 	await ap.animation_finished
 	locked = false
+
+func to_idle() -> void:
+	ap.play("Idle")

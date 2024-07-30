@@ -100,6 +100,7 @@ func start_tutorial() -> void:
 	SceneTransition.transition_switch(get_camera("Kitchen"), get_camera("First"))
 	await SceneTransition.transition_complete
 	get_tree().get_first_node_in_group("Player").locked = true
+	get_tree().get_first_node_in_group("Player").to_idle()
 	
 	await $Level/GhostChef.trigger1
 	

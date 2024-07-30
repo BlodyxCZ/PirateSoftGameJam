@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://bxax8oq7k3wop"]
+
+[ext_resource type="Script" path="res://scenes/classes/Item/Item.gd" id="1_7xcba"]
+
+[resource]
+script = ExtResource("1_7xcba")
+item_name = "name"
+cook_condition = Array[String]([])
+water_condition = Array[String]([])
+chop_condition = Array[String]([])
+combine_condition = Array[String]([])
+second_combine_condition = Array[String]([])
+enchant_condition = Array[String]([])

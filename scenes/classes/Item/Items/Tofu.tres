@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Item" load_steps=5 format=3 uid="uid://cjqqfyb6qasc6"]
 
 [ext_resource type="Script" path="res://scenes/classes/Item/Item.gd" id="1_1j066"]
-[ext_resource type="Texture2D" uid="uid://doia1fdrqbtgh" path="res://assets/items/tofuCombined.png" id="1_jyovr"]
+[ext_resource type="Texture2D" uid="uid://doia1fdrqbtgh" path="res://assets/items/Tofu/tofuCombined.png" id="1_jyovr"]
 [ext_resource type="Texture2D" uid="uid://hfnhs5x17kxi" path="res://assets/items/Trash.png" id="2_2nexj"]
-[ext_resource type="Texture2D" uid="uid://cc6q6qmcufyvk" path="res://assets/items/tofu.png" id="2_ql75a"]
+[ext_resource type="Texture2D" uid="uid://cc6q6qmcufyvk" path="res://assets/items/Tofu/tofu.png" id="2_ql75a"]
 
 [resource]
 script = ExtResource("1_1j066")

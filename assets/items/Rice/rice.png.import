@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5hkb5nkdyady"
-path="res://.godot/imported/EnchantedOnions.png-815203c32f0c871c31e938ddf5336161.ctex"
+uid="uid://c7hpndccmmae8"
+path="res://.godot/imported/rice.png-909d30f8ec217a894aa15721671c2bc0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/items/EnchantedOnions.png"
-dest_files=["res://.godot/imported/EnchantedOnions.png-815203c32f0c871c31e938ddf5336161.ctex"]
+source_file="res://assets/items/Rice/rice.png"
+dest_files=["res://.godot/imported/rice.png-909d30f8ec217a894aa15721671c2bc0.ctex"]
 
 [params]
 

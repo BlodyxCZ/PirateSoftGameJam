@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="Item" load_steps=6 format=3 uid="uid://b1yuwwch7dk4o"]
 
-[ext_resource type="Texture2D" uid="uid://su71p5p1igqi" path="res://assets/items/CombinedRice.png" id="1_4a7m6"]
+[ext_resource type="Texture2D" uid="uid://su71p5p1igqi" path="res://assets/items/Rice/CombinedRice.png" id="1_4a7m6"]
 [ext_resource type="Script" path="res://scenes/classes/Item/Item.gd" id="1_cvcgf"]
 [ext_resource type="Texture2D" uid="uid://ohpp3rhkfwq" path="res://assets/items/Complete/tofu.png" id="2_fth1r"]
 [ext_resource type="Texture2D" uid="uid://hfnhs5x17kxi" path="res://assets/items/Trash.png" id="2_s5dxh"]
-[ext_resource type="Texture2D" uid="uid://c7hpndccmmae8" path="res://assets/items/rice.png" id="3_tbgjh"]
+[ext_resource type="Texture2D" uid="uid://c7hpndccmmae8" path="res://assets/items/Rice/rice.png" id="3_tbgjh"]
 
 [resource]
 script = ExtResource("1_cvcgf")

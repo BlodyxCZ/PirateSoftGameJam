@@ -81,6 +81,10 @@ func enchant() -> void:
 	item_name += "Enchanted"
 
 
+func trash() -> void:
+	texture = trashed
+
+
 func instantiate() -> Item:
 	var new = Item.new()
 	

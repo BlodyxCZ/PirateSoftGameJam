@@ -50,3 +50,7 @@ func _on_popup_process_complete() -> void:
 	
 	if is_in_range:
 		if current_item and $PopUpTexture.process >= 100.0: Overlay.add_action(Action.BUTTONS.E, "Take item")
+
+
+func _on_popup_overprocess_complete() -> void:
+	current_item.trash()

@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://dra6g6pn1arj1"]
 
 [ext_resource type="Script" path="res://scenes/classes/Item/Item.gd" id="1_f8crs"]
-[ext_resource type="Texture2D" uid="uid://d1iw7tc8hi7uj" path="res://assets/items/hot_sauce.png" id="1_xyh63"]
+[ext_resource type="Texture2D" uid="uid://d1iw7tc8hi7uj" path="res://assets/items/HotSauce/hot_sauce.png" id="1_xyh63"]
 [ext_resource type="Texture2D" uid="uid://hfnhs5x17kxi" path="res://assets/items/Trash.png" id="2_rg1mx"]
 
 [resource]

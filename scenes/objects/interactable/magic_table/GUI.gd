@@ -10,4 +10,5 @@ func open() -> void:
 
 
 func _on_button_pressed() -> void:
+	get_parent().get_parent().current_item.enchant()
 	close()

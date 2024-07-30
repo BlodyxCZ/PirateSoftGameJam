@@ -161,4 +161,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.52, 0, 0)
 mesh = SubResource("ArrayMesh_8phpr")
 skin = SubResource("Skin_gduoj")
 
+[connection signal="overprocess_complete" from="Popup" to="." method="_on_popup_overprocess_complete"]
 [connection signal="process_complete" from="Popup" to="." method="_on_popup_process_complete"]

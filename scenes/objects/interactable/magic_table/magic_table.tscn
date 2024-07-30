@@ -52,6 +52,7 @@ pop_up = NodePath("Popup")
 
 [node name="InventorySlot" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.66676, 0)
+pixel_size = 0.008
 billboard = 1
 
 [node name="MagicTable" type="MeshInstance3D" parent="."]

@@ -64,7 +64,6 @@ offset_bottom = 40.0
 mouse_filter = 1
 
 [node name="Level" type="Control" parent="."]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -441,7 +440,6 @@ grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Recipes" type="Control" parent="."]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

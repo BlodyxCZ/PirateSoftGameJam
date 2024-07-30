@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cbcns4judb7mq"]
+[gd_scene load_steps=6 format=3 uid="uid://cbcns4judb7mq"]
 
 [ext_resource type="AudioStream" uid="uid://c02hgvdaguepk" path="res://assets/sounds/Fresh air on a dark night.wav" id="1_cgtv4"]
 [ext_resource type="Script" path="res://scenes/audio/audio.gd" id="1_wfrff"]
 [ext_resource type="AudioStream" uid="uid://b5qxqefls2u5w" path="res://assets/sounds/Frantic kitchen samba FINAL.wav" id="2_jpmsl"]
 [ext_resource type="AudioStream" uid="uid://dvjc4yx2j78xa" path="res://assets/sounds/title theme.wav" id="3_g7nlf"]
+[ext_resource type="AudioStream" uid="uid://ddn2saejxb4c6" path="res://assets/sounds/GhostChefIntroTake1_GhostKitchen_SamuelFurches.mp3" id="5_2c2u0"]
 
 [node name="Audio" type="Node"]
 script = ExtResource("1_wfrff")
@@ -16,3 +17,6 @@ stream = ExtResource("2_jpmsl")
 
 [node name="Title" type="AudioStreamPlayer" parent="." groups=["Music"]]
 stream = ExtResource("3_g7nlf")
+
+[node name="Voice" type="AudioStreamPlayer" parent="." groups=["Voice"]]
+stream = ExtResource("5_2c2u0")

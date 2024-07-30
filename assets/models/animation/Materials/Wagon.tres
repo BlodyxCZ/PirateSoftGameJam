@@ -2,6 +2,5 @@
 
 [resource]
 resource_name = "Wagon"
-cull_mode = 2
 albedo_color = Color(0.596715, 0.197619, 0.262691, 1)
 roughness = 0.5

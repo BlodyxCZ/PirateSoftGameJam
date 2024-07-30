@@ -1,8 +1,7 @@
-[gd_scene load_steps=16 format=3 uid="uid://bolrbueo5umgm"]
+[gd_scene load_steps=15 format=3 uid="uid://bolrbueo5umgm"]
 
 [ext_resource type="Script" path="res://scenes/objects/interactable/oven/oven.gd" id="1_7k8b2"]
 [ext_resource type="Script" path="res://scenes/classes/Popup/popup.gd" id="2_bpdp7"]
-[ext_resource type="Texture2D" uid="uid://lu1ib77o2qlk" path="res://assets/items/Chicken/coocked chicken .png" id="2_kb7g3"]
 [ext_resource type="Script" path="res://scenes/classes/Popup/pop_up_texture.gd" id="3_jkosa"]
 [ext_resource type="Material" uid="uid://byip00fwh6224" path="res://assets/models/kitchen1/Materials/Oven.tres" id="3_rtjpa"]
 [ext_resource type="Script" path="res://scenes/objects/interactable/oven/GUI.gd" id="4_tqn8q"]
@@ -68,9 +67,11 @@ gui = NodePath("GUI")
 pop_up = NodePath("Popup")
 
 [node name="InventorySlot" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.567588, -0.219362, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.567588, -0.0777404, 0)
+pixel_size = 0.008
 billboard = 1
-texture = ExtResource("2_kb7g3")
+shaded = true
+double_sided = false
 
 [node name="Popup" type="Sprite3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1.9016, 0)

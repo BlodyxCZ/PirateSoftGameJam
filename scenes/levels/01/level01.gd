@@ -9,12 +9,24 @@ signal wake()
 func _ready() -> void:
 	Overlay.hide_all()
 	await $Prerender/AnimationPlayer.animation_finished
-	Audio.play("Hub")
-	$Cameras/Intro.current = true
+	Audio.play("Voice")
 	$Prerender.hide()
 	
 	player.frozen = true
 	player.sleep()
+	$Cutscene/camera/CamPart/Camera3D.current = true
+	$Cutscene/camera/AnimationPlayer.play("Action_001")
+	$Cutscene/AnimationPlayer.play("Armature_007Action_001")
+	$Cutscene/AnimationPlayer2.play("Armature_008Action_001")
+	$Cutscene/AnimationPlayer3.play("Armature_009Action_001")
+	$Cutscene/AnimationPlayer4.play("Cube_033Action_001")
+	await $Cutscene/camera/AnimationPlayer.animation_finished
+	SceneTransition.transition_switch($Cutscene/camera/CamPart/Camera3D, $Cameras/Intro)
+	await SceneTransition.transition_complete
+	
+	$Cutscene.hide()
+	Audio.play("Hub")
+	
 	await get_tree().create_timer(3.0).timeout
 	Overlay.show_ui("intro")
 	await wake

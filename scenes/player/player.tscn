@@ -206,7 +206,7 @@ _data = {
 script = ExtResource("1_3vxr8")
 
 [node name="HornL" type="BoneAttachment3D" parent="."]
-transform = Transform3D(-0.155751, -0.304616, 0.939654, 0.481343, 0.807277, 0.341486, -0.862584, 0.505483, 0.0208907, -0.207057, 1.17242, 0.168694)
+transform = Transform3D(-0.15575, -0.304615, 0.939655, 0.481344, 0.807277, 0.341485, -0.862583, 0.505483, 0.0208906, -0.207056, 1.17242, 0.168694)
 bone_name = "Horn_L"
 bone_idx = 8
 use_external_skeleton = true
@@ -220,7 +220,7 @@ omni_range = 2.0
 omni_attenuation = 0.5
 
 [node name="HornR" type="BoneAttachment3D" parent="."]
-transform = Transform3D(0.155771, -0.304651, 0.93964, -0.481336, 0.807264, 0.341527, -0.862584, -0.505482, -0.0208908, -0.207057, 1.17242, -0.184562)
+transform = Transform3D(0.15577, -0.30465, 0.93964, -0.481336, 0.807265, 0.341525, -0.862584, -0.505482, -0.0208908, -0.207056, 1.17242, -0.184562)
 bone_name = "Horn_R"
 bone_idx = 12
 use_external_skeleton = true
@@ -235,7 +235,7 @@ omni_range = 2.0
 omni_attenuation = 0.5
 
 [node name="Head" type="BoneAttachment3D" parent="."]
-transform = Transform3D(-2.53471e-07, -0.474525, 0.880242, -1.13795e-07, 0.880242, 0.474525, -1, 2.01114e-08, -2.77114e-07, -0.013355, 0.924872, -0.00793398)
+transform = Transform3D(-2.53471e-07, -0.474524, 0.880242, -1.13795e-07, 0.880242, 0.474524, -1, 2.01114e-08, -2.77114e-07, -0.0133545, 0.924873, -0.00793398)
 bone_name = "Head"
 bone_idx = 4
 use_external_skeleton = true
@@ -554,4 +554,4 @@ skin = SubResource("Skin_050pl")
 libraries = {
 "": SubResource("AnimationLibrary_m2hoe")
 }
-blend_times = [&"Walk", &"Idle", 0.2, &"GetUp", &"Walk", 0.2, &"GetUp", &"Idle", 0.2, &"Idle", &"Walk", 0.2]
+blend_times = [&"Walk", &"Idle", 0.2, &"Idle", &"Walk", 0.2, &"GetUp", &"Walk", 0.2, &"GetUp", &"Idle", 0.2]

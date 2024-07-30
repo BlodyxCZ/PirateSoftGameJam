@@ -31,4 +31,8 @@ func _input(event: InputEvent) -> void:
 					Overlay.show_ui("dialogue")
 					await Overlay.dialog_finished
 					Overlay.hide_all()
+					get_tree().get_first_node_in_group("Barrier").queue_free()
+					progress += 1
+				1:
+					pass
 			player.frozen = false

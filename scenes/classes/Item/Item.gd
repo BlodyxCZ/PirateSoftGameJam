@@ -10,7 +10,6 @@ var texture: Texture
 @export_group("Sprites")
 @export var default: Texture
 @export var cooked: Texture
-@export var boiled: Texture
 @export var watered: Texture
 @export var chopped: Texture
 @export var combined: Texture
@@ -19,7 +18,6 @@ var texture: Texture
 
 @export_group("Conditions")
 @export var cook_condition: Array[String] = []
-@export var boil_condition: Array[String] = []
 @export var water_condition: Array[String] = []
 @export var chop_condition: Array[String] = []
 @export var combine_condition: Array[String] = []
@@ -34,22 +32,18 @@ func cook() -> void:
 		if item_name.find(condition) == -1 or texture == trashed:
 			texture = trashed
 			return
+	if not item_name.find("Cooked") == -1:
+		return
 	texture = cooked
 	item_name += "Cooked"
-
-func boil() -> void:
-	for condition in boil_condition:
-		if item_name.find(condition) == -1 or texture == trashed:
-			texture = trashed
-			return
-	texture = boiled
-	item_name += "Boiled"
 
 func water() -> void:
 	for condition in water_condition:
 		if item_name.find(condition) == -1 or texture == trashed:
 			texture = trashed
 			return
+	if not item_name.find("Watered") == -1:
+		return
 	texture = watered
 	item_name += "Watered"
 
@@ -58,6 +52,8 @@ func chop() -> void:
 		if item_name.find(condition) == -1 or texture == trashed:
 			texture = trashed
 			return
+	if not item_name.find("Chopped") == -1:
+		return
 	texture = chopped
 	item_name += "Chopped"
 
@@ -77,6 +73,8 @@ func enchant() -> void:
 		if item_name.find(condition) == -1 or texture == trashed:
 			texture = trashed
 			return
+	if not item_name.find("Enchanted") == -1:
+		return
 	texture = enchanted
 	item_name += "Enchanted"
 
@@ -93,7 +91,6 @@ func instantiate() -> Item:
 	
 	new.default = default
 	new.cooked = cooked
-	new.boiled = boiled
 	new.watered = watered
 	new.chopped = chopped
 	new.combined = combined
@@ -101,7 +98,6 @@ func instantiate() -> Item:
 	new.trashed = trashed
 	
 	new.cook_condition = cook_condition
-	new.boil_condition = boil_condition
 	new.chop_condition = chop_condition
 	new.combine_condition = combine_condition
 	new.second_combine_condition = second_combine_condition

@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://d1iw7tc8hi7uj" path="res://assets/items/HotSauce/hot_sauce.png" id="13_ncekl"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_e7jdm"]
-size = Vector3(3.624, 0.7, 1)
+size = Vector3(2.71642, 0.7, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_eureo"]
 size = Vector3(2.04847, 4.60701, 2.01628)
@@ -44,7 +44,7 @@ script = ExtResource("2_q71sa")
 [node name="Range" type="Area3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Range"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.31201, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.85822, 0, 0)
 shape = SubResource("BoxShape3D_e7jdm")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
@@ -62,6 +62,7 @@ skeleton = NodePath("")
 layer = 3
 
 [node name="GUI" type="Control" parent="CanvasLayer"]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -72,152 +73,144 @@ mouse_filter = 1
 script = ExtResource("5_roqk6")
 metadata/_edit_lock_ = true
 
-[node name="Panel" type="TextureRect" parent="CanvasLayer/GUI"]
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/GUI"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 192.0
-offset_top = 192.0
-offset_right = -192.0
-offset_bottom = -196.0
+offset_right = -267.0
+offset_bottom = -150.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.2, 1.2)
+
+[node name="Panel" type="TextureRect" parent="CanvasLayer/GUI/CenterContainer"]
+layout_mode = 2
 texture = ExtResource("6_1loly")
 metadata/_edit_lock_ = true
 
-[node name="Carrot" type="Button" parent="CanvasLayer/GUI/Panel"]
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/GUI/CenterContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/GUI/CenterContainer/Panel/CenterContainer"]
+layout_mode = 2
+theme_override_constants/v_separation = 90
+columns = 6
+
+[node name="Carrot" type="Button" parent="CanvasLayer/GUI/CenterContainer/Panel/CenterContainer/GridContainer"]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
-offset_left = 241.0
-offset_top = 217.0
-offset_right = 369.0
-offset_bottom = 345.0
 focus_neighbor_right = NodePath("../Pepper")
 focus_next = NodePath("../Pepper")
 mouse_filter = 1
 icon = ExtResource("6_2stu8")
+flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="Pepper" type="Button" parent="CanvasLayer/GUI/Panel"]
+[node name="Pepper" type="Button" parent="CanvasLayer/GUI/CenterContainer/Panel/CenterContainer/GridContainer"]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
-offset_left = 497.0
-offset_top = 228.0
-offset_right = 625.0
-offset_bottom = 356.0
 focus_neighbor_left = NodePath("../Carrot")
 focus_neighbor_right = NodePath("../Chicken")
 focus_next = NodePath("../Chicken")
 focus_previous = NodePath("../Carrot")
 mouse_filter = 1
 icon = ExtResource("7_17fmn")
+flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="Chicken" type="Button" parent="CanvasLayer/GUI/Panel"]
+[node name="Chicken" type="Button" parent="CanvasLayer/GUI/CenterContainer/Panel/CenterContainer/GridContainer"]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
-offset_left = 369.0
-offset_top = 235.0
-offset_right = 497.0
-offset_bottom = 363.0
 focus_neighbor_left = NodePath("../Pepper")
 focus_previous = NodePath("../Pepper")
 mouse_filter = 1
 icon = ExtResource("8_rehq1")
+flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="Wine" type="Button" parent="CanvasLayer/GUI/Panel"]
+[node name="Wine" type="Button" parent="CanvasLayer/GUI/CenterContainer/Panel/CenterContainer/GridContainer"]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
-offset_left = 625.0
-offset_top = 218.0
-offset_right = 753.0
-offset_bottom = 346.0
 focus_neighbor_left = NodePath("../Pepper")
 focus_previous = NodePath("../Pepper")
 mouse_filter = 1
 icon = ExtResource("9_buhsy")
+flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="Rice" type="Button" parent="CanvasLayer/GUI/Panel"]
+[node name="Rice" type="Button" parent="CanvasLayer/GUI/CenterContainer/Panel/CenterContainer/GridContainer"]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
-offset_left = 367.0
-offset_top = 424.0
-offset_right = 495.0
-offset_bottom = 552.0
 focus_neighbor_left = NodePath("../Pepper")
 focus_previous = NodePath("../Pepper")
 mouse_filter = 1
 icon = ExtResource("10_mydm5")
+flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="Tofu" type="Button" parent="CanvasLayer/GUI/Panel"]
+[node name="Tofu" type="Button" parent="CanvasLayer/GUI/CenterContainer/Panel/CenterContainer/GridContainer"]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
-offset_left = 885.0
-offset_top = 201.0
-offset_right = 1013.0
-offset_bottom = 329.0
 focus_neighbor_left = NodePath("../Pepper")
 focus_previous = NodePath("../Pepper")
 mouse_filter = 1
 icon = ExtResource("11_thdc1")
+flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="Onions" type="Button" parent="CanvasLayer/GUI/Panel"]
+[node name="Onions" type="Button" parent="CanvasLayer/GUI/CenterContainer/Panel/CenterContainer/GridContainer"]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
-offset_left = 237.0
-offset_top = 423.0
-offset_right = 365.0
-offset_bottom = 551.0
 focus_neighbor_left = NodePath("../Pepper")
 focus_previous = NodePath("../Pepper")
 mouse_filter = 1
 icon = ExtResource("12_5jqcf")
+flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="HotSauce" type="Button" parent="CanvasLayer/GUI/Panel"]
+[node name="HotSauce" type="Button" parent="CanvasLayer/GUI/CenterContainer/Panel/CenterContainer/GridContainer"]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
-offset_left = 755.0
-offset_top = 202.0
-offset_right = 883.0
-offset_bottom = 330.0
 focus_neighbor_left = NodePath("../Pepper")
 focus_previous = NodePath("../Pepper")
 mouse_filter = 1
 icon = ExtResource("13_ncekl")
+flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="Item" type="Button" parent="CanvasLayer/GUI/Panel"]
+[node name="Item" type="Button" parent="CanvasLayer/GUI/CenterContainer/Panel"]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 offset_left = 1526.0
 offset_top = 212.0
 offset_right = 1654.0
 offset_bottom = 340.0
-focus_neighbor_left = NodePath("../Pepper")
-focus_previous = NodePath("../Pepper")
+focus_neighbor_left = NodePath("../CenterContainer/GridContainer/Pepper")
+focus_previous = NodePath("../CenterContainer/GridContainer/Pepper")
 mouse_filter = 1
 icon_alignment = 1
 expand_icon = true
 
-[connection signal="pressed" from="CanvasLayer/GUI/Panel/Carrot" to="CanvasLayer/GUI" method="_on_carrot_pressed"]
-[connection signal="pressed" from="CanvasLayer/GUI/Panel/Pepper" to="CanvasLayer/GUI" method="_on_pepper_pressed"]
-[connection signal="pressed" from="CanvasLayer/GUI/Panel/Chicken" to="CanvasLayer/GUI" method="_on_chicken_pressed"]
-[connection signal="pressed" from="CanvasLayer/GUI/Panel/Wine" to="CanvasLayer/GUI" method="_on_wine_pressed"]
-[connection signal="pressed" from="CanvasLayer/GUI/Panel/Rice" to="CanvasLayer/GUI" method="_on_rice_pressed"]
-[connection signal="pressed" from="CanvasLayer/GUI/Panel/Tofu" to="CanvasLayer/GUI" method="_on_tofu_pressed"]
-[connection signal="pressed" from="CanvasLayer/GUI/Panel/Onions" to="CanvasLayer/GUI" method="_on_onions_pressed"]
-[connection signal="pressed" from="CanvasLayer/GUI/Panel/HotSauce" to="CanvasLayer/GUI" method="_on_hot_sauce_pressed"]
+[connection signal="pressed" from="CanvasLayer/GUI/CenterContainer/Panel/CenterContainer/GridContainer/Carrot" to="CanvasLayer/GUI" method="_on_carrot_pressed"]
+[connection signal="pressed" from="CanvasLayer/GUI/CenterContainer/Panel/CenterContainer/GridContainer/Pepper" to="CanvasLayer/GUI" method="_on_pepper_pressed"]
+[connection signal="pressed" from="CanvasLayer/GUI/CenterContainer/Panel/CenterContainer/GridContainer/Chicken" to="CanvasLayer/GUI" method="_on_chicken_pressed"]
+[connection signal="pressed" from="CanvasLayer/GUI/CenterContainer/Panel/CenterContainer/GridContainer/Wine" to="CanvasLayer/GUI" method="_on_wine_pressed"]
+[connection signal="pressed" from="CanvasLayer/GUI/CenterContainer/Panel/CenterContainer/GridContainer/Rice" to="CanvasLayer/GUI" method="_on_rice_pressed"]
+[connection signal="pressed" from="CanvasLayer/GUI/CenterContainer/Panel/CenterContainer/GridContainer/Tofu" to="CanvasLayer/GUI" method="_on_tofu_pressed"]
+[connection signal="pressed" from="CanvasLayer/GUI/CenterContainer/Panel/CenterContainer/GridContainer/Onions" to="CanvasLayer/GUI" method="_on_onions_pressed"]
+[connection signal="pressed" from="CanvasLayer/GUI/CenterContainer/Panel/CenterContainer/GridContainer/HotSauce" to="CanvasLayer/GUI" method="_on_hot_sauce_pressed"]

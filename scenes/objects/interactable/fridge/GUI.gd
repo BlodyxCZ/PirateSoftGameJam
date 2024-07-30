@@ -14,7 +14,7 @@ const HOT_SAUCE_ITEM = preload("res://scenes/classes/Item/Items/HotSauce.tres")
 func open() -> void:
 	super.open()
 	if not Global.controller == Global.controllers.PC:
-		$Panel/MarginContainer/GridContainer/Carrot.grab_focus()
+		$CenterContainer/Panel/CenterContainer/GridContainer/Carrot.grab_focus()
 
 
 func _ready() -> void:

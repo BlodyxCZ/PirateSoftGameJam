@@ -89,9 +89,11 @@ gui = NodePath("GUI")
 pop_up = NodePath("Popup")
 
 [node name="InventorySlot" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.532, 0)
+transform = Transform3D(1.91069e-15, -1, -4.37114e-08, -4.37114e-08, -4.37114e-08, 1, -1, 0, -4.37114e-08, 0, 1.51676, 0.126205)
 pixel_size = 0.008
 billboard = 1
+shaded = true
+double_sided = false
 
 [node name="Popup" type="Sprite3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1.9016, 0)
@@ -172,3 +174,9 @@ bones/1/scale = Vector3(1, 1, 1)
 [node name="ChoppingBoard" type="MeshInstance3D" parent="ChoppingBlock/Skeleton3D"]
 mesh = SubResource("ArrayMesh_0y7p7")
 skin = SubResource("Skin_hu7im")
+
+[node name="BoneAttachment3D" type="BoneAttachment3D" parent="ChoppingBlock/Skeleton3D"]
+transform = Transform3D(0.438283, -0.898837, 0.000346758, 0.000949971, 7.74311e-05, -1, 0.898837, 0.438283, 0.000887806, 0.421878, 0.0815024, -0.750484)
+bone_name = "Knife"
+bone_idx = 1
+override_pose = true

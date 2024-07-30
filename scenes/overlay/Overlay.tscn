@@ -1,41 +1,68 @@
-[gd_scene load_steps=41 format=3 uid="uid://dcq1we4ule87k"]
+[gd_scene load_steps=68 format=3 uid="uid://dcq1we4ule87k"]
 
 [ext_resource type="Script" path="res://scenes/overlay/Overlay.gd" id="1_2uwuf"]
 [ext_resource type="PackedScene" uid="uid://llaar1v2bv66" path="res://scenes/overlay/order/order.tscn" id="2_bdb1u"]
 [ext_resource type="Texture2D" uid="uid://bvgsw0janrdig" path="res://assets/kenney/arrow_e.svg" id="2_pi06a"]
+[ext_resource type="Script" path="res://scenes/overlay/Recipes.gd" id="2_s658n"]
 [ext_resource type="Texture2D" uid="uid://b37x0f4f5k6mt" path="res://assets/ui/book.png" id="3_54h45"]
 [ext_resource type="Script" path="res://scenes/overlay/GhostChef.gd" id="3_hxfpv"]
 [ext_resource type="Script" path="res://scenes/classes/button/IconButton.gd" id="3_u66x3"]
+[ext_resource type="Texture2D" uid="uid://dmpnorku6gl1j" path="res://assets/items/Complete/pepper .png" id="4_gj4mu"]
 [ext_resource type="VideoStream" path="res://assets/videos/Chef/ChefTalk.ogv" id="4_hmg2p"]
 [ext_resource type="Texture2D" uid="uid://c6ttf40hqqmwt" path="res://assets/ui/action back.png" id="5_cj73a"]
+[ext_resource type="Texture2D" uid="uid://cen22u4q85712" path="res://assets/items/BellPeppers/peppers.png" id="5_jbjxr"]
 [ext_resource type="Texture2D" uid="uid://devff3kvftros" path="res://assets/videos/Chef/ChefPaused.png" id="5_jqw4f"]
+[ext_resource type="Texture2D" uid="uid://cww8vvupf6bqg" path="res://assets/items/Chicken/chicken .png" id="6_gwphn"]
 [ext_resource type="VideoStream" path="res://assets/videos/Chef/ChefAngryTalk.ogv" id="6_mkbgc"]
+[ext_resource type="Texture2D" uid="uid://lu1ib77o2qlk" path="res://assets/items/Chicken/coocked chicken .png" id="7_hldg2"]
 [ext_resource type="Texture2D" uid="uid://ddn2sm4fg71yo" path="res://assets/videos/Chef/chefAngryPaused.png" id="7_oysl0"]
 [ext_resource type="Texture2D" uid="uid://bdkynyl7ov0ck" path="res://assets/ui/action front.png" id="7_t7lpi"]
 [ext_resource type="Texture2D" uid="uid://bnhromr3itfha" path="res://assets/ui/book 2.png" id="7_vxbue"]
 [ext_resource type="VideoStream" path="res://assets/videos/Chef/ChefFocusedTalk.ogv" id="8_pyob4"]
+[ext_resource type="Texture2D" uid="uid://bq4vbny44p5m" path="res://assets/icons/icon 1.png" id="8_y8q52"]
 [ext_resource type="Texture2D" uid="uid://sjiev8dfqgv2" path="res://assets/videos/Chef/chefFocusedPaused.png" id="9_8emi6"]
+[ext_resource type="Texture2D" uid="uid://coc6uc42puqkr" path="res://assets/items/BellPeppers/cored peppers.png" id="9_52gm2"]
 [ext_resource type="VideoStream" path="res://assets/videos/Chef/ChefPleasedTalk.ogv" id="10_2f8pf"]
 [ext_resource type="PackedScene" uid="uid://bycc6jggmrowp" path="res://scenes/overlay/action/action.tscn" id="10_smlax"]
+[ext_resource type="Texture2D" uid="uid://dilmstbrfwrhl" path="res://assets/icons/icon 4.png" id="10_xpcqh"]
 [ext_resource type="Texture2D" uid="uid://rxyejkjcj11o" path="res://assets/videos/Chef/chefPleasedPaused.png" id="11_j4h3x"]
+[ext_resource type="Texture2D" uid="uid://dx01iph82voe1" path="res://assets/icons/icon 2.png" id="11_n75ij"]
 [ext_resource type="Script" path="res://scenes/overlay/Dialogue.gd" id="11_sb3jb"]
+[ext_resource type="Texture2D" uid="uid://bs8t8aw2yme6h" path="res://assets/items/BellPeppers/uncooked peppers.png" id="12_3rorj"]
 [ext_resource type="VideoStream" path="res://assets/videos/Chef/ChefThinkingTalk.ogv" id="12_rnvfj"]
 [ext_resource type="Texture2D" uid="uid://dfxshuav1cnrb" path="res://assets/videos/Vampire/VampirePaused.png" id="12_y3m1s"]
 [ext_resource type="Texture2D" uid="uid://xxhx5y7dwuof" path="res://assets/videos/Chef/chefThinkingPaused.png" id="13_ilprb"]
+[ext_resource type="Texture2D" uid="uid://cdques1eprfib" path="res://assets/items/Complete/rat.png" id="13_nxtj4"]
 [ext_resource type="Material" uid="uid://ln7u33eoc8ee" path="res://assets/shaders/ChromaKey.material" id="13_qdtij"]
 [ext_resource type="VideoStream" path="res://assets/videos/Vampire/VampireTalk.ogv" id="14_4gv8b"]
+[ext_resource type="Texture2D" uid="uid://uxqpkgpw2cni" path="res://assets/items/Vegetables/vegetables.png" id="14_ilevu"]
+[ext_resource type="Texture2D" uid="uid://dswebeyir8xxb" path="res://assets/items/Wine/wine.png" id="15_knx0r"]
 [ext_resource type="VideoStream" path="res://assets/videos/Vampire/vampireHappyTalk.ogv" id="16_56qdk"]
+[ext_resource type="Texture2D" uid="uid://7kcilwiv2083" path="res://assets/items/Vegetables/chop vegetables.png" id="16_hycc4"]
 [ext_resource type="Texture2D" uid="uid://dek580dnta5t7" path="res://assets/videos/Vampire/vampireHappyPaused.png" id="16_pioej"]
 [ext_resource type="Texture2D" uid="uid://dyubsojduwujp" path="res://assets/ui/chat-transformed.png" id="16_uwhb2"]
 [ext_resource type="VideoStream" path="res://assets/videos/Vampire/vampireSadTalk.ogv" id="17_2wy72"]
+[ext_resource type="Texture2D" uid="uid://dkgpo71o6jgay" path="res://assets/items/Vegetables/unc. rat. .png" id="17_qxa7d"]
+[ext_resource type="Texture2D" uid="uid://ohpp3rhkfwq" path="res://assets/items/Complete/tofu.png" id="18_jy3ow"]
 [ext_resource type="Texture2D" uid="uid://dp8schc2t75aq" path="res://assets/videos/Vampire/vampSadPaused.png" id="18_rkhkb"]
 [ext_resource type="VideoStream" path="res://assets/videos/Vampire/VampireSleepyTalk.ogv" id="19_p33kt"]
+[ext_resource type="Texture2D" uid="uid://xh7xhqolkqc5" path="res://assets/items/Onions/onions.png" id="19_y48jw"]
 [ext_resource type="Texture2D" uid="uid://b4vcoh0crls5m" path="res://assets/videos/Vampire/vampireSleepyPaused.png" id="20_f5u5c"]
+[ext_resource type="Texture2D" uid="uid://cc6q6qmcufyvk" path="res://assets/items/Tofu/tofu.png" id="20_foj8a"]
+[ext_resource type="Texture2D" uid="uid://doia1fdrqbtgh" path="res://assets/items/Tofu/tofuCombined.png" id="21_bbsgo"]
 [ext_resource type="VideoStream" path="res://assets/videos/Vampire/VampireWideOpenedTalk.ogv" id="21_ch81l"]
+[ext_resource type="Texture2D" uid="uid://rl1pendphs55" path="res://assets/ui/pause back.png" id="21_djo3x"]
 [ext_resource type="Texture2D" uid="uid://bm5alq04nuwoo" path="res://assets/videos/Vampire/vampireWideOpenedPaused.png" id="22_6ublj"]
+[ext_resource type="Texture2D" uid="uid://cxrfqpw34uia4" path="res://assets/ui/button.png" id="22_rfqoq"]
+[ext_resource type="Texture2D" uid="uid://d1iw7tc8hi7uj" path="res://assets/items/HotSauce/hot_sauce.png" id="22_u4523"]
+[ext_resource type="Texture2D" uid="uid://b5hkb5nkdyady" path="res://assets/items/Onions/EnchantedOnions.png" id="23_53mpc"]
 [ext_resource type="Texture2D" uid="uid://bbfotc00jpyry" path="res://assets/New_Project13.png" id="23_c6jo1"]
 [ext_resource type="VideoStream" path="res://assets/videos/Jackalope/JackalopeTalk.ogv" id="23_uw371"]
 [ext_resource type="Texture2D" uid="uid://dsc1aew3h1m85" path="res://assets/videos/Jackalope/JackalopePaused.png" id="24_cdpag"]
+[ext_resource type="Texture2D" uid="uid://c7hpndccmmae8" path="res://assets/items/Rice/rice.png" id="24_fko1n"]
+[ext_resource type="Texture2D" uid="uid://su71p5p1igqi" path="res://assets/items/Rice/CombinedRice.png" id="25_ihk1p"]
+[ext_resource type="Texture2D" uid="uid://ekj3e41mm520" path="res://assets/icons/icon 5.png" id="26_ebmry"]
+[ext_resource type="Texture2D" uid="uid://cvbpsmya14cpp" path="res://assets/items/Onions/CombinedOnions.png" id="27_cts0b"]
 
 [sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_nfm1y"]
 button_index = 4
@@ -62,6 +89,273 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 mouse_filter = 1
+
+[node name="Recipes" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 256.0
+offset_top = 296.0
+offset_right = -256.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("2_s658n")
+
+[node name="Sprite2D" type="Sprite2D" parent="Recipes"]
+position = Vector2(544, 328)
+texture = ExtResource("7_vxbue")
+
+[node name="MarginContainer" type="MarginContainer" parent="Recipes"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 32.0
+offset_right = 896.0
+offset_bottom = 504.0
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 30
+
+[node name="Page1" type="Control" parent="Recipes/MarginContainer"]
+layout_mode = 2
+
+[node name="Pepper" type="Sprite2D" parent="Recipes/MarginContainer/Page1"]
+position = Vector2(169, 273)
+scale = Vector2(1.21875, 1.21875)
+texture = ExtResource("4_gj4mu")
+
+[node name="Pepper2" type="Sprite2D" parent="Recipes/MarginContainer/Page1"]
+position = Vector2(529, 361)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_gj4mu")
+
+[node name="Peppers" type="Sprite2D" parent="Recipes/MarginContainer/Page1"]
+position = Vector2(433, 41)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_jbjxr")
+
+[node name="Chicken" type="Sprite2D" parent="Recipes/MarginContainer/Page1"]
+position = Vector2(625, 41)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_gwphn")
+
+[node name="Chicken2" type="Sprite2D" parent="Recipes/MarginContainer/Page1"]
+position = Vector2(625, 177)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_hldg2")
+
+[node name="Icon1" type="Sprite2D" parent="Recipes/MarginContainer/Page1"]
+position = Vector2(433, 105)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_y8q52")
+
+[node name="CoredPeppers" type="Sprite2D" parent="Recipes/MarginContainer/Page1"]
+position = Vector2(433, 169)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_52gm2")
+
+[node name="Icon4" type="Sprite2D" parent="Recipes/MarginContainer/Page1"]
+position = Vector2(625, 105)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("10_xpcqh")
+
+[node name="Icon5" type="Sprite2D" parent="Recipes/MarginContainer/Page1"]
+position = Vector2(529, 297)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("10_xpcqh")
+
+[node name="Icon2" type="Sprite2D" parent="Recipes/MarginContainer/Page1"]
+position = Vector2(529, 169)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("11_n75ij")
+
+[node name="UncookedPeppers" type="Sprite2D" parent="Recipes/MarginContainer/Page1"]
+position = Vector2(529, 233)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_3rorj")
+
+[node name="Label" type="Label" parent="Recipes/MarginContainer/Page1"]
+layout_mode = 0
+offset_right = 329.0
+offset_bottom = 179.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 48
+text = "Quinoa Stuffed Peppers"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Page2" type="Control" parent="Recipes/MarginContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Pepper" type="Sprite2D" parent="Recipes/MarginContainer/Page2"]
+position = Vector2(169, 273)
+scale = Vector2(1.21875, 1.21875)
+texture = ExtResource("13_nxtj4")
+
+[node name="Pepper2" type="Sprite2D" parent="Recipes/MarginContainer/Page2"]
+position = Vector2(529, 377)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("13_nxtj4")
+
+[node name="Peppers" type="Sprite2D" parent="Recipes/MarginContainer/Page2"]
+position = Vector2(433, 41)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_ilevu")
+
+[node name="Chicken2" type="Sprite2D" parent="Recipes/MarginContainer/Page2"]
+position = Vector2(617, 153)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("15_knx0r")
+
+[node name="Icon1" type="Sprite2D" parent="Recipes/MarginContainer/Page2"]
+position = Vector2(433, 113)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_y8q52")
+
+[node name="CoredPeppers" type="Sprite2D" parent="Recipes/MarginContainer/Page2"]
+position = Vector2(433, 169)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("16_hycc4")
+
+[node name="Icon5" type="Sprite2D" parent="Recipes/MarginContainer/Page2"]
+position = Vector2(529, 321)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("10_xpcqh")
+
+[node name="Icon2" type="Sprite2D" parent="Recipes/MarginContainer/Page2"]
+position = Vector2(529, 177)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("11_n75ij")
+
+[node name="UncookedPeppers" type="Sprite2D" parent="Recipes/MarginContainer/Page2"]
+position = Vector2(529, 249)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("17_qxa7d")
+
+[node name="Label" type="Label" parent="Recipes/MarginContainer/Page2"]
+offset_left = -7.0
+offset_right = 337.0
+offset_bottom = 179.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 48
+text = "Ratatouille"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Page3" type="Control" parent="Recipes/MarginContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Pepper" type="Sprite2D" parent="Recipes/MarginContainer/Page3"]
+position = Vector2(169, 273)
+scale = Vector2(1.21875, 1.21875)
+texture = ExtResource("18_jy3ow")
+
+[node name="Pepper2" type="Sprite2D" parent="Recipes/MarginContainer/Page3"]
+position = Vector2(393, 345)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("18_jy3ow")
+
+[node name="Peppers" type="Sprite2D" parent="Recipes/MarginContainer/Page3"]
+position = Vector2(585, 25)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("19_y48jw")
+
+[node name="Chicken" type="Sprite2D" parent="Recipes/MarginContainer/Page3"]
+position = Vector2(457, 25)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("20_foj8a")
+
+[node name="Chicken2" type="Sprite2D" parent="Recipes/MarginContainer/Page3"]
+position = Vector2(585, 153)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("21_bbsgo")
+
+[node name="Chicken3" type="Sprite2D" parent="Recipes/MarginContainer/Page3"]
+position = Vector2(649, 89)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("22_u4523")
+
+[node name="Icon1" type="Sprite2D" parent="Recipes/MarginContainer/Page3"]
+position = Vector2(521, 153)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("11_n75ij")
+
+[node name="CoredPeppers" type="Sprite2D" parent="Recipes/MarginContainer/Page3"]
+position = Vector2(457, 153)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("23_53mpc")
+
+[node name="Icon4" type="Sprite2D" parent="Recipes/MarginContainer/Page3"]
+position = Vector2(585, 281)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("24_fko1n")
+
+[node name="Icon7" type="Sprite2D" parent="Recipes/MarginContainer/Page3"]
+position = Vector2(521, 345)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("25_ihk1p")
+
+[node name="Icon8" type="Sprite2D" parent="Recipes/MarginContainer/Page3"]
+position = Vector2(457, 345)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_xpcqh")
+
+[node name="Icon6" type="Sprite2D" parent="Recipes/MarginContainer/Page3"]
+position = Vector2(457, 89)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("26_ebmry")
+
+[node name="Icon5" type="Sprite2D" parent="Recipes/MarginContainer/Page3"]
+position = Vector2(521, 281)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("11_n75ij")
+
+[node name="Icon2" type="Sprite2D" parent="Recipes/MarginContainer/Page3"]
+position = Vector2(585, 89)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("11_n75ij")
+
+[node name="UncookedPeppers" type="Sprite2D" parent="Recipes/MarginContainer/Page3"]
+position = Vector2(521, 217)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("27_cts0b")
+
+[node name="Label" type="Label" parent="Recipes/MarginContainer/Page3"]
+offset_right = 321.0
+offset_bottom = 137.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 48
+text = "Hellfire Mapo Tofu"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Page4" type="Control" parent="Recipes/MarginContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Right" type="Button" parent="Recipes"]
+layout_mode = 0
+offset_left = 840.0
+offset_top = 448.0
+offset_right = 888.0
+offset_bottom = 496.0
+text = "->"
+
+[node name="Left" type="Button" parent="Recipes"]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 448.0
+offset_right = 248.0
+offset_bottom = 496.0
+text = "<-"
 
 [node name="Level" type="Control" parent="."]
 visible = false
@@ -108,7 +402,6 @@ offset_top = 24.0
 offset_right = 1576.0
 offset_bottom = 312.0
 script = ExtResource("3_hxfpv")
-metadata/_edit_group_ = true
 
 [node name="GhostChef" type="Control" parent="Level/GhostChef"]
 layout_mode = 1
@@ -259,6 +552,27 @@ grow_vertical = 2
 texture = ExtResource("13_ilprb")
 expand_mode = 2
 
+[node name="GhostChefSpeech" type="TextureRect" parent="Level/GhostChef"]
+visible = false
+offset_left = -272.0
+offset_top = 96.0
+offset_right = 240.0
+offset_bottom = 608.0
+texture = ExtResource("16_uwhb2")
+flip_v = true
+
+[node name="JackalopeText" type="Label" parent="Level/GhostChef/GhostChefSpeech"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 240.0
+offset_right = 480.0
+offset_bottom = 344.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
 [node name="Book" type="Button" parent="Level"]
 layout_mode = 0
 offset_left = 1336.0
@@ -316,54 +630,6 @@ offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("7_t7lpi")
 
-[node name="Recipes" type="Control" parent="."]
-visible = false
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 256.0
-offset_top = 296.0
-offset_right = -256.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-
-[node name="Sprite2D" type="Sprite2D" parent="Recipes"]
-position = Vector2(544, 328)
-texture = ExtResource("7_vxbue")
-
-[node name="MarginContainer" type="MarginContainer" parent="Recipes"]
-layout_mode = 0
-offset_left = 192.0
-offset_top = 32.0
-offset_right = 896.0
-offset_bottom = 504.0
-theme_override_constants/margin_left = 15
-theme_override_constants/margin_top = 15
-theme_override_constants/margin_right = 15
-theme_override_constants/margin_bottom = 30
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Recipes/MarginContainer"]
-layout_mode = 2
-theme_override_constants/separation = 64
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Recipes/MarginContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-mouse_filter = 1
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-bbcode_enabled = true
-text = " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas erat nibh, tincidunt tincidunt neque consectetur id. Fusce id volutpat velit. Nullam condimentum, nisl ut semper varius, mauris justo finibus purus, vel pretium nibh risus ut lectus. Mauris pellentesque accumsan magna id eleifend. Sed nec libero ligula. Pellentesque at mollis lorem, ut volutpat dolor. Maecenas consequat purus sed nibh fringilla, sed finibus eros semper."
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="Recipes/MarginContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-mouse_filter = 1
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-bbcode_enabled = true
-text = " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas erat nibh, tincidunt tincidunt neque consectetur id. Fusce id volutpat velit. Nullam condimentum, nisl ut semper varius, mauris justo finibus purus, vel pretium nibh risus ut lectus. Mauris pellentesque accumsan magna id eleifend. Sed nec libero ligula. Pellentesque at mollis lorem, ut volutpat dolor. Maecenas consequat purus sed nibh fringilla, sed finibus eros semper."
-
 [node name="Pause" type="Control" parent="."]
 visible = false
 layout_mode = 3
@@ -381,95 +647,165 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 2
-color = Color(0, 0, 0, 1)
+color = Color(0, 0, 0, 0.392157)
 
-[node name="MarginContainer" type="MarginContainer" parent="Pause"]
+[node name="TextureRect" type="TextureRect" parent="Pause"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 400
-theme_override_constants/margin_top = 50
-theme_override_constants/margin_right = 400
-theme_override_constants/margin_bottom = 150
+texture = ExtResource("21_djo3x")
+expand_mode = 2
+stretch_mode = 5
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="Pause/MarginContainer"]
+[node name="Resume" type="Button" parent="Pause"]
 layout_mode = 2
-
-[node name="Label" type="RichTextLabel" parent="Pause/MarginContainer/VBoxContainer2"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_font_sizes/normal_font_size = 64
-bbcode_enabled = true
-text = "
-[center]-PAUSED-"
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Pause/MarginContainer/VBoxContainer2"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_constants/separation = 75
-alignment = 1
-
-[node name="Resume" type="Button" parent="Pause/MarginContainer/VBoxContainer2/VBoxContainer"]
-layout_mode = 2
+offset_left = 711.0
+offset_top = 427.0
+offset_right = 878.0
+offset_bottom = 480.0
 size_flags_horizontal = 4
 focus_neighbor_top = NodePath("../Return")
 focus_neighbor_bottom = NodePath("../Options")
 focus_next = NodePath("../Options")
 focus_previous = NodePath("../Return")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 32
 theme_override_styles/focus = SubResource("StyleBoxEmpty_kan7d")
 text = "Resume"
 icon = ExtResource("2_pi06a")
 flat = true
 script = ExtResource("3_u66x3")
+metadata/_edit_group_ = true
 
-[node name="Options" type="Button" parent="Pause/MarginContainer/VBoxContainer2/VBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="Pause/Resume"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -172.5
+offset_top = -229.5
+offset_right = 172.5
+offset_bottom = 229.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("22_rfqoq")
+stretch_mode = 5
+metadata/_edit_lock_ = true
+
+[node name="Options" type="Button" parent="Pause"]
 layout_mode = 2
+offset_left = 727.0
+offset_top = 512.0
+offset_right = 863.0
+offset_bottom = 554.0
 size_flags_horizontal = 4
 focus_neighbor_top = NodePath("../Resume")
 focus_neighbor_bottom = NodePath("../Help")
 focus_next = NodePath("../Help")
 focus_previous = NodePath("../Resume")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
 theme_override_styles/focus = SubResource("StyleBoxEmpty_kan7d")
 text = "Options"
 icon = ExtResource("2_pi06a")
 flat = true
 script = ExtResource("3_u66x3")
+metadata/_edit_group_ = true
 
-[node name="Help" type="Button" parent="Pause/MarginContainer/VBoxContainer2/VBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="Pause/Options"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -172.5
+offset_top = -229.5
+offset_right = 172.5
+offset_bottom = 229.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("22_rfqoq")
+stretch_mode = 5
+metadata/_edit_lock_ = true
+
+[node name="Help" type="Button" parent="Pause"]
 layout_mode = 2
+offset_left = 746.0
+offset_top = 592.0
+offset_right = 844.0
+offset_bottom = 634.0
 size_flags_horizontal = 4
 focus_neighbor_top = NodePath("../Options")
 focus_neighbor_bottom = NodePath("../Return")
 focus_next = NodePath("../Return")
 focus_previous = NodePath("../Options")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
 theme_override_styles/focus = SubResource("StyleBoxEmpty_kan7d")
 text = "Help"
 icon = ExtResource("2_pi06a")
 flat = true
 script = ExtResource("3_u66x3")
+metadata/_edit_group_ = true
 
-[node name="Return" type="Button" parent="Pause/MarginContainer/VBoxContainer2/VBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="Pause/Help"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -172.5
+offset_top = -229.5
+offset_right = 172.5
+offset_bottom = 229.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("22_rfqoq")
+stretch_mode = 5
+metadata/_edit_lock_ = true
+
+[node name="Return" type="Button" parent="Pause"]
 layout_mode = 2
+offset_left = 688.0
+offset_top = 672.0
+offset_right = 917.0
+offset_bottom = 714.0
 size_flags_horizontal = 4
 focus_neighbor_top = NodePath("../Help")
 focus_neighbor_bottom = NodePath("../Resume")
 focus_next = NodePath("../Resume")
 focus_previous = NodePath("../Help")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
 theme_override_styles/focus = SubResource("StyleBoxEmpty_kan7d")
 text = "Return To Menu"
 icon = ExtResource("2_pi06a")
 flat = true
 script = ExtResource("3_u66x3")
+metadata/_edit_group_ = true
+
+[node name="TextureRect" type="TextureRect" parent="Pause/Return"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -172.5
+offset_top = -229.5
+offset_right = 172.5
+offset_bottom = 229.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("22_rfqoq")
+stretch_mode = 5
+metadata/_edit_lock_ = true
 
 [node name="Options" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -745,6 +1081,8 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("24_cdpag")
 
+[connection signal="pressed" from="Recipes/Right" to="Recipes" method="_on_right_pressed"]
+[connection signal="pressed" from="Recipes/Left" to="Recipes" method="_on_left_pressed"]
 [connection signal="pressed" from="Level/Book" to="." method="_on_book_pressed"]
-[connection signal="pressed" from="Pause/MarginContainer/VBoxContainer2/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Pause/Resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="Options/Button" to="." method="_on_button_pressed"]

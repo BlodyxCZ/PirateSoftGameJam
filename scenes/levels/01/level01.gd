@@ -51,6 +51,9 @@ func _on_camera_trigger_body_entered(body: Node3D) -> void:
 	SceneTransition.transition_switch($Cameras/Hub, $Cameras/Kitchen)
 	await SceneTransition.transition_complete
 	Overlay.show_ui("level")
+	if Overlay.tutorial:
+		Overlay.tutorial = false
+		Overlay.start_tutorial()
 
 
 func _on_camera_trigger_body_exited(body: Node3D) -> void:

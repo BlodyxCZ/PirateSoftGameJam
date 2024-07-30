@@ -9,7 +9,7 @@ func _on_body_entered(body: Node3D) -> void:
 		Overlay.add_action(Action.BUTTONS.E, "Swap items")
 	else:
 		if body.held_item and ($PopUpTexture.process <= 0.0 or $PopUpTexture.process >= 100.0): Overlay.add_action(Action.BUTTONS.E, "Place item")
-		if current_item and $PopUpTexture.process == 0.0: Overlay.add_action(Action.BUTTONS.Q, "Start processing")
+		if current_item and $PopUpTexture.process == 0.0: Overlay.add_action(Action.BUTTONS.Q, "Start cooking")
 		if current_item and ($PopUpTexture.process <= 0.0 or $PopUpTexture.process >= 100.0): Overlay.add_action(Action.BUTTONS.E, "Take item")
 
 func _on_body_exited(body: Node3D) -> void:
@@ -17,7 +17,7 @@ func _on_body_exited(body: Node3D) -> void:
 	super._on_body_exited(body)
 	
 	Overlay.remove_action_by_text("Swap items")
-	Overlay.remove_action_by_text("Start processing")
+	Overlay.remove_action_by_text("Start cooking")
 	Overlay.remove_action_by_text("Place item")
 	Overlay.remove_action_by_text("Take item")
 
@@ -44,7 +44,7 @@ func _input(event: InputEvent) -> void:
 			_on_body_entered(player)
 	if event.is_action("interact2") and event.is_pressed() and not event.is_echo():
 		if current_item and $PopUpTexture.process == 0.0:
-			Overlay.remove_action_by_text("Start processing")
+			Overlay.remove_action_by_text("Start cooking")
 			Overlay.remove_action_by_text("Take item")
 			$PopUpTexture.reset()
 			$Popup.process(10.0, 6.0)

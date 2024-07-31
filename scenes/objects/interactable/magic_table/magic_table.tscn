@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://bp7kegrops2vk"]
+[gd_scene load_steps=11 format=3 uid="uid://bp7kegrops2vk"]
 
 [ext_resource type="Script" path="res://scenes/objects/interactable/magic_table/magic_table.gd" id="1_tbuak"]
 [ext_resource type="Script" path="res://scenes/classes/Popup/popup.gd" id="2_0j37y"]
 [ext_resource type="Material" uid="uid://blpexn72obacp" path="res://assets/models/kitchen1/Materials/Material.008.tres" id="2_8c80t"]
 [ext_resource type="Script" path="res://scenes/objects/interactable/magic_table/GUI.gd" id="3_w6cc3"]
 [ext_resource type="Texture2D" uid="uid://dhimsrmxcfg4h" path="res://assets/MagicTable.png" id="5_cwr4s"]
+[ext_resource type="Texture2D" uid="uid://ekj3e41mm520" path="res://assets/icons/icon 5.png" id="6_qgabt"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_35gav"]
 _surfaces = [{
@@ -152,6 +153,7 @@ offset_right = 275.0
 offset_bottom = 151.0
 
 [node name="Item" type="TextureRect" parent="CanvasLayer/GUI/Panel/Slot1"]
+layout_mode = 0
 offset_left = -94.0
 offset_top = -99.0
 offset_right = 162.0
@@ -166,6 +168,7 @@ offset_right = 502.0
 offset_bottom = 125.0
 
 [node name="Item" type="TextureRect" parent="CanvasLayer/GUI/Panel/Slot2"]
+layout_mode = 0
 offset_left = -108.0
 offset_top = -100.0
 offset_right = 148.0
@@ -180,6 +183,7 @@ offset_right = 438.0
 offset_bottom = 486.0
 
 [node name="Item" type="TextureRect" parent="CanvasLayer/GUI/Panel/Slot3"]
+layout_mode = 0
 offset_left = -96.0
 offset_top = -103.0
 offset_right = 160.0
@@ -194,6 +198,7 @@ offset_right = 240.0
 offset_bottom = 383.0
 
 [node name="Item" type="TextureRect" parent="CanvasLayer/GUI/Panel/Slot4"]
+layout_mode = 0
 offset_left = -98.0
 offset_top = -102.0
 offset_right = 158.0
@@ -221,6 +226,13 @@ theme_override_font_sizes/font_size = 32
 text = "2. Select Spell:"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 2.58523, 0)
+billboard = 1
+shaded = true
+double_sided = false
+texture = ExtResource("6_qgabt")
 
 [connection signal="process_complete" from="Popup" to="." method="_on_popup_process_complete"]
 [connection signal="pressed" from="CanvasLayer/GUI/Panel/Spring" to="CanvasLayer/GUI" method="_on_spring_pressed"]

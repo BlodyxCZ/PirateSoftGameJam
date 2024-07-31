@@ -392,7 +392,6 @@ theme_override_constants/margin_right = 15
 theme_override_constants/margin_bottom = 30
 
 [node name="Page1" type="Control" parent="Recipes/MarginContainer"]
-visible = false
 layout_mode = 2
 
 [node name="Pepper" type="Sprite2D" parent="Recipes/MarginContainer/Page1"]
@@ -696,6 +695,7 @@ vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="Page5" type="Control" parent="Recipes/MarginContainer"]
+visible = false
 layout_mode = 2
 
 [node name="Pepper" type="Sprite2D" parent="Recipes/MarginContainer/Page5"]
@@ -1034,6 +1034,7 @@ offset_bottom = 40.0
 texture = ExtResource("7_t7lpi")
 
 [node name="Dialogue" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

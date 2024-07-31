@@ -1,10 +1,11 @@
-[gd_scene load_steps=15 format=3 uid="uid://bolrbueo5umgm"]
+[gd_scene load_steps=16 format=3 uid="uid://bolrbueo5umgm"]
 
 [ext_resource type="Script" path="res://scenes/objects/interactable/oven/oven.gd" id="1_7k8b2"]
 [ext_resource type="Script" path="res://scenes/classes/Popup/popup.gd" id="2_bpdp7"]
 [ext_resource type="Script" path="res://scenes/classes/Popup/pop_up_texture.gd" id="3_jkosa"]
 [ext_resource type="Material" uid="uid://byip00fwh6224" path="res://assets/models/kitchen1/Materials/Oven.tres" id="3_rtjpa"]
 [ext_resource type="Script" path="res://scenes/objects/interactable/oven/GUI.gd" id="4_tqn8q"]
+[ext_resource type="Texture2D" uid="uid://dilmstbrfwrhl" path="res://assets/icons/icon 4.png" id="6_oowkd"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_8tj5f"]
 viewport_path = NodePath("PopUpTexture")
@@ -160,6 +161,13 @@ bones/1/scale = Vector3(1, 1, 1)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.52, 0, 0)
 mesh = SubResource("ArrayMesh_8phpr")
 skin = SubResource("Skin_gduoj")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 2.58523, 0)
+billboard = 1
+shaded = true
+double_sided = false
+texture = ExtResource("6_oowkd")
 
 [connection signal="overprocess_complete" from="Popup" to="." method="_on_popup_overprocess_complete"]
 [connection signal="process_complete" from="Popup" to="." method="_on_popup_process_complete"]

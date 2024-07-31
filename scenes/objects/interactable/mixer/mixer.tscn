@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://b1qeotvgf4b3w"]
+[gd_scene load_steps=10 format=3 uid="uid://b1qeotvgf4b3w"]
 
 [ext_resource type="Script" path="res://scenes/classes/Popup/popup.gd" id="1_f4hdi"]
 [ext_resource type="Script" path="res://scenes/objects/interactable/mixer/mixer.gd" id="1_j2j1l"]
 [ext_resource type="Material" uid="uid://dt2ohqtquihq8" path="res://assets/models/kitchen1/Materials/Mixer.tres" id="2_m4qpv"]
 [ext_resource type="Script" path="res://scenes/objects/interactable/mixer/GUI.gd" id="3_4ifp3"]
+[ext_resource type="Texture2D" uid="uid://bcujnhg4xur3n" path="res://assets/icons/icon 3.png" id="5_g355v"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_joqd2"]
 size = Vector3(3.6, 0.7, 1)
@@ -129,6 +130,13 @@ bones/4/scale = Vector3(1, 1, 1)
 [node name="Cube_003" type="MeshInstance3D" parent="Mixer/Skeleton3D"]
 mesh = SubResource("ArrayMesh_38pii")
 skin = SubResource("Skin_lijju")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 2.58523, 0)
+billboard = 1
+shaded = true
+double_sided = false
+texture = ExtResource("5_g355v")
 
 [connection signal="overprocess_complete" from="Popup" to="." method="_on_popup_overprocess_complete"]
 [connection signal="process_complete" from="Popup" to="." method="_on_popup_process_complete"]

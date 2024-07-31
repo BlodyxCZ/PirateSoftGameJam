@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bj0voposi40n5"]
+[gd_scene load_steps=16 format=3 uid="uid://bj0voposi40n5"]
 
 [ext_resource type="Script" path="res://scenes/objects/interactable/chopping_block/chopping_block.gd" id="1_3fn24"]
 [ext_resource type="Script" path="res://scenes/classes/Popup/popup.gd" id="1_o53oq"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://scenes/objects/interactable/fridge/GUI.gd" id="4_w805t"]
 [ext_resource type="Material" uid="uid://dlrxrgppyflf8" path="res://assets/models/kitchen1/Materials/ChoppingBoard.tres" id="5_rv75j"]
 [ext_resource type="Material" uid="uid://b828ckvmwyvyh" path="res://assets/models/kitchen1/Materials/Springbonnie.tres" id="6_78uo7"]
+[ext_resource type="Texture2D" uid="uid://bq4vbny44p5m" path="res://assets/icons/icon 1.png" id="7_br32o"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_3vunf"]
 viewport_path = NodePath("PopUpTexture")
@@ -180,3 +181,10 @@ transform = Transform3D(0.438283, -0.898837, 0.000346758, 0.000949971, 7.74311e-
 bone_name = "Knife"
 bone_idx = 1
 override_pose = true
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 2.58523, 0)
+billboard = 1
+shaded = true
+double_sided = false
+texture = ExtResource("7_br32o")

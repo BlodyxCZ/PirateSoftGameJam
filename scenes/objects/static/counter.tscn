@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dsgayg6wweait"]
+[gd_scene load_steps=8 format=3 uid="uid://dsgayg6wweait"]
 
 [ext_resource type="Script" path="res://scenes/objects/static/counter.gd" id="1_dmktb"]
 [ext_resource type="Script" path="res://scenes/classes/Popup/popup.gd" id="2_88ekh"]
 [ext_resource type="PackedScene" uid="uid://crwvcfdi3hef7" path="res://scenes/classes/Popup/pop_up_texture.tscn" id="3_d5y7h"]
 [ext_resource type="Script" path="res://scenes/objects/interactable/fridge/GUI.gd" id="4_lw5kc"]
+[ext_resource type="Texture2D" uid="uid://dx01iph82voe1" path="res://assets/icons/icon 2.png" id="5_ilnn1"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_joqd2"]
 size = Vector3(3.11445, 0.7, 1)
@@ -50,5 +51,12 @@ transform = Transform3D(0.7, 1.04308e-08, 2.08617e-08, -1.04308e-08, 0.7, -1.074
 billboard = 1
 shaded = true
 double_sided = false
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 2.30447, 0)
+billboard = 1
+shaded = true
+double_sided = false
+texture = ExtResource("5_ilnn1")
 
 [connection signal="process_complete" from="Popup" to="." method="_on_popup_process_complete"]

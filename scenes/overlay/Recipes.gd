@@ -24,7 +24,7 @@ func flip_right() -> void:
 	for page in $MarginContainer.get_children():
 		i += 1
 		if page.visible: break
-	if i + 1 > $MarginContainer.get_child_count(): i = -2
+	if i + 1 > $MarginContainer.get_child_count(): i = -1
 	switch_to_page(i + 1)
 
 

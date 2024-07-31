@@ -338,7 +338,7 @@ _data = {
 "VampireRigAction": SubResource("Animation_qn4ry")
 }
 
-[node name="NPC" type="Node3D"]
+[node name="NPC" type="Node3D" groups=["NPC"]]
 script = ExtResource("1_bld23")
 
 [node name="Area3D" type="Area3D" parent="."]

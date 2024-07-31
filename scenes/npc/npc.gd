@@ -28,11 +28,17 @@ func _input(event: InputEvent) -> void:
 			player.frozen = true
 			match progress:
 				0:
-					Overlay.show_ui("dialogue")
+					Overlay.show_ui("first")
 					await Overlay.dialog_finished
 					Overlay.hide_all()
 					get_tree().get_first_node_in_group("Barrier").queue_free()
 					progress += 1
 				1:
-					pass
+					Overlay.show_ui("second")
+					await Overlay.dialog_finished
+					Overlay.hide_all()
+				2:
+					Overlay.show_ui("third")
+					await Overlay.dialog_finished
+					Overlay.hide_all()
 			player.frozen = false

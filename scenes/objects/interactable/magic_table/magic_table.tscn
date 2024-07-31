@@ -1,11 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://bp7kegrops2vk"]
+[gd_scene load_steps=10 format=3 uid="uid://bp7kegrops2vk"]
 
 [ext_resource type="Script" path="res://scenes/objects/interactable/magic_table/magic_table.gd" id="1_tbuak"]
 [ext_resource type="Script" path="res://scenes/classes/Popup/popup.gd" id="2_0j37y"]
 [ext_resource type="Material" uid="uid://blpexn72obacp" path="res://assets/models/kitchen1/Materials/Material.008.tres" id="2_8c80t"]
 [ext_resource type="Script" path="res://scenes/objects/interactable/magic_table/GUI.gd" id="3_w6cc3"]
 [ext_resource type="Texture2D" uid="uid://dhimsrmxcfg4h" path="res://assets/MagicTable.png" id="5_cwr4s"]
-[ext_resource type="Texture2D" uid="uid://cww8vvupf6bqg" path="res://assets/items/Chicken/chicken .png" id="6_spndo"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_35gav"]
 _surfaces = [{
@@ -97,10 +96,10 @@ offset_bottom = 768.0
 
 [node name="Spring" type="Button" parent="CanvasLayer/GUI/Panel"]
 layout_mode = 0
-offset_left = 768.0
-offset_top = 56.0
-offset_right = 1176.0
-offset_bottom = 192.0
+offset_left = 760.0
+offset_top = 96.0
+offset_right = 1168.0
+offset_bottom = 232.0
 theme_override_font_sizes/font_size = 32
 text = "Spring
 (Onions)"
@@ -108,9 +107,9 @@ text = "Spring
 [node name="BloodEssence" type="Button" parent="CanvasLayer/GUI/Panel"]
 layout_mode = 0
 offset_left = 760.0
-offset_top = 216.0
+offset_top = 240.0
 offset_right = 1168.0
-offset_bottom = 352.0
+offset_bottom = 376.0
 theme_override_font_sizes/font_size = 32
 text = "Blood Essence
 (Final Mix)"
@@ -132,26 +131,25 @@ anchor_left = -0.095
 anchor_top = -0.215
 anchor_right = -0.095
 anchor_bottom = -0.215
-offset_left = 244.68
-offset_top = 192.88
-offset_right = 764.68
-offset_bottom = 704.88
+offset_left = 247.68
+offset_top = 151.88
+offset_right = 767.68
+offset_bottom = 663.88
 texture = ExtResource("5_cwr4s")
 
 [node name="Item" type="TextureRect" parent="CanvasLayer/GUI/Panel"]
 layout_mode = 1
-offset_left = 248.0
-offset_top = 184.0
-offset_right = 504.0
-offset_bottom = 440.0
-texture = ExtResource("6_spndo")
+offset_left = 251.0
+offset_top = 143.0
+offset_right = 507.0
+offset_bottom = 399.0
 
 [node name="Slot1" type="Button" parent="CanvasLayer/GUI/Panel"]
 layout_mode = 0
-offset_left = 216.0
-offset_top = 136.0
-offset_right = 272.0
-offset_bottom = 192.0
+offset_left = 219.0
+offset_top = 95.0
+offset_right = 275.0
+offset_bottom = 151.0
 
 [node name="Item" type="TextureRect" parent="CanvasLayer/GUI/Panel/Slot1"]
 offset_left = -94.0
@@ -162,10 +160,10 @@ mouse_filter = 2
 
 [node name="Slot2" type="Button" parent="CanvasLayer/GUI/Panel"]
 layout_mode = 0
-offset_left = 443.0
-offset_top = 110.0
-offset_right = 499.0
-offset_bottom = 166.0
+offset_left = 446.0
+offset_top = 69.0
+offset_right = 502.0
+offset_bottom = 125.0
 
 [node name="Item" type="TextureRect" parent="CanvasLayer/GUI/Panel/Slot2"]
 offset_left = -108.0
@@ -176,10 +174,10 @@ mouse_filter = 2
 
 [node name="Slot3" type="Button" parent="CanvasLayer/GUI/Panel"]
 layout_mode = 0
-offset_left = 379.0
-offset_top = 471.0
-offset_right = 435.0
-offset_bottom = 527.0
+offset_left = 382.0
+offset_top = 430.0
+offset_right = 438.0
+offset_bottom = 486.0
 
 [node name="Item" type="TextureRect" parent="CanvasLayer/GUI/Panel/Slot3"]
 offset_left = -96.0
@@ -190,10 +188,10 @@ mouse_filter = 2
 
 [node name="Slot4" type="Button" parent="CanvasLayer/GUI/Panel"]
 layout_mode = 0
-offset_left = 181.0
-offset_top = 368.0
-offset_right = 237.0
-offset_bottom = 424.0
+offset_left = 184.0
+offset_top = 327.0
+offset_right = 240.0
+offset_bottom = 383.0
 
 [node name="Item" type="TextureRect" parent="CanvasLayer/GUI/Panel/Slot4"]
 offset_left = -98.0
@@ -202,9 +200,32 @@ offset_right = 158.0
 offset_bottom = 154.0
 mouse_filter = 2
 
+[node name="Label" type="Label" parent="CanvasLayer/GUI/Panel"]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 560.0
+offset_right = 586.0
+offset_bottom = 616.0
+theme_override_font_sizes/font_size = 32
+text = "1. Place your item in the slots"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="CanvasLayer/GUI/Panel"]
+layout_mode = 0
+offset_left = 752.0
+offset_top = 32.0
+offset_right = 1170.0
+offset_bottom = 88.0
+theme_override_font_sizes/font_size = 32
+text = "2. Select Spell:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="process_complete" from="Popup" to="." method="_on_popup_process_complete"]
 [connection signal="pressed" from="CanvasLayer/GUI/Panel/Spring" to="CanvasLayer/GUI" method="_on_spring_pressed"]
 [connection signal="pressed" from="CanvasLayer/GUI/Panel/BloodEssence" to="CanvasLayer/GUI" method="_on_blood_essence_pressed"]
+[connection signal="pressed" from="CanvasLayer/GUI/Panel/Clear" to="CanvasLayer/GUI" method="_on_clear_pressed"]
 [connection signal="pressed" from="CanvasLayer/GUI/Panel/Slot1" to="CanvasLayer/GUI" method="_on_slot_1_pressed"]
 [connection signal="pressed" from="CanvasLayer/GUI/Panel/Slot2" to="CanvasLayer/GUI" method="_on_slot_2_pressed"]
 [connection signal="pressed" from="CanvasLayer/GUI/Panel/Slot3" to="CanvasLayer/GUI" method="_on_slot_3_pressed"]

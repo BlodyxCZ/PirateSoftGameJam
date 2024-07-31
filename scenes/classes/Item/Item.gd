@@ -28,7 +28,7 @@ var order_id: int
 
 @export_group("Conditions")
 @export var cook_condition: Array[String] = []
-@export var water_condition: Array[String] = []
+@export var mix_condition: Array[String] = []
 @export var chop_condition: Array[String] = []
 @export var combine_condition: Array[String] = []
 @export var second_combine_condition: Array[String] = []
@@ -49,8 +49,8 @@ func cook() -> void:
 	item_name += "Cooked"
 	refresh_order()
 
-func water() -> void:
-	for condition in water_condition:
+func mix() -> void:
+	for condition in mix_condition:
 		if item_name.find(condition) == -1 or texture == trashed:
 			texture = trashed
 			return
@@ -140,6 +140,7 @@ func instantiate() -> Item:
 	
 	new.cook_condition = cook_condition
 	new.chop_condition = chop_condition
+	new.mix_condition = mix_condition
 	new.combine_condition = combine_condition
 	new.second_combine_condition = second_combine_condition
 	new.enchant_condition = enchant_condition

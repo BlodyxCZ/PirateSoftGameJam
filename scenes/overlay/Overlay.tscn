@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=3 uid="uid://dcq1we4ule87k"]
+[gd_scene load_steps=76 format=3 uid="uid://dcq1we4ule87k"]
 
 [ext_resource type="Script" path="res://scenes/overlay/Overlay.gd" id="1_2uwuf"]
 [ext_resource type="Texture2D" uid="uid://bvgsw0janrdig" path="res://assets/kenney/arrow_e.svg" id="2_pi06a"]
@@ -62,6 +62,15 @@
 [ext_resource type="Texture2D" uid="uid://su71p5p1igqi" path="res://assets/items/Rice/CombinedRice.png" id="25_ihk1p"]
 [ext_resource type="Texture2D" uid="uid://ekj3e41mm520" path="res://assets/icons/icon 5.png" id="26_ebmry"]
 [ext_resource type="Texture2D" uid="uid://cvbpsmya14cpp" path="res://assets/items/Onions/CombinedOnions.png" id="27_cts0b"]
+[ext_resource type="Texture2D" uid="uid://jrwhof0xlc7x" path="res://assets/items/Complete/b-c pie.png" id="44_0yri7"]
+[ext_resource type="Texture2D" uid="uid://fjc86w5p3wj2" path="res://assets/items/Banana/Banana.png" id="45_hmse1"]
+[ext_resource type="Texture2D" uid="uid://b2q7mjfnu3cah" path="res://assets/items/Crust/FilledCrust.png" id="46_v40p0"]
+[ext_resource type="Texture2D" uid="uid://bcujnhg4xur3n" path="res://assets/icons/icon 3.png" id="47_0i31k"]
+[ext_resource type="Texture2D" uid="uid://dbg8gm0xnna2h" path="res://assets/items/Coconut/Coconut.png" id="48_2qwah"]
+[ext_resource type="Texture2D" uid="uid://bgwc1wysevero" path="res://assets/items/Banana/BananaCreamMix.png" id="49_5irt0"]
+[ext_resource type="Texture2D" uid="uid://co4hmokr6q6ew" path="res://assets/items/SoyCream/SoyCream.png" id="50_hey2b"]
+[ext_resource type="Texture2D" uid="uid://clm3g0hj18emn" path="res://assets/items/Crust/Crust.png" id="51_68v0d"]
+[ext_resource type="Texture2D" uid="uid://bvyo1dlhqq0i4" path="res://assets/items/Complete/dr pie.png" id="52_5h3l4"]
 
 [sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_nfm1y"]
 button_index = 4
@@ -90,6 +99,7 @@ offset_bottom = 40.0
 mouse_filter = 1
 
 [node name="Level" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -382,6 +392,7 @@ theme_override_constants/margin_right = 15
 theme_override_constants/margin_bottom = 30
 
 [node name="Page1" type="Control" parent="Recipes/MarginContainer"]
+visible = false
 layout_mode = 2
 
 [node name="Pepper" type="Sprite2D" parent="Recipes/MarginContainer/Page1"]
@@ -526,12 +537,12 @@ scale = Vector2(0.25, 0.25)
 texture = ExtResource("18_jy3ow")
 
 [node name="Peppers" type="Sprite2D" parent="Recipes/MarginContainer/Page3"]
-position = Vector2(585, 25)
+position = Vector2(457, 25)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("19_y48jw")
 
 [node name="Chicken" type="Sprite2D" parent="Recipes/MarginContainer/Page3"]
-position = Vector2(457, 25)
+position = Vector2(585, 25)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("20_foj8a")
 
@@ -571,7 +582,7 @@ scale = Vector2(0.25, 0.25)
 texture = ExtResource("10_xpcqh")
 
 [node name="Icon6" type="Sprite2D" parent="Recipes/MarginContainer/Page3"]
-position = Vector2(457, 89)
+position = Vector2(457, 97)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("26_ebmry")
 
@@ -601,9 +612,150 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
+[node name="Label2" type="Label" parent="Recipes/MarginContainer/Page3"]
+layout_mode = 0
+offset_left = 417.0
+offset_top = 57.0
+offset_right = 489.0
+offset_bottom = 106.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "Spring Spell"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
 [node name="Page4" type="Control" parent="Recipes/MarginContainer"]
 visible = false
 layout_mode = 2
+
+[node name="Pepper" type="Sprite2D" parent="Recipes/MarginContainer/Page4"]
+position = Vector2(169, 273)
+scale = Vector2(1.21875, 1.21875)
+texture = ExtResource("44_0yri7")
+
+[node name="Pepper2" type="Sprite2D" parent="Recipes/MarginContainer/Page4"]
+position = Vector2(497, 385)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("44_0yri7")
+
+[node name="Peppers" type="Sprite2D" parent="Recipes/MarginContainer/Page4"]
+position = Vector2(569, 65)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("45_hmse1")
+
+[node name="Chicken" type="Sprite2D" parent="Recipes/MarginContainer/Page4"]
+position = Vector2(497, 257)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("46_v40p0")
+
+[node name="Chicken2" type="Sprite2D" parent="Recipes/MarginContainer/Page4"]
+position = Vector2(561, 129)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("47_0i31k")
+
+[node name="Icon1" type="Sprite2D" parent="Recipes/MarginContainer/Page4"]
+position = Vector2(513, 97)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("48_2qwah")
+
+[node name="CoredPeppers" type="Sprite2D" parent="Recipes/MarginContainer/Page4"]
+position = Vector2(561, 193)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("49_5irt0")
+
+[node name="Icon4" type="Sprite2D" parent="Recipes/MarginContainer/Page4"]
+position = Vector2(625, 121)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("50_hey2b")
+
+[node name="Icon5" type="Sprite2D" parent="Recipes/MarginContainer/Page4"]
+position = Vector2(497, 321)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_xpcqh")
+
+[node name="Icon2" type="Sprite2D" parent="Recipes/MarginContainer/Page4"]
+position = Vector2(497, 193)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("11_n75ij")
+
+[node name="UncookedPeppers" type="Sprite2D" parent="Recipes/MarginContainer/Page4"]
+position = Vector2(433, 193)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("51_68v0d")
+
+[node name="Label" type="Label" parent="Recipes/MarginContainer/Page4"]
+layout_mode = 0
+offset_right = 329.0
+offset_bottom = 179.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 48
+text = "Coconut Creamana Pie"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Page5" type="Control" parent="Recipes/MarginContainer"]
+layout_mode = 2
+
+[node name="Pepper" type="Sprite2D" parent="Recipes/MarginContainer/Page5"]
+position = Vector2(169, 273)
+scale = Vector2(1.21875, 1.21875)
+texture = ExtResource("52_5h3l4")
+
+[node name="Pepper2" type="Sprite2D" parent="Recipes/MarginContainer/Page5"]
+position = Vector2(529, 321)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("52_5h3l4")
+
+[node name="Peppers" type="Sprite2D" parent="Recipes/MarginContainer/Page5"]
+position = Vector2(473, 105)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("18_jy3ow")
+
+[node name="Chicken" type="Sprite2D" parent="Recipes/MarginContainer/Page5"]
+position = Vector2(585, 105)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("44_0yri7")
+
+[node name="Chicken2" type="Sprite2D" parent="Recipes/MarginContainer/Page5"]
+position = Vector2(617, 177)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_gj4mu")
+
+[node name="CoredPeppers" type="Sprite2D" parent="Recipes/MarginContainer/Page5"]
+position = Vector2(449, 177)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("13_nxtj4")
+
+[node name="Icon2" type="Sprite2D" parent="Recipes/MarginContainer/Page5"]
+position = Vector2(529, 185)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("26_ebmry")
+
+[node name="Label" type="Label" parent="Recipes/MarginContainer/Page5"]
+layout_mode = 0
+offset_right = 329.0
+offset_bottom = 179.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 48
+text = "???"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="Recipes/MarginContainer/Page5"]
+layout_mode = 0
+offset_left = 457.0
+offset_top = 209.0
+offset_right = 601.0
+offset_bottom = 226.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "Blood Essence"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="Right" type="Button" parent="Recipes"]
 layout_mode = 0
@@ -882,7 +1034,6 @@ offset_bottom = 40.0
 texture = ExtResource("7_t7lpi")
 
 [node name="Dialogue" type="Control" parent="."]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

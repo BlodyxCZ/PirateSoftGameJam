@@ -72,10 +72,10 @@ text = "[center]
 [font_size=128]CREDITS[/font_size]
 
 [font_size=48]
-Tatoni Fail: 2D Artist
-Samuel Furches: Manager
-Jakub \"Blodyx\" Talman: Programmer
-Matt Perry: Musician
+Tatoni Fail : 2D Artist
+Samuel Furches : Manager
+Jakub \"Blodyx\" Talman : Programmer
+st. emmerson : Musician
 [/font_size]"
 
 [node name="Button" type="Button" parent="."]

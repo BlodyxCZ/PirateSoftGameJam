@@ -68,9 +68,15 @@ func show_ui(_name: String) -> void:
 			$Hub.show()
 		"intro":
 			$Intro.show()
-		"dialogue":
+		"first":
 			$Dialogue.show()
 			$Dialogue.first_meeting()
+		"second":
+			$Dialogue.show()
+			$Dialogue.hungry()
+		"third":
+			$Dialogue.show()
+			$Dialogue.delivery()
 		"options":
 			$Options.show()
 

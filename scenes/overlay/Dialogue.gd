@@ -19,6 +19,25 @@ func first_meeting() -> void:
 	Overlay.dialog_finished.emit()
 
 
+func hungry() -> void:
+	await vampire_say("Ungh…..", 0.5, "Sleepy")
+	Overlay.dialog_finished.emit()
+
+
+func delivery() -> void:
+	await vampire_say("Ungh….. Hrmm?", 0.5, "Sleepy")
+	await vampire_say("Ohh… that smell… delicious… can I have it?", 1.2, "Wide")
+	await vampire_say("Thank you so much!", 0.5, "Happy")
+	await vampire_say("NOM! NOM! NOM!", 1.5, "Happy")
+	await vampire_say("Oh that was so good! ", 1.0, "Happy")
+	await vampire_say("I can feel my energy returning to me…", 1.5, "Happy")
+	await vampire_say("I wish I could stay longer to thank you somehow…", 1.6, "Normal")
+	await vampire_say("But it seems day is rapidly approaching.", 1.5, "Sad")
+	await vampire_say("I must be on my way", 1.0, "Sad")
+	await vampire_say("Goodbye little horned rabbit creature!", 1.2, "Happy")
+	Overlay.dialog_finished.emit()
+
+
 func vampire_say(what: String, duration: float, emotion: String = "Normal") -> void:
 	for video: VideoStreamPlayer in $Vampire.get_children():
 		if video.name == emotion:

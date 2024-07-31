@@ -1,10 +1,20 @@
-[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://dewm7560r3iuh"]
+[gd_resource type="Resource" script_class="Item" load_steps=7 format=3 uid="uid://dewm7560r3iuh"]
 
 [ext_resource type="Script" path="res://scenes/classes/Item/Item.gd" id="1_b3dvd"]
+[ext_resource type="Texture2D" uid="uid://dx01iph82voe1" path="res://assets/icons/icon 2.png" id="1_scvr8"]
+[ext_resource type="Texture2D" uid="uid://fjc86w5p3wj2" path="res://assets/items/Banana/Banana.png" id="1_uioq2"]
+[ext_resource type="Texture2D" uid="uid://bcujnhg4xur3n" path="res://assets/icons/icon 3.png" id="2_hijdg"]
+[ext_resource type="Texture2D" uid="uid://bgwc1wysevero" path="res://assets/items/Banana/BananaCreamMix.png" id="4_x3d77"]
+[ext_resource type="Texture2D" uid="uid://hfnhs5x17kxi" path="res://assets/items/Trash.png" id="6_kljii"]
 
 [resource]
 script = ExtResource("1_b3dvd")
-item_name = "name"
+item_name = "Banana"
+action_texture = ExtResource("2_hijdg")
+default = ExtResource("1_uioq2")
+mixed = ExtResource("4_x3d77")
+trashed = ExtResource("6_kljii")
+action_mixed = ExtResource("1_scvr8")
 cook_condition = Array[String]([])
 water_condition = Array[String]([])
 chop_condition = Array[String]([])

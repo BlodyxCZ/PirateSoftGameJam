@@ -1,10 +1,24 @@
-[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://ckkxokefgouhn"]
+[gd_resource type="Resource" script_class="Item" load_steps=9 format=3 uid="uid://ckkxokefgouhn"]
 
 [ext_resource type="Script" path="res://scenes/classes/Item/Item.gd" id="1_q0edn"]
+[ext_resource type="Texture2D" uid="uid://dilmstbrfwrhl" path="res://assets/icons/icon 4.png" id="1_vsdsd"]
+[ext_resource type="Texture2D" uid="uid://ekj3e41mm520" path="res://assets/icons/icon 5.png" id="2_gria2"]
+[ext_resource type="Texture2D" uid="uid://dx01iph82voe1" path="res://assets/icons/icon 2.png" id="3_yhx0k"]
+[ext_resource type="Texture2D" uid="uid://b2q7mjfnu3cah" path="res://assets/items/Crust/FilledCrust.png" id="4_rpntm"]
+[ext_resource type="Texture2D" uid="uid://jrwhof0xlc7x" path="res://assets/items/Complete/b-c pie.png" id="5_hnhyh"]
+[ext_resource type="Texture2D" uid="uid://clm3g0hj18emn" path="res://assets/items/Crust/Crust.png" id="6_asd2i"]
+[ext_resource type="Texture2D" uid="uid://hfnhs5x17kxi" path="res://assets/items/Trash.png" id="8_uhycq"]
 
 [resource]
 script = ExtResource("1_q0edn")
-item_name = "name"
+item_name = "PremadePieCrust"
+action_texture = ExtResource("3_yhx0k")
+default = ExtResource("6_asd2i")
+cooked = ExtResource("5_hnhyh")
+combined = ExtResource("4_rpntm")
+trashed = ExtResource("8_uhycq")
+action_cooked = ExtResource("2_gria2")
+action_combined = ExtResource("1_vsdsd")
 cook_condition = Array[String]([])
 water_condition = Array[String]([])
 chop_condition = Array[String]([])

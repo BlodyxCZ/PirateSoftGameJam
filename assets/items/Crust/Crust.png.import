@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbg8gm0xnna2h"
-path="res://.godot/imported/Coconut.png-5cf306bf6638b1af6b32fe672563d9d0.ctex"
+uid="uid://clm3g0hj18emn"
+path="res://.godot/imported/Crust.png-311e588e789fb7c2497d4fb3f7a3554c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/items/Coconut.png"
-dest_files=["res://.godot/imported/Coconut.png-5cf306bf6638b1af6b32fe672563d9d0.ctex"]
+source_file="res://assets/items/Crust/Crust.png"
+dest_files=["res://.godot/imported/Crust.png-311e588e789fb7c2497d4fb3f7a3554c.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fjc86w5p3wj2"
-path="res://.godot/imported/Banana.png-464f94bd95358b7869497b0520bcf4fa.ctex"
+uid="uid://co4hmokr6q6ew"
+path="res://.godot/imported/SoyCream.png-ec118cfdf89cf61ea204bc752a48b88f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/items/Banana.png"
-dest_files=["res://.godot/imported/Banana.png-464f94bd95358b7869497b0520bcf4fa.ctex"]
+source_file="res://assets/items/SoyCream/SoyCream.png"
+dest_files=["res://.godot/imported/SoyCream.png-ec118cfdf89cf61ea204bc752a48b88f.ctex"]
 
 [params]
 

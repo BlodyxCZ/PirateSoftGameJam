@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=3 uid="uid://dcq1we4ule87k"]
+[gd_scene load_steps=67 format=3 uid="uid://dcq1we4ule87k"]
 
 [ext_resource type="Script" path="res://scenes/overlay/Overlay.gd" id="1_2uwuf"]
 [ext_resource type="Texture2D" uid="uid://bvgsw0janrdig" path="res://assets/kenney/arrow_e.svg" id="2_pi06a"]
@@ -62,8 +62,6 @@
 [ext_resource type="Texture2D" uid="uid://su71p5p1igqi" path="res://assets/items/Rice/CombinedRice.png" id="25_ihk1p"]
 [ext_resource type="Texture2D" uid="uid://ekj3e41mm520" path="res://assets/icons/icon 5.png" id="26_ebmry"]
 [ext_resource type="Texture2D" uid="uid://cvbpsmya14cpp" path="res://assets/items/Onions/CombinedOnions.png" id="27_cts0b"]
-[ext_resource type="Texture2D" uid="uid://libtwalh025u" path="res://assets/ui/steps.png" id="28_njncm"]
-[ext_resource type="Script" path="res://scenes/overlay/order/order.gd" id="29_itduv"]
 
 [sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_nfm1y"]
 button_index = 4
@@ -373,131 +371,15 @@ mouse_filter = 1
 layout_mode = 0
 offset_left = 24.0
 offset_top = 24.0
-offset_right = 640.0
+offset_right = 936.0
 offset_bottom = 136.0
 
 [node name="OrderList" type="HBoxContainer" parent="Level/Orders"]
+unique_name_in_owner = true
 layout_mode = 0
 offset_left = 16.0
 offset_right = 604.0
 offset_bottom = 200.0
-
-[node name="Panel" type="TextureRect" parent="Level/Orders/OrderList"]
-custom_minimum_size = Vector2(144, 200)
-layout_mode = 2
-texture = ExtResource("28_njncm")
-expand_mode = 1
-stretch_mode = 3
-script = ExtResource("29_itduv")
-
-[node name="Label" type="Label" parent="Level/Orders/OrderList/Panel"]
-layout_mode = 0
-offset_top = 144.0
-offset_right = 144.0
-offset_bottom = 192.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_constants/line_spacing = -1
-theme_override_font_sizes/font_size = 12
-text = "Quinoa stuffed    peppers"
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 3
-
-[node name="TextureRect" type="TextureRect" parent="Level/Orders/OrderList/Panel"]
-layout_mode = 0
-offset_top = 16.0
-offset_right = 136.0
-offset_bottom = 152.0
-texture = ExtResource("4_gj4mu")
-expand_mode = 3
-stretch_mode = 5
-
-[node name="Panel2" type="TextureRect" parent="Level/Orders/OrderList"]
-custom_minimum_size = Vector2(144, 200)
-layout_mode = 2
-texture = ExtResource("28_njncm")
-expand_mode = 1
-stretch_mode = 3
-script = ExtResource("29_itduv")
-
-[node name="Label" type="Label" parent="Level/Orders/OrderList/Panel2"]
-layout_mode = 0
-offset_top = 144.0
-offset_right = 144.0
-offset_bottom = 176.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 12
-text = "Ratatouille"
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 3
-
-[node name="TextureRect" type="TextureRect" parent="Level/Orders/OrderList/Panel2"]
-layout_mode = 0
-offset_top = 16.0
-offset_right = 136.0
-offset_bottom = 152.0
-texture = ExtResource("13_nxtj4")
-expand_mode = 3
-stretch_mode = 5
-
-[node name="Panel3" type="TextureRect" parent="Level/Orders/OrderList"]
-custom_minimum_size = Vector2(144, 200)
-layout_mode = 2
-texture = ExtResource("28_njncm")
-expand_mode = 1
-stretch_mode = 3
-script = ExtResource("29_itduv")
-
-[node name="Label" type="Label" parent="Level/Orders/OrderList/Panel3"]
-layout_mode = 0
-offset_top = 144.0
-offset_right = 144.0
-offset_bottom = 176.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 12
-text = "Hellfire Mapo Tofu"
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 3
-
-[node name="TextureRect" type="TextureRect" parent="Level/Orders/OrderList/Panel3"]
-layout_mode = 0
-offset_top = 16.0
-offset_right = 136.0
-offset_bottom = 152.0
-texture = ExtResource("18_jy3ow")
-expand_mode = 3
-stretch_mode = 5
-
-[node name="Panel4" type="TextureRect" parent="Level/Orders/OrderList"]
-custom_minimum_size = Vector2(144, 200)
-layout_mode = 2
-texture = ExtResource("28_njncm")
-expand_mode = 1
-stretch_mode = 3
-script = ExtResource("29_itduv")
-
-[node name="Label" type="Label" parent="Level/Orders/OrderList/Panel4"]
-layout_mode = 0
-offset_top = 144.0
-offset_right = 144.0
-offset_bottom = 168.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 12
-text = "Quinoa stuffed    peppers"
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 3
-
-[node name="TextureRect" type="TextureRect" parent="Level/Orders/OrderList/Panel4"]
-layout_mode = 0
-offset_top = 16.0
-offset_right = 136.0
-offset_bottom = 152.0
-texture = ExtResource("4_gj4mu")
-expand_mode = 3
-stretch_mode = 5
 
 [node name="GhostChef" type="Panel" parent="Level"]
 layout_mode = 0
@@ -657,7 +539,6 @@ texture = ExtResource("13_ilprb")
 expand_mode = 2
 
 [node name="GhostChefSpeech" type="TextureRect" parent="Level/GhostChef"]
-visible = false
 layout_mode = 0
 offset_left = -512.0
 offset_top = -112.0

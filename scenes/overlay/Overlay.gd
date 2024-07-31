@@ -5,6 +5,7 @@ signal dialog_finished()
 signal tutorial_finished()
 
 
+const ORDER = preload("res://scenes/overlay/order/order.tscn")
 const ACTION = preload("res://scenes/overlay/action/action.tscn")
 
 var tutorial: bool = true
@@ -127,4 +128,15 @@ func get_camera(_name: String) -> Camera3D:
 		if camera.name == _name:
 			return camera
 	return Camera3D.new()
-	
+
+
+func add_order(texture: Texture, action: Texture) -> int:
+	var order: TextureRect = ORDER.instantiate()
+	%OrderList.add_child(order)
+	return order.create(texture, action)
+
+
+func delete_order(id: int) -> void:
+	for order in %OrderList.get_children():
+		if order.id == id:
+			order.queue_free()

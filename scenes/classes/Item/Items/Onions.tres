@@ -1,18 +1,23 @@
-[gd_resource type="Resource" script_class="Item" load_steps=6 format=3 uid="uid://l7b7f3qdsdrb"]
+[gd_resource type="Resource" script_class="Item" load_steps=8 format=3 uid="uid://l7b7f3qdsdrb"]
 
+[ext_resource type="Texture2D" uid="uid://dx01iph82voe1" path="res://assets/icons/icon 2.png" id="1_2ibpe"]
 [ext_resource type="Script" path="res://scenes/classes/Item/Item.gd" id="1_4c740"]
 [ext_resource type="Texture2D" uid="uid://cvbpsmya14cpp" path="res://assets/items/Onions/CombinedOnions.png" id="1_r77in"]
 [ext_resource type="Texture2D" uid="uid://xh7xhqolkqc5" path="res://assets/items/Onions/onions.png" id="2_2peoy"]
+[ext_resource type="Texture2D" uid="uid://ekj3e41mm520" path="res://assets/icons/icon 5.png" id="2_gysw5"]
 [ext_resource type="Texture2D" uid="uid://hfnhs5x17kxi" path="res://assets/items/Trash.png" id="2_p5ypx"]
 [ext_resource type="Texture2D" uid="uid://b5hkb5nkdyady" path="res://assets/items/Onions/EnchantedOnions.png" id="3_s3soq"]
 
 [resource]
 script = ExtResource("1_4c740")
 item_name = "Onions"
+action_texture = ExtResource("2_gysw5")
 default = ExtResource("2_2peoy")
 combined = ExtResource("1_r77in")
 enchanted = ExtResource("3_s3soq")
 trashed = ExtResource("2_p5ypx")
+action_combined = ExtResource("1_2ibpe")
+action_enchanted = ExtResource("1_2ibpe")
 cook_condition = Array[String]([])
 water_condition = Array[String]([])
 chop_condition = Array[String]([])

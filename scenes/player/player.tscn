@@ -554,4 +554,4 @@ skin = SubResource("Skin_050pl")
 libraries = {
 "": SubResource("AnimationLibrary_m2hoe")
 }
-blend_times = [&"Idle", &"Walk", 0.2, &"Walk", &"Idle", 0.2, &"GetUp", &"Idle", 0.2, &"GetUp", &"Walk", 0.2]
+blend_times = [&"Walk", &"Idle", 0.2, &"GetUp", &"Walk", 0.2, &"GetUp", &"Idle", 0.2, &"Idle", &"Walk", 0.2]

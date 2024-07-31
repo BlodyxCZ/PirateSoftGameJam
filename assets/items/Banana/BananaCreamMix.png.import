@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2q7mjfnu3cah"
-path="res://.godot/imported/FilledCrust.png-41b2ebdfe8bf5d8f7c7d2278dbd1ec9a.ctex"
+uid="uid://bgwc1wysevero"
+path="res://.godot/imported/BananaCreamMix.png-08be9854028c5a66f2eae0cc9aa92172.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/items/FilledCrust.png"
-dest_files=["res://.godot/imported/FilledCrust.png-41b2ebdfe8bf5d8f7c7d2278dbd1ec9a.ctex"]
+source_file="res://assets/items/Banana/BananaCreamMix.png"
+dest_files=["res://.godot/imported/BananaCreamMix.png-08be9854028c5a66f2eae0cc9aa92172.ctex"]
 
 [params]
 

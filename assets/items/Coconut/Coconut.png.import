@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgwc1wysevero"
-path="res://.godot/imported/BananaCreamMix.png-e51c9e6c202a6f79223e43a90ebd407c.ctex"
+uid="uid://dbg8gm0xnna2h"
+path="res://.godot/imported/Coconut.png-e1b4a55e463b0a0fd7ec02867cc3d196.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/items/BananaCreamMix.png"
-dest_files=["res://.godot/imported/BananaCreamMix.png-e51c9e6c202a6f79223e43a90ebd407c.ctex"]
+source_file="res://assets/items/Coconut/Coconut.png"
+dest_files=["res://.godot/imported/Coconut.png-e1b4a55e463b0a0fd7ec02867cc3d196.ctex"]
 
 [params]
 

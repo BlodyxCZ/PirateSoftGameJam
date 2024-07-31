@@ -1,4 +1,4 @@
-[gd_scene load_steps=76 format=3 uid="uid://dcq1we4ule87k"]
+[gd_scene load_steps=78 format=3 uid="uid://dcq1we4ule87k"]
 
 [ext_resource type="Script" path="res://scenes/overlay/Overlay.gd" id="1_2uwuf"]
 [ext_resource type="Texture2D" uid="uid://bvgsw0janrdig" path="res://assets/kenney/arrow_e.svg" id="2_pi06a"]
@@ -71,6 +71,12 @@
 [ext_resource type="Texture2D" uid="uid://co4hmokr6q6ew" path="res://assets/items/SoyCream/SoyCream.png" id="50_hey2b"]
 [ext_resource type="Texture2D" uid="uid://clm3g0hj18emn" path="res://assets/items/Crust/Crust.png" id="51_68v0d"]
 [ext_resource type="Texture2D" uid="uid://bvyo1dlhqq0i4" path="res://assets/items/Complete/dr pie.png" id="52_5h3l4"]
+[ext_resource type="PackedScene" uid="uid://bbyokxaslcuv" path="res://scenes/end/end.tscn" id="73_c2g35"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2o0w7"]
+border_width_right = 75
+border_color = Color(0.8, 0.8, 0.8, 0)
+border_blend = true
 
 [sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_nfm1y"]
 button_index = 4
@@ -109,19 +115,19 @@ grow_vertical = 2
 mouse_filter = 1
 
 [node name="Orders" type="Panel" parent="Level"]
+clip_children = 1
 layout_mode = 0
-offset_left = 24.0
-offset_top = 24.0
-offset_right = 936.0
-offset_bottom = 136.0
-mouse_filter = 2
+offset_right = 960.0
+offset_bottom = 240.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_2o0w7")
 
 [node name="OrderList" type="HBoxContainer" parent="Level/Orders"]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 16.0
-offset_right = 604.0
-offset_bottom = 200.0
+offset_left = 40.0
+offset_top = 24.0
+offset_right = 1220.0
+offset_bottom = 224.0
 
 [node name="GhostChef" type="Panel" parent="Level"]
 layout_mode = 0
@@ -379,6 +385,22 @@ script = ExtResource("2_s658n")
 position = Vector2(544, 328)
 texture = ExtResource("7_vxbue")
 
+[node name="ColorRect" type="ColorRect" parent="Recipes"]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 40.0
+offset_right = 516.0
+offset_bottom = 463.0
+color = Color(0.839216, 0.807843, 0.8, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Recipes"]
+layout_mode = 0
+offset_left = 575.0
+offset_top = 39.0
+offset_right = 890.0
+offset_bottom = 464.0
+color = Color(0.839216, 0.807843, 0.8, 1)
+
 [node name="MarginContainer" type="MarginContainer" parent="Recipes"]
 layout_mode = 0
 offset_left = 192.0
@@ -392,6 +414,7 @@ theme_override_constants/margin_right = 15
 theme_override_constants/margin_bottom = 30
 
 [node name="Page1" type="Control" parent="Recipes/MarginContainer"]
+visible = false
 layout_mode = 2
 
 [node name="Pepper" type="Sprite2D" parent="Recipes/MarginContainer/Page1"]
@@ -454,7 +477,7 @@ layout_mode = 0
 offset_right = 329.0
 offset_bottom = 179.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 48
+theme_override_font_sizes/font_size = 40
 text = "Quinoa Stuffed Peppers"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -515,7 +538,7 @@ offset_left = -7.0
 offset_right = 337.0
 offset_bottom = 179.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 48
+theme_override_font_sizes/font_size = 40
 text = "Ratatouille"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -531,73 +554,73 @@ scale = Vector2(1.21875, 1.21875)
 texture = ExtResource("18_jy3ow")
 
 [node name="Pepper2" type="Sprite2D" parent="Recipes/MarginContainer/Page3"]
-position = Vector2(393, 345)
-scale = Vector2(0.25, 0.25)
+position = Vector2(406, 354)
+scale = Vector2(0.4, 0.4)
 texture = ExtResource("18_jy3ow")
 
 [node name="Peppers" type="Sprite2D" parent="Recipes/MarginContainer/Page3"]
 position = Vector2(457, 25)
-scale = Vector2(0.25, 0.25)
+scale = Vector2(0.4, 0.4)
 texture = ExtResource("19_y48jw")
 
 [node name="Chicken" type="Sprite2D" parent="Recipes/MarginContainer/Page3"]
 position = Vector2(585, 25)
-scale = Vector2(0.25, 0.25)
+scale = Vector2(0.4, 0.4)
 texture = ExtResource("20_foj8a")
 
 [node name="Chicken2" type="Sprite2D" parent="Recipes/MarginContainer/Page3"]
 position = Vector2(585, 153)
-scale = Vector2(0.25, 0.25)
+scale = Vector2(0.4, 0.4)
 texture = ExtResource("21_bbsgo")
 
 [node name="Chicken3" type="Sprite2D" parent="Recipes/MarginContainer/Page3"]
 position = Vector2(649, 89)
-scale = Vector2(0.25, 0.25)
+scale = Vector2(0.4, 0.4)
 texture = ExtResource("22_u4523")
 
 [node name="Icon1" type="Sprite2D" parent="Recipes/MarginContainer/Page3"]
 position = Vector2(521, 153)
-scale = Vector2(0.25, 0.25)
+scale = Vector2(0.4, 0.4)
 texture = ExtResource("11_n75ij")
 
 [node name="CoredPeppers" type="Sprite2D" parent="Recipes/MarginContainer/Page3"]
 position = Vector2(457, 153)
-scale = Vector2(0.25, 0.25)
+scale = Vector2(0.4, 0.4)
 texture = ExtResource("23_53mpc")
 
 [node name="Icon4" type="Sprite2D" parent="Recipes/MarginContainer/Page3"]
 position = Vector2(585, 281)
-scale = Vector2(0.25, 0.25)
+scale = Vector2(0.4, 0.4)
 texture = ExtResource("24_fko1n")
 
 [node name="Icon7" type="Sprite2D" parent="Recipes/MarginContainer/Page3"]
 position = Vector2(521, 345)
-scale = Vector2(0.25, 0.25)
+scale = Vector2(0.4, 0.4)
 texture = ExtResource("25_ihk1p")
 
 [node name="Icon8" type="Sprite2D" parent="Recipes/MarginContainer/Page3"]
-position = Vector2(457, 345)
-scale = Vector2(0.25, 0.25)
+position = Vector2(465, 348)
+scale = Vector2(0.4, 0.4)
 texture = ExtResource("10_xpcqh")
 
 [node name="Icon6" type="Sprite2D" parent="Recipes/MarginContainer/Page3"]
-position = Vector2(457, 97)
-scale = Vector2(0.25, 0.25)
+position = Vector2(456, 103)
+scale = Vector2(0.4, 0.4)
 texture = ExtResource("26_ebmry")
 
 [node name="Icon5" type="Sprite2D" parent="Recipes/MarginContainer/Page3"]
 position = Vector2(521, 281)
-scale = Vector2(0.25, 0.25)
+scale = Vector2(0.4, 0.4)
 texture = ExtResource("11_n75ij")
 
 [node name="Icon2" type="Sprite2D" parent="Recipes/MarginContainer/Page3"]
 position = Vector2(585, 89)
-scale = Vector2(0.25, 0.25)
+scale = Vector2(0.4, 0.4)
 texture = ExtResource("11_n75ij")
 
 [node name="UncookedPeppers" type="Sprite2D" parent="Recipes/MarginContainer/Page3"]
 position = Vector2(521, 217)
-scale = Vector2(0.25, 0.25)
+scale = Vector2(0.4, 0.4)
 texture = ExtResource("27_cts0b")
 
 [node name="Label" type="Label" parent="Recipes/MarginContainer/Page3"]
@@ -605,7 +628,7 @@ layout_mode = 0
 offset_right = 321.0
 offset_bottom = 137.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 48
+theme_override_font_sizes/font_size = 40
 text = "Hellfire Mapo Tofu"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -614,9 +637,9 @@ autowrap_mode = 3
 [node name="Label2" type="Label" parent="Recipes/MarginContainer/Page3"]
 layout_mode = 0
 offset_left = 417.0
-offset_top = 57.0
+offset_top = 51.0
 offset_right = 489.0
-offset_bottom = 106.0
+offset_bottom = 100.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 12
 text = "Spring Spell"
@@ -639,7 +662,7 @@ scale = Vector2(0.25, 0.25)
 texture = ExtResource("44_0yri7")
 
 [node name="Peppers" type="Sprite2D" parent="Recipes/MarginContainer/Page4"]
-position = Vector2(569, 65)
+position = Vector2(569, 81)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("45_hmse1")
 
@@ -664,7 +687,7 @@ scale = Vector2(0.25, 0.25)
 texture = ExtResource("49_5irt0")
 
 [node name="Icon4" type="Sprite2D" parent="Recipes/MarginContainer/Page4"]
-position = Vector2(625, 121)
+position = Vector2(609, 113)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("50_hey2b")
 
@@ -688,20 +711,14 @@ layout_mode = 0
 offset_right = 329.0
 offset_bottom = 179.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 48
+theme_override_font_sizes/font_size = 40
 text = "Coconut Creamana Pie"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="Page5" type="Control" parent="Recipes/MarginContainer"]
-visible = false
 layout_mode = 2
-
-[node name="Pepper" type="Sprite2D" parent="Recipes/MarginContainer/Page5"]
-position = Vector2(169, 273)
-scale = Vector2(1.21875, 1.21875)
-texture = ExtResource("52_5h3l4")
 
 [node name="Pepper2" type="Sprite2D" parent="Recipes/MarginContainer/Page5"]
 position = Vector2(529, 321)
@@ -739,8 +756,19 @@ offset_right = 329.0
 offset_bottom = 179.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 48
-text = "???"
+text = "Sanguine Infusion Spell"
 horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label3" type="Label" parent="Recipes/MarginContainer/Page5"]
+layout_mode = 0
+offset_top = 150.0
+offset_right = 310.0
+offset_bottom = 418.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "Vampires have special diets, consisting only of blood, or that was until the invention of the Sanguine Infusion Spell! This spell imbues meals with blood essence, making any food palatable to vampires' sensitive tastes. Some vampires have even used this spell to remove cruelty from their diet entirely!"
 vertical_alignment = 1
 autowrap_mode = 3
 
@@ -749,7 +777,7 @@ layout_mode = 0
 offset_left = 457.0
 offset_top = 209.0
 offset_right = 601.0
-offset_bottom = 226.0
+offset_bottom = 230.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 12
 text = "Blood Essence"
@@ -813,8 +841,6 @@ offset_right = 878.0
 offset_bottom = 480.0
 size_flags_horizontal = 4
 focus_neighbor_top = NodePath("../Return")
-focus_neighbor_bottom = NodePath("../Options")
-focus_next = NodePath("../Options")
 focus_previous = NodePath("../Return")
 mouse_filter = 1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -843,82 +869,6 @@ texture = ExtResource("22_rfqoq")
 stretch_mode = 5
 metadata/_edit_lock_ = true
 
-[node name="Options" type="Button" parent="Pause"]
-layout_mode = 2
-offset_left = 727.0
-offset_top = 512.0
-offset_right = 863.0
-offset_bottom = 554.0
-size_flags_horizontal = 4
-focus_neighbor_top = NodePath("../Resume")
-focus_neighbor_bottom = NodePath("../Help")
-focus_next = NodePath("../Help")
-focus_previous = NodePath("../Resume")
-mouse_filter = 1
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 24
-theme_override_styles/focus = SubResource("StyleBoxEmpty_kan7d")
-text = "Options"
-icon = ExtResource("2_pi06a")
-flat = true
-script = ExtResource("3_u66x3")
-metadata/_edit_group_ = true
-
-[node name="TextureRect" type="TextureRect" parent="Pause/Options"]
-show_behind_parent = true
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -172.5
-offset_top = -229.5
-offset_right = 172.5
-offset_bottom = 229.5
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-texture = ExtResource("22_rfqoq")
-stretch_mode = 5
-metadata/_edit_lock_ = true
-
-[node name="Help" type="Button" parent="Pause"]
-layout_mode = 2
-offset_left = 746.0
-offset_top = 592.0
-offset_right = 844.0
-offset_bottom = 634.0
-size_flags_horizontal = 4
-focus_neighbor_top = NodePath("../Options")
-focus_neighbor_bottom = NodePath("../Return")
-focus_next = NodePath("../Return")
-focus_previous = NodePath("../Options")
-mouse_filter = 1
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 24
-theme_override_styles/focus = SubResource("StyleBoxEmpty_kan7d")
-text = "Help"
-icon = ExtResource("2_pi06a")
-flat = true
-script = ExtResource("3_u66x3")
-metadata/_edit_group_ = true
-
-[node name="TextureRect" type="TextureRect" parent="Pause/Help"]
-show_behind_parent = true
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -172.5
-offset_top = -229.5
-offset_right = 172.5
-offset_bottom = 229.5
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-texture = ExtResource("22_rfqoq")
-stretch_mode = 5
-metadata/_edit_lock_ = true
-
 [node name="Return" type="Button" parent="Pause"]
 layout_mode = 2
 offset_left = 688.0
@@ -926,10 +876,8 @@ offset_top = 672.0
 offset_right = 917.0
 offset_bottom = 714.0
 size_flags_horizontal = 4
-focus_neighbor_top = NodePath("../Help")
 focus_neighbor_bottom = NodePath("../Resume")
 focus_next = NodePath("../Resume")
-focus_previous = NodePath("../Help")
 mouse_filter = 1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
@@ -956,34 +904,6 @@ mouse_filter = 2
 texture = ExtResource("22_rfqoq")
 stretch_mode = 5
 metadata/_edit_lock_ = true
-
-[node name="Options" type="Control" parent="."]
-visible = false
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 1
-
-[node name="bg" type="ColorRect" parent="Options"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-color = Color(0, 0, 0, 1)
-
-[node name="Button" type="Button" parent="Options"]
-layout_mode = 0
-offset_left = 752.0
-offset_top = 768.0
-offset_right = 912.0
-offset_bottom = 832.0
-text = "BACK"
 
 [node name="Intro" type="Control" parent="."]
 visible = false
@@ -1243,8 +1163,11 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("24_cdpag")
 
+[node name="End" parent="." instance=ExtResource("73_c2g35")]
+visible = false
+
 [connection signal="pressed" from="Level/Book" to="." method="_on_book_pressed"]
 [connection signal="pressed" from="Recipes/Right" to="Recipes" method="_on_right_pressed"]
 [connection signal="pressed" from="Recipes/Left" to="Recipes" method="_on_left_pressed"]
 [connection signal="pressed" from="Pause/Resume" to="." method="_on_resume_pressed"]
-[connection signal="pressed" from="Options/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Pause/Return" to="." method="_on_return_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cbcns4judb7mq"]
+[gd_scene load_steps=16 format=3 uid="uid://cbcns4judb7mq"]
 
 [ext_resource type="AudioStream" uid="uid://c02hgvdaguepk" path="res://assets/sounds/Fresh air on a dark night.wav" id="1_cgtv4"]
 [ext_resource type="Script" path="res://scenes/audio/audio.gd" id="1_wfrff"]
@@ -12,6 +12,9 @@
 [ext_resource type="AudioStream" uid="uid://btwgdxqs2ixbf" path="res://assets/sounds/Chef Chatter 1.wav" id="10_25gn6"]
 [ext_resource type="AudioStream" uid="uid://dib6ak050j7rt" path="res://assets/sounds/Chef Chatter 3.wav" id="11_ljqee"]
 [ext_resource type="AudioStream" uid="uid://bq0xx4u4rno5k" path="res://assets/sounds/Chef Chatter 4.wav" id="12_di15f"]
+[ext_resource type="AudioStream" uid="uid://c5886swldo7fb" path="res://assets/sounds/oven ding.wav" id="13_383bd"]
+[ext_resource type="AudioStream" uid="uid://c0h2d83amsbsy" path="res://assets/sounds/pick up object.wav" id="14_2io43"]
+[ext_resource type="AudioStream" uid="uid://c3hpb6ij32xs7" path="res://assets/sounds/place object.wav" id="15_tayll"]
 
 [node name="Audio" type="Node"]
 script = ExtResource("1_wfrff")
@@ -53,4 +56,15 @@ max_polyphony = 3
 
 [node name="ChefTalk3" type="AudioStreamPlayer" parent="." groups=["Talk"]]
 stream = ExtResource("12_di15f")
+max_polyphony = 3
+
+[node name="OvenDing" type="AudioStreamPlayer" parent="." groups=["Sfx"]]
+stream = ExtResource("13_383bd")
+
+[node name="PlayerPickUp" type="AudioStreamPlayer" parent="." groups=["Sfx"]]
+stream = ExtResource("14_2io43")
+max_polyphony = 3
+
+[node name="PlayerDrop" type="AudioStreamPlayer" parent="." groups=["Sfx"]]
+stream = ExtResource("15_tayll")
 max_polyphony = 3

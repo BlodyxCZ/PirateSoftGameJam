@@ -47,12 +47,12 @@ func _input(event: InputEvent) -> void:
 			Overlay.remove_action_by_text("Start cooking")
 			Overlay.remove_action_by_text("Take item")
 			$PopUpTexture.reset()
-			$Popup.process(10.0, 6.0)
+			$Popup.process(20.0, 6.0)
 
 
 func _on_popup_process_complete() -> void:
 	current_item.cook()
-	
+	Audio.play("OvenDing")
 	if is_in_range:
 		if current_item and $PopUpTexture.process >= 100.0: Overlay.add_action(Action.BUTTONS.E, "Take item")
 

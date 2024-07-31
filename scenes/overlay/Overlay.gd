@@ -79,6 +79,9 @@ func show_ui(_name: String) -> void:
 			$Dialogue.delivery()
 		"options":
 			$Options.show()
+		"End":
+			$End.show()
+			$End.start()
 
 
 func is_in_dialogue() -> bool:
@@ -146,3 +149,7 @@ func delete_order(id: int) -> void:
 	for order in %OrderList.get_children():
 		if order.id == id:
 			order.queue_free()
+
+
+func _on_return_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/mainmenu/main_menu.tscn")

@@ -55,7 +55,6 @@ double_sided = false
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 2.30447, 0)
 billboard = 1
-shaded = true
 double_sided = false
 texture = ExtResource("5_ilnn1")
 

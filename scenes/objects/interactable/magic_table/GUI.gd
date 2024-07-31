@@ -1,6 +1,9 @@
 extends ObjectGUI
 
 
+const ONIONS = preload("res://scenes/classes/Item/Items/Onions.tres")
+const CRUST = preload("res://scenes/classes/Item/Items/Crust.tres")
+
 func open() -> void:
 	super.open()
 	if get_parent().get_parent().current_item:
@@ -13,25 +16,31 @@ func _on_slot_1_pressed() -> void:
 	if $Panel/Item.texture == null: return
 	$Panel/Slot1/Item.texture = $Panel/Item.texture
 	$Panel/Item.texture = null
+	get_parent().get_parent().current_item = null
 
 func _on_slot_2_pressed() -> void:
 	if $Panel/Item.texture == null: return
 	$Panel/Slot2/Item.texture = $Panel/Item.texture
 	$Panel/Item.texture = null
+	get_parent().get_parent().current_item = null
 
 func _on_slot_3_pressed() -> void:
 	if $Panel/Item.texture == null: return
 	$Panel/Slot3/Item.texture = $Panel/Item.texture
 	$Panel/Item.texture = null
+	get_parent().get_parent().current_item = null
 
 func _on_slot_4_pressed() -> void:
 	if $Panel/Item.texture == null: return
 	$Panel/Slot4/Item.texture = $Panel/Item.texture
 	$Panel/Item.texture = null
+	get_parent().get_parent().current_item = null
 
 
 func _on_spring_pressed() -> void:
 	if $Panel/Slot1/Item.texture == load("res://assets/items/Onions/onions.png") or $Panel/Slot2/Item.texture == load("res://assets/items/Onions/onions.png") or $Panel/Slot3/Item.texture == load("res://assets/items/Onions/onions.png") or $Panel/Slot4/Item.texture == load("res://assets/items/Onions/onions.png"):
+		ONIONS.texture = ONIONS.enchanted
+		get_parent().get_parent().current_item = ONIONS.instantiate(false)
 		get_parent().get_parent().current_item.enchant()
 		_on_clear_pressed()
 		close()
@@ -42,6 +51,9 @@ func _on_blood_essence_pressed() -> void:
 		if $Panel/Slot1/Item.texture == load("res://assets/items/Complete/pepper .png") or $Panel/Slot2/Item.texture == load("res://assets/items/Complete/pepper .png") or $Panel/Slot3/Item.texture == load("res://assets/items/Complete/pepper .png") or $Panel/Slot4/Item.texture == load("res://assets/items/Complete/pepper .png"):
 			if $Panel/Slot1/Item.texture == load("res://assets/items/Complete/rat.png") or $Panel/Slot2/Item.texture == load("res://assets/items/Complete/rat.png") or $Panel/Slot3/Item.texture == load("res://assets/items/Complete/rat.png") or $Panel/Slot4/Item.texture == load("res://assets/items/Complete/rat.png"):
 				if $Panel/Slot1/Item.texture == load("res://assets/items/Complete/tofu.png") or $Panel/Slot2/Item.texture == load("res://assets/items/Complete/tofu.png") or $Panel/Slot3/Item.texture == load("res://assets/items/Complete/tofu.png") or $Panel/Slot4/Item.texture == load("res://assets/items/Complete/tofu.png"):
+					CRUST.texture = CRUST.enchanted
+					get_parent().get_parent().current_item = CRUST.instantiate(false)
+					get_parent().get_parent().current_item.item_name += "Cooked"
 					get_parent().get_parent().current_item.enchant()
 					_on_clear_pressed()
 					get_tree().get_first_node_in_group("NPC").progress = 2

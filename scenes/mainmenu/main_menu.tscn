@@ -186,23 +186,10 @@ icon = ExtResource("3_sbuf4")
 flat = true
 script = ExtResource("1_3te8o")
 
-[node name="Settings" type="Button" parent="."]
-layout_mode = 2
-offset_left = 64.0
-offset_top = 624.0
-offset_right = 293.0
-offset_bottom = 699.0
-theme_override_font_sizes/font_size = 48
-theme_override_styles/focus = SubResource("StyleBoxEmpty_o5jto")
-text = "Settings"
-icon = ExtResource("3_sbuf4")
-flat = true
-script = ExtResource("1_3te8o")
-
 [node name="Credits2" type="Button" parent="."]
 layout_mode = 2
 offset_left = 88.0
-offset_top = 768.0
+offset_top = 704.0
 offset_right = 296.0
 offset_bottom = 843.0
 theme_override_font_sizes/font_size = 48
@@ -250,8 +237,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 880.0
 offset_top = 240.0
-offset_right = 880.0
-offset_bottom = 240.0
+offset_right = 2480.0
+offset_bottom = 1140.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("7_0go3l")
@@ -276,5 +263,4 @@ autoplay = "intro"
 speed_scale = 2.0
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="Credits2" to="." method="_on_credits_pressed"]

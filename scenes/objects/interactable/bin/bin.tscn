@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://crauljlfwrb3r"]
+[gd_scene load_steps=10 format=3 uid="uid://crauljlfwrb3r"]
 
 [ext_resource type="Script" path="res://scenes/objects/interactable/bin/bin.gd" id="1_g88os"]
 [ext_resource type="Script" path="res://scenes/classes/Popup/popup.gd" id="1_y463n"]
 [ext_resource type="Material" uid="uid://dnbnew1r2jlot" path="res://assets/models/kitchen1/Materials/Material.005.tres" id="4_412dt"]
 [ext_resource type="Script" path="res://scenes/objects/interactable/bin/GUI.gd" id="4_o0ap7"]
+[ext_resource type="Texture2D" uid="uid://spe5sem6akhu" path="res://assets/icons/icon 6.png" id="5_qeden"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_joqd2"]
 size = Vector3(4.64424, 0.7, 1.32526)
@@ -84,5 +85,11 @@ metadata/_edit_lock_ = true
 [node name="Bin" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_vii65")
 skeleton = NodePath("")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 2.58523, 0)
+billboard = 1
+double_sided = false
+texture = ExtResource("5_qeden")
 
 [connection signal="process_complete" from="Popup" to="." method="_on_popup_process_complete"]

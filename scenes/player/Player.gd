@@ -24,10 +24,12 @@ var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 @export var held_item: Item:
 	set(value):
 		if value:
+			Audio.play("PlayerPickUp")
 			$Head/InventorySlot.texture = value.texture
 			$HornL/OmniLight3D.omni_range = 5
 			$HornR/OmniLight3D.omni_range = 5
 		else:
+			Audio.play("PlayerDrop")
 			$Head/InventorySlot.texture = null
 			$HornL/OmniLight3D.omni_range = 3
 			$HornR/OmniLight3D.omni_range = 3

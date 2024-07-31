@@ -85,7 +85,6 @@ func combine(second_item: Item) -> bool:
 	item_name += "Combined"
 	refresh_order()
 	Overlay.delete_order(second_item.order_id)
-	print("Deleting: ", order_id)
 	return true
 
 
@@ -108,21 +107,19 @@ func trash() -> void:
 
 
 func refresh_order(trash: bool = false) -> void:
-	print("Deleting: ", order_id)
 	Overlay.delete_order(order_id)
 	if not trash:
 		order_id = Overlay.add_order(texture, action_texture)
-		print("Adding: ", order_id)
 
 
-func instantiate() -> Item:
+func instantiate(with_order: bool = true) -> Item:
 	var new = Item.new()
 	
 	new.item_name = item_name
 	new.texture = default
 	new.action_texture = action_texture
-	new.order_id = Overlay.add_order(texture, action_texture)
-	print("Adding: ", order_id)
+	if with_order:
+		new.order_id = Overlay.add_order(texture, action_texture)
 	
 	new.default = default
 	new.cooked = cooked

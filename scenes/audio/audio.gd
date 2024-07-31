@@ -42,8 +42,10 @@ func _process(delta: float) -> void:
 	for child: AudioStreamPlayer in get_children():
 		if not get_tree().get_processed_tweens().size() >= 1:
 			if child.is_in_group("Music"):
-				child.volume_db = linear_to_db(0.5 * master_volume * music_volume)
+				child.volume_db = linear_to_db(0.5 * master_volume)
 			if child.is_in_group("Voice"):
-				child.volume_db = linear_to_db(0.4 * master_volume * voice_volume)
+				child.volume_db = linear_to_db(0.4 * master_volume)
 			if child.is_in_group("Talk"):
-				child.volume_db = linear_to_db(0.3 * master_volume * voice_volume)
+				child.volume_db = linear_to_db(0.3 * master_volume)
+			if child.is_in_group("Sfx"):
+				child.volume_db = linear_to_db(0.4 * master_volume)

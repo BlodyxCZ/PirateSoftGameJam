@@ -134,7 +134,6 @@ skin = SubResource("Skin_lijju")
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 2.58523, 0)
 billboard = 1
-shaded = true
 double_sided = false
 texture = ExtResource("5_g355v")
 

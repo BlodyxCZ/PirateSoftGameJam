@@ -1,0 +1,45 @@
+[gd_scene load_steps=2 format=3 uid="uid://bbyokxaslcuv"]
+
+[ext_resource type="Script" path="res://scenes/end/end.gd" id="1_8egwn"]
+
+[node name="End" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+script = ExtResource("1_8egwn")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer"]
+show_behind_parent = true
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "The vampire has been fed, and his energy restored.
+He is endlessly grateful.
+
+You have reached the end of the content available in this prototype.
+Thank you for playing!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3

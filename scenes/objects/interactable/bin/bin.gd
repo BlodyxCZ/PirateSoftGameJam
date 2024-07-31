@@ -20,6 +20,7 @@ func _input(event: InputEvent) -> void:
 	
 	if event.is_action_pressed("interact1"):
 		if player.held_item:
+			player.held_item.trash()
 			player.held_item = null
 		_on_body_exited(player)
 		_on_body_entered(player)

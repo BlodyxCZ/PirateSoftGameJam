@@ -38,7 +38,7 @@ func _input(event: InputEvent) -> void:
 		var tmp = player.held_item
 		player.held_item = current_item
 		current_item = tmp
-	if event.is_action_pressed("interact2"):
+	if event.is_action_pressed("interact2") and current_item:
 		if current_item.combined and current_item.item_name.find("Combined") == -1:
 			if current_item.combine(player.held_item):
 				current_item = current_item

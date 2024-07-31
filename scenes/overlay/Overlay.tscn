@@ -100,7 +100,6 @@ offset_top = 296.0
 offset_right = -256.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 2
 script = ExtResource("2_s658n")
 
 [node name="Sprite2D" type="Sprite2D" parent="Recipes"]
@@ -113,6 +112,7 @@ offset_left = 192.0
 offset_top = 32.0
 offset_right = 896.0
 offset_bottom = 504.0
+mouse_filter = 2
 theme_override_constants/margin_left = 15
 theme_override_constants/margin_top = 15
 theme_override_constants/margin_right = 15
@@ -632,6 +632,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 color = Color(0, 0, 0, 0.392157)
 
 [node name="TextureRect" type="TextureRect" parent="Pause"]
@@ -641,6 +642,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("21_djo3x")
 expand_mode = 2
 stretch_mode = 5
@@ -656,6 +658,7 @@ focus_neighbor_top = NodePath("../Return")
 focus_neighbor_bottom = NodePath("../Options")
 focus_next = NodePath("../Options")
 focus_previous = NodePath("../Return")
+mouse_filter = 1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 32
 theme_override_styles/focus = SubResource("StyleBoxEmpty_kan7d")
@@ -693,6 +696,7 @@ focus_neighbor_top = NodePath("../Resume")
 focus_neighbor_bottom = NodePath("../Help")
 focus_next = NodePath("../Help")
 focus_previous = NodePath("../Resume")
+mouse_filter = 1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
 theme_override_styles/focus = SubResource("StyleBoxEmpty_kan7d")
@@ -730,6 +734,7 @@ focus_neighbor_top = NodePath("../Options")
 focus_neighbor_bottom = NodePath("../Return")
 focus_next = NodePath("../Return")
 focus_previous = NodePath("../Options")
+mouse_filter = 1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
 theme_override_styles/focus = SubResource("StyleBoxEmpty_kan7d")
@@ -767,6 +772,7 @@ focus_neighbor_top = NodePath("../Help")
 focus_neighbor_bottom = NodePath("../Resume")
 focus_next = NodePath("../Resume")
 focus_previous = NodePath("../Help")
+mouse_filter = 1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
 theme_override_styles/focus = SubResource("StyleBoxEmpty_kan7d")
@@ -810,6 +816,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Button" type="Button" parent="Options"]
@@ -828,6 +835,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="Actions" type="Control" parent="Intro"]
 anchors_preset = 0
@@ -835,6 +843,7 @@ offset_left = 672.0
 offset_top = 64.0
 offset_right = 928.0
 offset_bottom = 304.0
+mouse_filter = 2
 metadata/_edit_group_ = true
 
 [node name="TextureRect" type="TextureRect" parent="Intro/Actions"]
@@ -874,6 +883,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("11_sb3jb")
 
 [node name="BG" type="TextureRect" parent="Dialogue"]
@@ -883,6 +893,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("23_c6jo1")
 metadata/_edit_lock_ = true
 
@@ -892,6 +903,7 @@ offset_left = 896.0
 offset_top = 64.0
 offset_right = 1408.0
 offset_bottom = 576.0
+mouse_filter = 2
 texture = ExtResource("16_uwhb2")
 
 [node name="VampireText" type="Label" parent="Dialogue/VampireSpeech"]
@@ -913,6 +925,7 @@ offset_left = 192.0
 offset_top = 64.0
 offset_right = 704.0
 offset_bottom = 576.0
+mouse_filter = 2
 texture = ExtResource("16_uwhb2")
 flip_h = true
 
@@ -933,6 +946,7 @@ autowrap_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+mouse_filter = 2
 
 [node name="Normal" type="VideoStreamPlayer" parent="Dialogue/Vampire"]
 material = ExtResource("13_qdtij")
@@ -1047,6 +1061,7 @@ texture = ExtResource("22_6ublj")
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+mouse_filter = 2
 
 [node name="Normal" type="VideoStreamPlayer" parent="Dialogue/Jackalope"]
 material = ExtResource("13_qdtij")

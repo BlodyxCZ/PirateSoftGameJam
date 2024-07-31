@@ -3,6 +3,7 @@ extends Control
 
 func _ready() -> void:
 	Overlay.hide_all()
+	Audio.play("Intro")
 	await $Prerender/AnimationPlayer.animation_finished
 	$Prerender.hide()
 	Audio.play("Title")

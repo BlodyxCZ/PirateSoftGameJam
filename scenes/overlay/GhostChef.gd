@@ -8,6 +8,7 @@ signal trigger3()
 
 
 func _ready() -> void:
+	randomize()
 	$GhostChefSpeech.hide()
 
 
@@ -59,6 +60,8 @@ func chef_say(what: String, duration: float, emotion: String = "Normal", x: floa
 			video.hide()
 		video.get_child(0).hide()
 	$GhostChefSpeech.show()
+	
+	Audio.play("ChefTalk" + str(randi_range(1, 3)))
 	
 	$GhostChefSpeech/JackalopeText.visible_ratio = 0.0
 	$GhostChefSpeech/JackalopeText.text = what

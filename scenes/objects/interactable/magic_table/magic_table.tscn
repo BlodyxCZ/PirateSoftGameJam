@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://bp7kegrops2vk"]
+[gd_scene load_steps=11 format=3 uid="uid://bp7kegrops2vk"]
 
 [ext_resource type="Script" path="res://scenes/objects/interactable/magic_table/magic_table.gd" id="1_tbuak"]
 [ext_resource type="Script" path="res://scenes/classes/Popup/popup.gd" id="2_0j37y"]
 [ext_resource type="Material" uid="uid://blpexn72obacp" path="res://assets/models/kitchen1/Materials/Material.008.tres" id="2_8c80t"]
 [ext_resource type="Script" path="res://scenes/objects/interactable/magic_table/GUI.gd" id="3_w6cc3"]
 [ext_resource type="Texture2D" uid="uid://dhimsrmxcfg4h" path="res://assets/MagicTable.png" id="5_cwr4s"]
+[ext_resource type="Texture2D" uid="uid://cww8vvupf6bqg" path="res://assets/items/Chicken/chicken .png" id="6_spndo"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_35gav"]
 _surfaces = [{
@@ -50,11 +51,6 @@ range = NodePath("Range")
 gui = NodePath("CanvasLayer/GUI")
 pop_up = NodePath("Popup")
 
-[node name="InventorySlot" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.66676, 0)
-pixel_size = 0.008
-billboard = 1
-
 [node name="MagicTable" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.631033, 0, -0.458473, 0, 0.78, 0, 0.458473, 0, 0.631033, 0, 1.39638, 0)
 mesh = SubResource("ArrayMesh_bt4yx")
@@ -83,7 +79,6 @@ shape = SubResource("BoxShape3D_7fqo0")
 layer = 2
 
 [node name="GUI" type="Control" parent="CanvasLayer"]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -100,14 +95,35 @@ offset_top = 136.0
 offset_right = 1472.0
 offset_bottom = 768.0
 
-[node name="Win" type="Button" parent="CanvasLayer/GUI/Panel"]
+[node name="Spring" type="Button" parent="CanvasLayer/GUI/Panel"]
 layout_mode = 0
-offset_left = 776.0
-offset_top = 248.0
-offset_right = 1184.0
-offset_bottom = 384.0
+offset_left = 768.0
+offset_top = 56.0
+offset_right = 1176.0
+offset_bottom = 192.0
 theme_override_font_sizes/font_size = 32
-text = "WIN MINIGAME"
+text = "Spring
+(Onions)"
+
+[node name="BloodEssence" type="Button" parent="CanvasLayer/GUI/Panel"]
+layout_mode = 0
+offset_left = 760.0
+offset_top = 216.0
+offset_right = 1168.0
+offset_bottom = 352.0
+theme_override_font_sizes/font_size = 32
+text = "Blood Essence
+(Final Mix)"
+
+[node name="Clear" type="Button" parent="CanvasLayer/GUI/Panel"]
+layout_mode = 0
+offset_left = 760.0
+offset_top = 456.0
+offset_right = 1168.0
+offset_bottom = 552.0
+theme_override_font_sizes/font_size = 32
+text = "Clear
+(Lose all items)"
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/GUI/Panel"]
 layout_mode = 1
@@ -124,10 +140,72 @@ texture = ExtResource("5_cwr4s")
 
 [node name="Item" type="TextureRect" parent="CanvasLayer/GUI/Panel"]
 layout_mode = 1
-offset_left = 256.0
+offset_left = 248.0
 offset_top = 184.0
-offset_right = 512.0
+offset_right = 504.0
 offset_bottom = 440.0
+texture = ExtResource("6_spndo")
+
+[node name="Slot1" type="Button" parent="CanvasLayer/GUI/Panel"]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 136.0
+offset_right = 272.0
+offset_bottom = 192.0
+
+[node name="Item" type="TextureRect" parent="CanvasLayer/GUI/Panel/Slot1"]
+offset_left = -94.0
+offset_top = -99.0
+offset_right = 162.0
+offset_bottom = 157.0
+mouse_filter = 2
+
+[node name="Slot2" type="Button" parent="CanvasLayer/GUI/Panel"]
+layout_mode = 0
+offset_left = 443.0
+offset_top = 110.0
+offset_right = 499.0
+offset_bottom = 166.0
+
+[node name="Item" type="TextureRect" parent="CanvasLayer/GUI/Panel/Slot2"]
+offset_left = -108.0
+offset_top = -100.0
+offset_right = 148.0
+offset_bottom = 156.0
+mouse_filter = 2
+
+[node name="Slot3" type="Button" parent="CanvasLayer/GUI/Panel"]
+layout_mode = 0
+offset_left = 379.0
+offset_top = 471.0
+offset_right = 435.0
+offset_bottom = 527.0
+
+[node name="Item" type="TextureRect" parent="CanvasLayer/GUI/Panel/Slot3"]
+offset_left = -96.0
+offset_top = -103.0
+offset_right = 160.0
+offset_bottom = 153.0
+mouse_filter = 2
+
+[node name="Slot4" type="Button" parent="CanvasLayer/GUI/Panel"]
+layout_mode = 0
+offset_left = 181.0
+offset_top = 368.0
+offset_right = 237.0
+offset_bottom = 424.0
+
+[node name="Item" type="TextureRect" parent="CanvasLayer/GUI/Panel/Slot4"]
+offset_left = -98.0
+offset_top = -102.0
+offset_right = 158.0
+offset_bottom = 154.0
+mouse_filter = 2
 
 [connection signal="process_complete" from="Popup" to="." method="_on_popup_process_complete"]
-[connection signal="pressed" from="CanvasLayer/GUI/Panel/Win" to="CanvasLayer/GUI" method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/GUI/Panel/Spring" to="CanvasLayer/GUI" method="_on_spring_pressed"]
+[connection signal="pressed" from="CanvasLayer/GUI/Panel/BloodEssence" to="CanvasLayer/GUI" method="_on_blood_essence_pressed"]
+[connection signal="pressed" from="CanvasLayer/GUI/Panel/Slot1" to="CanvasLayer/GUI" method="_on_slot_1_pressed"]
+[connection signal="pressed" from="CanvasLayer/GUI/Panel/Slot2" to="CanvasLayer/GUI" method="_on_slot_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/GUI/Panel/Slot3" to="CanvasLayer/GUI" method="_on_slot_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/GUI/Panel/Slot4" to="CanvasLayer/GUI" method="_on_slot_4_pressed"]

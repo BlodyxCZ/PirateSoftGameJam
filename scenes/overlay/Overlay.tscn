@@ -89,6 +89,269 @@ offset_right = 40.0
 offset_bottom = 40.0
 mouse_filter = 1
 
+[node name="Level" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="Orders" type="Panel" parent="Level"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 936.0
+offset_bottom = 136.0
+mouse_filter = 2
+
+[node name="OrderList" type="HBoxContainer" parent="Level/Orders"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 16.0
+offset_right = 604.0
+offset_bottom = 200.0
+
+[node name="GhostChef" type="Panel" parent="Level"]
+layout_mode = 0
+offset_left = 1288.0
+offset_top = 24.0
+offset_right = 1576.0
+offset_bottom = 312.0
+mouse_filter = 2
+script = ExtResource("3_hxfpv")
+
+[node name="GhostChef" type="Control" parent="Level/GhostChef"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+pivot_offset = Vector2(144, 144)
+
+[node name="Normal" type="VideoStreamPlayer" parent="Level/GhostChef/GhostChef"]
+material = ExtResource("13_qdtij")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -112.0
+offset_top = -112.0
+offset_right = 112.0
+offset_bottom = 112.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("4_hmg2p")
+loop = true
+
+[node name="Static" type="TextureRect" parent="Level/GhostChef/GhostChef/Normal"]
+show_behind_parent = true
+material = ExtResource("13_qdtij")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_jqw4f")
+expand_mode = 2
+
+[node name="Angry" type="VideoStreamPlayer" parent="Level/GhostChef/GhostChef"]
+visible = false
+material = ExtResource("13_qdtij")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -112.0
+offset_top = -112.0
+offset_right = 112.0
+offset_bottom = 112.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("6_mkbgc")
+loop = true
+
+[node name="Static" type="TextureRect" parent="Level/GhostChef/GhostChef/Angry"]
+show_behind_parent = true
+material = ExtResource("13_qdtij")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_oysl0")
+expand_mode = 2
+
+[node name="Focused" type="VideoStreamPlayer" parent="Level/GhostChef/GhostChef"]
+visible = false
+material = ExtResource("13_qdtij")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -112.0
+offset_top = -112.0
+offset_right = 112.0
+offset_bottom = 112.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("8_pyob4")
+loop = true
+
+[node name="Static" type="TextureRect" parent="Level/GhostChef/GhostChef/Focused"]
+show_behind_parent = true
+material = ExtResource("13_qdtij")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_8emi6")
+expand_mode = 2
+
+[node name="Pleased" type="VideoStreamPlayer" parent="Level/GhostChef/GhostChef"]
+visible = false
+material = ExtResource("13_qdtij")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -112.0
+offset_top = -112.0
+offset_right = 112.0
+offset_bottom = 112.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("10_2f8pf")
+loop = true
+
+[node name="Static" type="TextureRect" parent="Level/GhostChef/GhostChef/Pleased"]
+show_behind_parent = true
+material = ExtResource("13_qdtij")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_j4h3x")
+expand_mode = 2
+
+[node name="Thinking" type="VideoStreamPlayer" parent="Level/GhostChef/GhostChef"]
+visible = false
+material = ExtResource("13_qdtij")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -112.0
+offset_top = -112.0
+offset_right = 112.0
+offset_bottom = 112.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("12_rnvfj")
+loop = true
+
+[node name="Static" type="TextureRect" parent="Level/GhostChef/GhostChef/Thinking"]
+show_behind_parent = true
+material = ExtResource("13_qdtij")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("13_ilprb")
+expand_mode = 2
+
+[node name="GhostChefSpeech" type="TextureRect" parent="Level/GhostChef"]
+layout_mode = 0
+offset_left = -512.0
+offset_top = -112.0
+offset_bottom = 400.0
+texture = ExtResource("16_uwhb2")
+metadata/_edit_group_ = true
+
+[node name="JackalopeText" type="Label" parent="Level/GhostChef/GhostChefSpeech"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 168.0
+offset_right = 480.0
+offset_bottom = 272.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Book" type="Button" parent="Level"]
+layout_mode = 0
+offset_left = 1336.0
+offset_top = 632.0
+offset_right = 1576.0
+offset_bottom = 872.0
+focus_mode = 0
+shortcut = SubResource("Shortcut_sb144")
+flat = true
+metadata/_edit_group_ = true
+
+[node name="TextEdit" type="TextureRect" parent="Level/Book"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -16.0
+offset_top = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_54h45")
+stretch_mode = 5
+
+[node name="Actions" type="Control" parent="Level"]
+anchors_preset = 0
+offset_left = 24.0
+offset_top = 648.0
+offset_right = 280.0
+offset_bottom = 888.0
+mouse_filter = 2
+metadata/_edit_group_ = true
+
+[node name="TextureRect" type="TextureRect" parent="Level/Actions"]
+layout_mode = 1
+offset_right = 32.0
+offset_bottom = 32.0
+mouse_filter = 2
+texture = ExtResource("5_cj73a")
+
+[node name="ActionList" type="VBoxContainer" parent="Level/Actions"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = 56.0
+offset_right = -32.0
+offset_bottom = -56.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/separation = 0
+
+[node name="TextureRect2" type="TextureRect" parent="Level/Actions"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+texture = ExtResource("7_t7lpi")
+
 [node name="Recipes" type="Control" parent="."]
 visible = false
 layout_mode = 3
@@ -357,263 +620,6 @@ offset_top = 448.0
 offset_right = 248.0
 offset_bottom = 496.0
 text = "<-"
-
-[node name="Level" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 1
-
-[node name="Orders" type="Panel" parent="Level"]
-layout_mode = 0
-offset_left = 24.0
-offset_top = 24.0
-offset_right = 936.0
-offset_bottom = 136.0
-
-[node name="OrderList" type="HBoxContainer" parent="Level/Orders"]
-unique_name_in_owner = true
-layout_mode = 0
-offset_left = 16.0
-offset_right = 604.0
-offset_bottom = 200.0
-
-[node name="GhostChef" type="Panel" parent="Level"]
-layout_mode = 0
-offset_left = 1288.0
-offset_top = 24.0
-offset_right = 1576.0
-offset_bottom = 312.0
-script = ExtResource("3_hxfpv")
-
-[node name="GhostChef" type="Control" parent="Level/GhostChef"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.5, 0.5)
-pivot_offset = Vector2(144, 144)
-
-[node name="Normal" type="VideoStreamPlayer" parent="Level/GhostChef/GhostChef"]
-material = ExtResource("13_qdtij")
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -112.0
-offset_top = -112.0
-offset_right = 112.0
-offset_bottom = 112.0
-grow_horizontal = 2
-grow_vertical = 2
-stream = ExtResource("4_hmg2p")
-loop = true
-
-[node name="Static" type="TextureRect" parent="Level/GhostChef/GhostChef/Normal"]
-show_behind_parent = true
-material = ExtResource("13_qdtij")
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("5_jqw4f")
-expand_mode = 2
-
-[node name="Angry" type="VideoStreamPlayer" parent="Level/GhostChef/GhostChef"]
-visible = false
-material = ExtResource("13_qdtij")
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -112.0
-offset_top = -112.0
-offset_right = 112.0
-offset_bottom = 112.0
-grow_horizontal = 2
-grow_vertical = 2
-stream = ExtResource("6_mkbgc")
-loop = true
-
-[node name="Static" type="TextureRect" parent="Level/GhostChef/GhostChef/Angry"]
-show_behind_parent = true
-material = ExtResource("13_qdtij")
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("7_oysl0")
-expand_mode = 2
-
-[node name="Focused" type="VideoStreamPlayer" parent="Level/GhostChef/GhostChef"]
-visible = false
-material = ExtResource("13_qdtij")
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -112.0
-offset_top = -112.0
-offset_right = 112.0
-offset_bottom = 112.0
-grow_horizontal = 2
-grow_vertical = 2
-stream = ExtResource("8_pyob4")
-loop = true
-
-[node name="Static" type="TextureRect" parent="Level/GhostChef/GhostChef/Focused"]
-show_behind_parent = true
-material = ExtResource("13_qdtij")
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("9_8emi6")
-expand_mode = 2
-
-[node name="Pleased" type="VideoStreamPlayer" parent="Level/GhostChef/GhostChef"]
-visible = false
-material = ExtResource("13_qdtij")
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -112.0
-offset_top = -112.0
-offset_right = 112.0
-offset_bottom = 112.0
-grow_horizontal = 2
-grow_vertical = 2
-stream = ExtResource("10_2f8pf")
-loop = true
-
-[node name="Static" type="TextureRect" parent="Level/GhostChef/GhostChef/Pleased"]
-show_behind_parent = true
-material = ExtResource("13_qdtij")
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("11_j4h3x")
-expand_mode = 2
-
-[node name="Thinking" type="VideoStreamPlayer" parent="Level/GhostChef/GhostChef"]
-visible = false
-material = ExtResource("13_qdtij")
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -112.0
-offset_top = -112.0
-offset_right = 112.0
-offset_bottom = 112.0
-grow_horizontal = 2
-grow_vertical = 2
-stream = ExtResource("12_rnvfj")
-loop = true
-
-[node name="Static" type="TextureRect" parent="Level/GhostChef/GhostChef/Thinking"]
-show_behind_parent = true
-material = ExtResource("13_qdtij")
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("13_ilprb")
-expand_mode = 2
-
-[node name="GhostChefSpeech" type="TextureRect" parent="Level/GhostChef"]
-layout_mode = 0
-offset_left = -512.0
-offset_top = -112.0
-offset_bottom = 400.0
-texture = ExtResource("16_uwhb2")
-metadata/_edit_group_ = true
-
-[node name="JackalopeText" type="Label" parent="Level/GhostChef/GhostChefSpeech"]
-layout_mode = 0
-offset_left = 32.0
-offset_top = 168.0
-offset_right = 480.0
-offset_bottom = 272.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 16
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 3
-
-[node name="Book" type="Button" parent="Level"]
-layout_mode = 0
-offset_left = 1336.0
-offset_top = 632.0
-offset_right = 1576.0
-offset_bottom = 872.0
-focus_mode = 0
-shortcut = SubResource("Shortcut_sb144")
-flat = true
-metadata/_edit_group_ = true
-
-[node name="TextEdit" type="TextureRect" parent="Level/Book"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -16.0
-offset_top = -16.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("3_54h45")
-stretch_mode = 5
-
-[node name="Actions" type="Control" parent="Level"]
-anchors_preset = 0
-offset_left = 24.0
-offset_top = 648.0
-offset_right = 280.0
-offset_bottom = 888.0
-metadata/_edit_group_ = true
-
-[node name="TextureRect" type="TextureRect" parent="Level/Actions"]
-layout_mode = 1
-offset_right = 32.0
-offset_bottom = 32.0
-texture = ExtResource("5_cj73a")
-
-[node name="ActionList" type="VBoxContainer" parent="Level/Actions"]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 32.0
-offset_top = 56.0
-offset_right = -32.0
-offset_bottom = -56.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 0
-
-[node name="TextureRect2" type="TextureRect" parent="Level/Actions"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("7_t7lpi")
 
 [node name="Pause" type="Control" parent="."]
 visible = false
@@ -1085,8 +1091,8 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("24_cdpag")
 
+[connection signal="pressed" from="Level/Book" to="." method="_on_book_pressed"]
 [connection signal="pressed" from="Recipes/Right" to="Recipes" method="_on_right_pressed"]
 [connection signal="pressed" from="Recipes/Left" to="Recipes" method="_on_left_pressed"]
-[connection signal="pressed" from="Level/Book" to="." method="_on_book_pressed"]
 [connection signal="pressed" from="Pause/Resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="Options/Button" to="." method="_on_button_pressed"]

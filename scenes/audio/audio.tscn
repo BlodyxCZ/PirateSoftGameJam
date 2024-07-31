@@ -1,10 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://cbcns4judb7mq"]
+[gd_scene load_steps=13 format=3 uid="uid://cbcns4judb7mq"]
 
 [ext_resource type="AudioStream" uid="uid://c02hgvdaguepk" path="res://assets/sounds/Fresh air on a dark night.wav" id="1_cgtv4"]
 [ext_resource type="Script" path="res://scenes/audio/audio.gd" id="1_wfrff"]
 [ext_resource type="AudioStream" uid="uid://b5qxqefls2u5w" path="res://assets/sounds/Frantic kitchen samba FINAL.wav" id="2_jpmsl"]
 [ext_resource type="AudioStream" uid="uid://dvjc4yx2j78xa" path="res://assets/sounds/title theme.wav" id="3_g7nlf"]
-[ext_resource type="AudioStream" uid="uid://ddn2saejxb4c6" path="res://assets/sounds/GhostChefIntroTake1_GhostKitchen_SamuelFurches.mp3" id="5_2c2u0"]
+[ext_resource type="AudioStream" uid="uid://b7njbdyu774b3" path="res://assets/sounds/intro cutscene edited.wav" id="5_wnq7k"]
+[ext_resource type="AudioStream" uid="uid://davsn4cjxj2fp" path="res://assets/sounds/intro pantry-1.wav" id="6_45orq"]
+[ext_resource type="AudioStream" uid="uid://drti21ggy45t1" path="res://assets/sounds/Vamp Chatter 1.wav" id="7_o64bv"]
+[ext_resource type="AudioStream" uid="uid://or6tnnsd8240" path="res://assets/sounds/Vamp Chatter 2.wav" id="8_kfraq"]
+[ext_resource type="AudioStream" uid="uid://djfpeua5ubd13" path="res://assets/sounds/Vamp Chatter 3.wav" id="9_4ufcj"]
+[ext_resource type="AudioStream" uid="uid://btwgdxqs2ixbf" path="res://assets/sounds/Chef Chatter 1.wav" id="10_25gn6"]
+[ext_resource type="AudioStream" uid="uid://dib6ak050j7rt" path="res://assets/sounds/Chef Chatter 3.wav" id="11_ljqee"]
+[ext_resource type="AudioStream" uid="uid://bq0xx4u4rno5k" path="res://assets/sounds/Chef Chatter 4.wav" id="12_di15f"]
 
 [node name="Audio" type="Node"]
 script = ExtResource("1_wfrff")
@@ -19,4 +26,31 @@ stream = ExtResource("2_jpmsl")
 stream = ExtResource("3_g7nlf")
 
 [node name="Voice" type="AudioStreamPlayer" parent="." groups=["Voice"]]
-stream = ExtResource("5_2c2u0")
+stream = ExtResource("5_wnq7k")
+
+[node name="Intro" type="AudioStreamPlayer" parent="." groups=["Talk"]]
+stream = ExtResource("6_45orq")
+
+[node name="VampireTalk1" type="AudioStreamPlayer" parent="." groups=["Talk"]]
+stream = ExtResource("7_o64bv")
+max_polyphony = 3
+
+[node name="VampireTalk2" type="AudioStreamPlayer" parent="." groups=["Talk"]]
+stream = ExtResource("8_kfraq")
+max_polyphony = 3
+
+[node name="VampireTalk3" type="AudioStreamPlayer" parent="." groups=["Talk"]]
+stream = ExtResource("9_4ufcj")
+max_polyphony = 3
+
+[node name="ChefTalk1" type="AudioStreamPlayer" parent="." groups=["Talk"]]
+stream = ExtResource("10_25gn6")
+max_polyphony = 3
+
+[node name="ChefTalk2" type="AudioStreamPlayer" parent="." groups=["Talk"]]
+stream = ExtResource("11_ljqee")
+max_polyphony = 3
+
+[node name="ChefTalk3" type="AudioStreamPlayer" parent="." groups=["Talk"]]
+stream = ExtResource("12_di15f")
+max_polyphony = 3

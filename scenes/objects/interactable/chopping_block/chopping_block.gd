@@ -25,7 +25,7 @@ func _on_body_exited(body: Node3D) -> void:
 func _input(event: InputEvent) -> void:
 	if not is_in_range: return
 	
-	if event.is_action("interact1") and event.is_pressed() and not event.is_echo():
+	if event.is_action_pressed("interact1"):
 		if player.held_item and ($PopUpTexture.process <= 1.0 or $PopUpTexture.process >= 100.0):
 			current_item = player.held_item
 			player.held_item = null
@@ -37,12 +37,12 @@ func _input(event: InputEvent) -> void:
 			$Popup.end_process()
 			_on_body_exited(player)
 			_on_body_entered(player)
-	if event.is_action("interact2") and event.is_pressed() and not event.is_echo():
+	if event.is_action_pressed("interact2") and current_item:
 		if current_item:
 			$Popup.step_process(10.0, 0.1)
 		if $PopUpTexture.process >= 90.0:
 			current_item.chop()
-		if $PopUpTexture.process >= 190.0:
+		if $PopUpTexture.process >= 188.0:
 			current_item.trash()
 		_on_body_exited(player)
 		_on_body_entered(player)

@@ -273,7 +273,7 @@ libraries = {
 "": SubResource("AnimationLibrary_17h68")
 }
 autoplay = "intro"
-speed_scale = 3.0
+speed_scale = 2.0
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]

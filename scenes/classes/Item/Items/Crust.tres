@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Item" load_steps=9 format=3 uid="uid://ckkxokefgouhn"]
+[gd_resource type="Resource" script_class="Item" load_steps=10 format=3 uid="uid://ckkxokefgouhn"]
 
 [ext_resource type="Script" path="res://scenes/classes/Item/Item.gd" id="1_q0edn"]
 [ext_resource type="Texture2D" uid="uid://dilmstbrfwrhl" path="res://assets/icons/icon 4.png" id="1_vsdsd"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b2q7mjfnu3cah" path="res://assets/items/Crust/FilledCrust.png" id="4_rpntm"]
 [ext_resource type="Texture2D" uid="uid://jrwhof0xlc7x" path="res://assets/items/Complete/b-c pie.png" id="5_hnhyh"]
 [ext_resource type="Texture2D" uid="uid://clm3g0hj18emn" path="res://assets/items/Crust/Crust.png" id="6_asd2i"]
+[ext_resource type="Texture2D" uid="uid://bvyo1dlhqq0i4" path="res://assets/items/Complete/dr pie.png" id="7_qvb2f"]
 [ext_resource type="Texture2D" uid="uid://hfnhs5x17kxi" path="res://assets/items/Trash.png" id="8_uhycq"]
 
 [resource]
@@ -16,6 +17,7 @@ action_texture = ExtResource("3_yhx0k")
 default = ExtResource("6_asd2i")
 cooked = ExtResource("5_hnhyh")
 combined = ExtResource("4_rpntm")
+enchanted = ExtResource("7_qvb2f")
 trashed = ExtResource("8_uhycq")
 action_cooked = ExtResource("2_gria2")
 action_combined = ExtResource("1_vsdsd")

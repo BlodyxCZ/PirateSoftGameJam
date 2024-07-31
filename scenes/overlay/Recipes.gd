@@ -6,6 +6,7 @@ func hide_all() -> void:
 		page.hide()
 
 func switch_to_page(number: int) -> void:
+	print(number)
 	hide_all()
 	$MarginContainer.get_child(number-1).show()
 
@@ -23,7 +24,8 @@ func flip_right() -> void:
 	for page in $MarginContainer.get_children():
 		i += 1
 		if page.visible: break
-	switch_to_page(i+1)
+	if i + 1 > $MarginContainer.get_child_count(): i = -2
+	switch_to_page(i + 1)
 
 
 func _on_right_pressed() -> void:

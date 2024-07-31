@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Item" load_steps=11 format=3 uid="uid://ukp4748vi7ft"]
+[gd_resource type="Resource" script_class="Item" load_steps=12 format=3 uid="uid://ukp4748vi7ft"]
 
 [ext_resource type="Texture2D" uid="uid://coc6uc42puqkr" path="res://assets/items/BellPeppers/cored peppers.png" id="1_0kwar"]
 [ext_resource type="Texture2D" uid="uid://dx01iph82voe1" path="res://assets/icons/icon 2.png" id="1_ak7vv"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" path="res://scenes/classes/Item/Item.gd" id="4_e33yo"]
 [ext_resource type="Texture2D" uid="uid://bq4vbny44p5m" path="res://assets/icons/icon 1.png" id="4_pk8ix"]
 [ext_resource type="Texture2D" uid="uid://hfnhs5x17kxi" path="res://assets/items/Trash.png" id="6_eaj8e"]
+[ext_resource type="Texture2D" uid="uid://bvyo1dlhqq0i4" path="res://assets/items/Complete/dr pie.png" id="9_xo58t"]
 
 [resource]
 script = ExtResource("4_e33yo")
@@ -19,6 +20,7 @@ default = ExtResource("4_56ng0")
 cooked = ExtResource("2_luas2")
 chopped = ExtResource("1_0kwar")
 combined = ExtResource("2_y5geo")
+enchanted = ExtResource("9_xo58t")
 trashed = ExtResource("6_eaj8e")
 action_cooked = ExtResource("3_0anne")
 action_chopped = ExtResource("1_ak7vv")

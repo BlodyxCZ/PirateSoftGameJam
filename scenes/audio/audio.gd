@@ -15,6 +15,8 @@ func play(audio: String) -> void:
 				child.volume_db = linear_to_db(0.01)
 				tween.tween_property(child, "volume_db", linear_to_db(0.5 * master_volume * music_volume), 2.0)
 				tween.play()
+			if child.is_in_group("Talk"):
+				stop_talk()
 			child.play()
 
 
@@ -31,10 +33,17 @@ func stop_music(_name: String = "") -> void:
 			audio.stop()
 
 
+func stop_talk() -> void:
+	for audio: AudioStreamPlayer in get_tree().get_nodes_in_group("Talk"):
+		audio.stop()
+
+
 func _process(delta: float) -> void:
 	for child: AudioStreamPlayer in get_children():
 		if not get_tree().get_processed_tweens().size() >= 1:
 			if child.is_in_group("Music"):
 				child.volume_db = linear_to_db(0.5 * master_volume * music_volume)
 			if child.is_in_group("Voice"):
-				child.volume_db = linear_to_db(0.5 * master_volume * voice_volume)
+				child.volume_db = linear_to_db(0.4 * master_volume * voice_volume)
+			if child.is_in_group("Talk"):
+				child.volume_db = linear_to_db(0.3 * master_volume * voice_volume)

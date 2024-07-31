@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dc22jitmq87n1"]
+[gd_scene load_steps=21 format=3 uid="uid://dc22jitmq87n1"]
 
 [ext_resource type="Script" path="res://scenes/objects/interactable/fridge/fridge.gd" id="1_engde"]
 [ext_resource type="Script" path="res://scenes/classes/Popup/popup.gd" id="2_q71sa"]
@@ -13,6 +13,10 @@
 [ext_resource type="Texture2D" uid="uid://cc6q6qmcufyvk" path="res://assets/items/Tofu/tofu.png" id="11_thdc1"]
 [ext_resource type="Texture2D" uid="uid://xh7xhqolkqc5" path="res://assets/items/Onions/onions.png" id="12_5jqcf"]
 [ext_resource type="Texture2D" uid="uid://d1iw7tc8hi7uj" path="res://assets/items/HotSauce/hot_sauce.png" id="13_ncekl"]
+[ext_resource type="Texture2D" uid="uid://fjc86w5p3wj2" path="res://assets/items/Banana/Banana.png" id="14_32swa"]
+[ext_resource type="Texture2D" uid="uid://dbg8gm0xnna2h" path="res://assets/items/Coconut/Coconut.png" id="15_dfecg"]
+[ext_resource type="Texture2D" uid="uid://co4hmokr6q6ew" path="res://assets/items/SoyCream/SoyCream.png" id="16_upkmn"]
+[ext_resource type="Texture2D" uid="uid://clm3g0hj18emn" path="res://assets/items/Crust/Crust.png" id="17_4tk1y"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_e7jdm"]
 size = Vector3(2.71642, 0.7, 1)
@@ -62,7 +66,6 @@ skeleton = NodePath("")
 layer = 3
 
 [node name="GUI" type="Control" parent="CanvasLayer"]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -94,6 +97,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -25.0
 offset_bottom = 50.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -193,16 +197,47 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="Item" type="Button" parent="CanvasLayer/GUI/CenterContainer/Panel"]
+[node name="Banana" type="Button" parent="CanvasLayer/GUI/CenterContainer/Panel/CenterContainer/GridContainer"]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
-offset_left = 1526.0
-offset_top = 212.0
-offset_right = 1654.0
-offset_bottom = 340.0
-focus_neighbor_left = NodePath("../CenterContainer/GridContainer/Pepper")
-focus_previous = NodePath("../CenterContainer/GridContainer/Pepper")
+focus_neighbor_left = NodePath("../Pepper")
+focus_previous = NodePath("../Pepper")
 mouse_filter = 1
+icon = ExtResource("14_32swa")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Coconut" type="Button" parent="CanvasLayer/GUI/CenterContainer/Panel/CenterContainer/GridContainer"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+focus_neighbor_left = NodePath("../Pepper")
+focus_previous = NodePath("../Pepper")
+mouse_filter = 1
+icon = ExtResource("15_dfecg")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="SoyCream" type="Button" parent="CanvasLayer/GUI/CenterContainer/Panel/CenterContainer/GridContainer"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+focus_neighbor_left = NodePath("../Pepper")
+focus_previous = NodePath("../Pepper")
+mouse_filter = 1
+icon = ExtResource("16_upkmn")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Crust" type="Button" parent="CanvasLayer/GUI/CenterContainer/Panel/CenterContainer/GridContainer"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+focus_neighbor_left = NodePath("../Pepper")
+focus_previous = NodePath("../Pepper")
+mouse_filter = 1
+icon = ExtResource("17_4tk1y")
+flat = true
 icon_alignment = 1
 expand_icon = true
 
@@ -214,3 +249,7 @@ expand_icon = true
 [connection signal="pressed" from="CanvasLayer/GUI/CenterContainer/Panel/CenterContainer/GridContainer/Tofu" to="CanvasLayer/GUI" method="_on_tofu_pressed"]
 [connection signal="pressed" from="CanvasLayer/GUI/CenterContainer/Panel/CenterContainer/GridContainer/Onions" to="CanvasLayer/GUI" method="_on_onions_pressed"]
 [connection signal="pressed" from="CanvasLayer/GUI/CenterContainer/Panel/CenterContainer/GridContainer/HotSauce" to="CanvasLayer/GUI" method="_on_hot_sauce_pressed"]
+[connection signal="pressed" from="CanvasLayer/GUI/CenterContainer/Panel/CenterContainer/GridContainer/Banana" to="CanvasLayer/GUI" method="_on_banana_pressed"]
+[connection signal="pressed" from="CanvasLayer/GUI/CenterContainer/Panel/CenterContainer/GridContainer/Coconut" to="CanvasLayer/GUI" method="_on_coconut_pressed"]
+[connection signal="pressed" from="CanvasLayer/GUI/CenterContainer/Panel/CenterContainer/GridContainer/SoyCream" to="CanvasLayer/GUI" method="_on_soy_sauce_pressed"]
+[connection signal="pressed" from="CanvasLayer/GUI/CenterContainer/Panel/CenterContainer/GridContainer/Crust" to="CanvasLayer/GUI" method="_on_crust_pressed"]

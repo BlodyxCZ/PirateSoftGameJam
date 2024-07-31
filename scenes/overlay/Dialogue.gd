@@ -2,6 +2,7 @@ extends Control
 
 
 func _ready() -> void:
+	randomize()
 	$VampireSpeech.hide()
 	$JackalopeSpeech.hide()
 
@@ -27,6 +28,8 @@ func vampire_say(what: String, duration: float, emotion: String = "Normal") -> v
 			video.hide()
 		video.get_child(0).hide()
 	$VampireSpeech.show()
+	
+	Audio.play("VampireTalk" + str(randi_range(1, 3)))
 	
 	$VampireSpeech/VampireText.visible_ratio = 0.0
 	$VampireSpeech/VampireText.text = what
